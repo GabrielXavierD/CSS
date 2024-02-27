@@ -1,5 +1,3 @@
 
 *.html linguist-language=css
 
-dist/* linguist-vendored
-jquery.css linguist-vendored=true
