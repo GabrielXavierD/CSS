@@ -2,7 +2,7 @@
 CSS/*.css linguist-language=CSS
 
 # Define um ou mais arquivos CSS específicos como CSS.
-CSS/nomeArquivo.css linguist-language=CSS
+CSS/style.css linguist-language=CSS
 
 # Isso vai vedar o contato de stack do GitHub de considerar na contagem do projeto.
 # Por exemplo, se você não deseja que os arquivos CSS sejam contados para as estatísticas de linguagem.
