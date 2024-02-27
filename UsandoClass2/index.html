@@ -1,0 +1,35 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Usando Class</title>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <table border="1px" cellpadding="5px">  <!--border= largura da borda da tabela; cellpadding= tamanho da tabela  -->
+            <tr>
+                <!--usando class para criar grupos de formatação-->
+                <!--todas as celulas da primeira linha com dif-->
+                <td class="dif">Célula 1</td>
+                <td class="dif">Célula 2</td>
+                <td class="dif">Célula 3</td>
+            </tr>
+            <tr>
+                <td>Célula 4</td>
+                <td>Célula 5</td>
+                <td>Célula 6</td>
+            </tr>
+            <tr>
+                <!--todas as celulas da terceira linha com dif-->
+                <td class="dif">Célula 7</td>
+                <td class="dif">Célula 8</td>
+                <td class="dif">Célula 9</td>
+            </tr>
+        </table>
+    </body>
+    </html>
+
+    <!--dica, para criar algo mais rapido é só usar a tag e maior que
+    ex: tr>td*5{conteudo das linhas}   
+    ex2: tr>td.dif{Célula 8}*5
+    ex3: ! (base html) ou !! ou !!!
+    obs:*5 é as linhas-->

@@ -1,0 +1,10 @@
+label {
+    width: 80px;
+    display: inline-block; 
+/*tem que colocar o display: inline-block; 
+para o label considerar/respeitar a formatação*/
+}
+
+fieldset{
+    width: 200px;
+}

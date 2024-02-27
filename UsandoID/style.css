@@ -1,0 +1,19 @@
+#x1 { /*bloco diferente, mudando a cor do parágrafo, em específico*/
+    color: blue;
+    text-align: center; /*colocando um alinhamento de texto*/
+}
+
+#x2 { /*bloco diferente, mudando a cor do parágrafo, em específico*/
+    color:green;
+    text-align: justify; /*colocando um alinhamento de texto*/
+}
+
+#x3{ /*bloco diferente, mudando a cor do parágrafo, em específico*/
+    color:red;
+    text-align: right; /*colocando um alinhamento de texto*/
+}
+
+
+p{ /*bloco geral, mudando a cor de fundo de TODOS os parágrafos*/
+    background-color: yellow;
+}

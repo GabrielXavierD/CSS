@@ -1,0 +1,22 @@
+a:link { /*não pode ter espaço entre a tag a: 
+          | estado inicial do link*/
+    color: yellow;
+    background-color: green;
+} 
+
+a:visited { /*pós o link ser visitado*/
+    color: white;
+    background-color: black;
+}
+
+a:hover { /*quando passo o mouse sobre o link*/
+    font-size: 250%;
+    text-decoration: none;
+    color: black;
+    background-color: red;
+}
+
+a:active { /*quando clica no link*/ 
+    color: blue;
+    background-color: gray;
+}
