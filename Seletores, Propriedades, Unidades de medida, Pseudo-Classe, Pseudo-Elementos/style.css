@@ -10,8 +10,6 @@ h1[class="titulo"]{ /*informar no []  atributo e o valor que o elemento precisa 
     background-color: crimson; /*alterando cor de fundo do input especifico - com "nome"*/
 }
 
-
-
 h1,h2,h3{/*EXEMPLO DE SELETOR DE TEXTO*/
 }
 
@@ -227,10 +225,9 @@ p::selection{ /*alterar quando o user selecionar*/
 }
 
 
-
-li::before{ /*adicionando no inicio de algo*/
-  content: "😁"; /* before e after fazem o uso de content (conteúdo)*/
-                /*content aceita textos, espaços, emojis etc...*/
+li::before{                 /*adicionando no inicio de algo*/
+  content: "😁";            /* before e after fazem o uso de content (conteúdo)*/
+                            /*content aceita textos, espaços, emojis etc...*/
   background-color: aquamarine;
 }
 
@@ -243,36 +240,173 @@ li::after{          /*alterar quando o user selecionar*/
 
 
 
-                /*CSS Display*/
+                /*CSS Display
 
 div{
-    display: block; /*padrão, um embaixo do outro, pula uma linha, usa todo espaço disponivel na tela - aceita altura e largura etc...*/
-    display: inline; /*um do lado do outro, ignora largura*/
-    display: inline-block; /*começa a ficar um do lado do outro, na mesma linha, assim que houver o espaço necessario na tela - aceita altura e largura*/
-    display: none; /*não apresenta o elemento, mas ele continua presente*/
+    display: block; padrão, um embaixo do outro, pula uma linha, usa todo espaço disponivel na tela - aceita altura e largura etc...
+    display: inline; um do lado do outro, ignora largura
+    display: inline-block; começa a ficar um do lado do outro, na mesma linha, assim que houver o espaço necessario na tela - aceita altura e largura
+    display: none; não apresenta o elemento, mas ele continua presente
     display: grid;
     display: flex;
 }
 
 
 
-                /*CSS POSITIONS*/
+                CSS POSITIONS
 
 div{
-    position: static; /*padrão - respeita a ordem (o fluxo) que os elementos aparecem na tela - Ex.: 1,2,3,4*/
-    position: relative; /*ela respeita o fluxo (se mantem nele) porém permite utilizar as propriedades top, right, bottom e left para move-lá (e o espaço dela continua no fluxo e nao altera os outros elementos)*/                 
-    position: absolute; /*segue um elemento pai com position diferente de static ou a propria página - remove o elemento do fluxo e fica por cima - porém permite utilizar as propriedades top, right, bottom e left para move-lá */
-    position: fixed; /*remove o elemento do fluxo - mantem o elemento fixo na tela acompanha o scroll - é em relação a toda a tela - bom para menu fixo*/
-    position: sticky; /*remove o elemento do fluxo - se mantem em uma posição na tela, mas quando o scroll desce e encosta na sua parte superior o elemento se fixa e desce na tela junto com o scroll - sticky = grudar, pegajoso - bom para cabeçalhos de tabelas*/
+    position: static; padrão - respeita a ordem (o fluxo) que os elementos aparecem na tela - Ex.: 1,2,3,4
+    position: relative; ela respeita o fluxo (se mantem nele) porém permite utilizar as propriedades top, right, bottom e left para move-lá (e o espaço dela continua no fluxo e nao altera os outros elementos)                 
+    position: absolute; segue um elemento pai com position diferente de static ou a propria página - remove o elemento do fluxo e fica por cima - porém permite utilizar as propriedades top, right, bottom e left para move-lá
+    position: fixed; remove o elemento do fluxo - mantem o elemento fixo na tela acompanha o scroll - é em relação a toda a tela - bom para menu fixo
+    position: sticky; remove o elemento do fluxo - se mantem em uma posição na tela, mas quando o scroll desce e encosta na sua parte superior o elemento se fixa e desce na tela junto com o scroll - sticky = grudar, pegajoso - bom para cabeçalhos de tabelas
 }
 
 
 
-                /*Modelo de Caixa CSS (box-model)*/
+                Modelo de Caixa CSS (box-model)
 div{
-    box-sizing: content-box; /*padrão*/
-    box-sizing: border-box; /*o proprio navegador faz o calculo para caber o elemento certinho na borda*/
+    box-sizing: content-box; padrão - adiciona espaço ao tamanho
+    box-sizing: border-box; diminui espaço ao tamanhoo - proprio navegador faz o calculo para caber o elemento certinho na borda
 } 
 
 
 
+               /*GRID CSS
+
+-Um recurso do CSS que permite desenvolver layouts em grid;
+-É um valor da propriedade display;
+-Trabalhos com um container que contém itens;
+-O container controla a disposição dos itens, mas os itens também
+podem alterar o seu posicionamento;
+-Os grids são divididos em colunas e linhas;
+-Podemos inserir um espaçamento entre as áreas com o recurso de gap;
+-Por padrão os elementos já vem com stretch definido (esticar)
+-Por padrão o GRID tenta ordenar os elementos seguindo a ordem que foram declarados no html
+*/
+
+
+
+.containerComDivsDentro{
+    color: white;
+    background-color: #333;
+    border: 3px solid red;
+    padding: 15px;
+
+    display: grid;
+    grid-template-columns: 50px auto 10%; /*largura - define as colunas, pode passar quantos valores quiser (x x x x etc... - ali tem 3 então é 3 colunas) - a 1 coluna tem 50px; 2 coluna é automatica; 3 coluna é 10% do tamanho do elemento pai*/
+    grid-template-rows: 70% 30%; /*altura - define as linhas - (cada valor representa uma linha, seguindo a ordem de cima pra baixo - 1,2,3,4,5... - nesse caso a 1a linha tem 70% e a 2a linha 30%)*/
+    gap: 20px; /*serve para dar o mesmo espaçamento entre as linhas e as colunas */
+    
+    justify-content: center; /*alinha o grid no eixo horizontal - centro*/ 
+    justify-content: start; /*alinha o grid no eixo horizontal - no inicio, lado esquerdo*/ 
+    justify-content: end; /*alinha o grid no eixo horizontal - no fim, lado direito*/ 
+
+
+    align-items: center; /*alinha o grid no eixo vertical - centro*/ 
+    align-items: start; /*alinha o grid no eixo vertical - no inicio, superior*/ 
+    align-items: end; /*alinha o grid no eixo vertical - no fim, inferior*/  
+
+
+}
+    .containerComDivsDentro div {
+        background-color: #ccc;
+        border: 1px solid blue;
+        padding: 20px;  
+    }
+
+    
+/*GRID AREA*/
+/*seguindo um exemplo em que uma div contem as divisoes de um site: Cabeçalho, Sidebar, Conteúdo, Rodapé*/
+    .container{
+        color: white;
+        background-color: #333;
+        border: 3px solid red;
+        padding: 15px;
+        display: grid;
+        gap: 5px; /*serve para dar o mesmo espaçamento entre as linhas e as colunas*/
+
+        /*definindo as areas do template, grid-template-areas tambem pode ser usado para ordenar cada item, para não precisar usar grid-column/grid-row*/
+       /*quebrar uma linha para representar cada linha*/
+        grid-template-areas: "header header header header"                     /*linha 1 - cabeçalho ocupando 100% da tela*/
+                        "sidebar content content content"                      /*linha 2 - 1 texto e 3 textos*/
+                        "nomeNaoUsado nomeNaoUsado nomeNaoUsado nomeNaoUsado"  /*dando um espaço - o CSS procura a referencia, mas como ele não encontra, ele deixa vazio*/
+                        "footer footer footer footer"                          /*linha 3 - footer ocupando 100% da tela*/                     
+        /*caso ache que algo está muito pequeno, basta aumentar a quantidade de elementos ali*/;
+        /*para dar um espaço entre eles, basta usar um nome que nunca sera usado*/
+        } 
+    
+        .container div {
+            background-color: #ccc;
+            border: 1px solid blue;
+            padding: 20px;  
+        }
+        #header{
+            grid-area: header; /*qual area o id="header" representa no grid? ele representa o header*/
+            /*regra individual mas que leva em consideração o elemento pai*/
+        }
+        #sidebar{
+            grid-area: sidebar; /*qual area o id="sidebar" representa no grid? ele representa o sidebar*/
+            /*regra individual mas que leva em consideração o elemento pai*/
+            height: 50vh; /*estabelecento altura dessa area do grid*/
+        }
+
+        #content{
+            grid-area: content;
+            height: 50vh; /*estabelecento altura dessa area do grid*/
+        }
+
+        #footer{
+            grid-area: footer;  
+        }
+
+/*MANIPULANDO ITENS INDIVIDUAIS DO GRID*/
+
+.container{ /*container com 6 itens dentro*/
+    color: white;
+    background-color: #333;
+    border: 3px solid red;
+    padding: 15px;
+    display: grid;
+    gap: 5px; /*serve para dar o mesmo espaçamento entre as linhas e as colunas*/
+    grid-template-columns: auto auto auto; /*largura - define as colunas, pode passar quantos valores quiser (x x x x etc... - ali tem 3 então é 3 colunas) - a 1 coluna tem 50px; 2 coluna é automatica; 3 coluna é 10% do tamanho do elemento pai*/
+    } 
+
+    .container div {
+        background-color: #ccc;
+        border: 1px solid blue;
+        padding: 20px;  
+    }
+
+#item-1{
+    /*HORIZONTAL*/
+    grid-column: 6; /*dizer qual coluna o item irá ocupar*/
+
+        /*Tambem pode usar assim*/
+    grid-column-start: 1; /*#item-1 começa na coluna 1*/
+    grid-column-end: 4;  /*#item-1 termina na coluna 4 - colocar 1 numero a mais, pois ele respeita 1 a menos*/
+
+     /*VERTICAL*/
+     grid-row: 7; /*dizer qual linha o item irá ocupar*/
+
+         /*Tambem pode usar assim*/
+     grid-row-start: 2; /*#item-2 começa na linha 2 - pois na linha 1 já esta sendo ocupado pela #item-1*/
+     grid-row-end: 4;  /*#item-2 termina na linha 4 */
+}
+
+
+#item-3{
+    /*ALINHAMENTO DO #item-3 */
+
+    /*JUSTIFY se usa para alinhar no EIXO X - HORIZONTAL*/
+    justify-self: start; /*justify-self: posiciona na horizontal do item individual - no inicio*/
+    justify-self: end; /*justify-self: posiciona na horizontal do item individual - no fim*/
+    justify-self: start; /*justify-self: posiciona na horizontal do item individual - no inicio*/
+
+    /*ALIGN se usa para alinhar no EIXO Y - VERTICAL*/
+    align-self: center; /*posicionamento individual na vertical - centralizado*/
+    align-self: start; /*posicionamento individual na vertical - no inicio*/
+    align-self: end; /*posicionamento individual na vertical - no final*/
+    align-self: stretch; /*posicionamento individual na vertical - esticar*/
+}
