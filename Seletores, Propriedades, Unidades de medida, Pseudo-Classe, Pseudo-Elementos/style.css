@@ -1,0 +1,278 @@
+                /*SELETORES*/
+
+*{ /*SELETOR UNIVERSAL - TODA A PÁGINA*/
+    margin: 0;
+    padding: 0;
+}
+
+input[type="nome"], 
+h1[class="titulo"]{ /*informar no []  atributo e o valor que o elemento precisa ter*/
+    background-color: crimson; /*alterando cor de fundo do input especifico - com "nome"*/
+}
+
+
+
+h1,h2,h3{/*EXEMPLO DE SELETOR DE TEXTO*/
+}
+
+.container{/*SELETOR UNIVERSAL - TODA A PÁGINA*/
+}
+
+p.azul{   /*SELETOR DE CLASSE DENTRO DE ELEMENTO (NO CASO, PARAGRAFO COM CLASSE AZUL)*/
+}
+
+p .azul{   /*SELETOR DE CLASSE DENTRO DE ELEMENTO (NO CASO, PARAGRAFO COM UM ELEMENTO C/ CLASSE AZUL DENTRO DELE, EX: <p><a class="azul"></a></p>)*/
+}
+
+#cabecalho { /*SELECIONA PELO ID*/
+} 
+
+li>a { /*SELECIONA O FILHO DIRETO (NO CASO, LINK DENTRO DA LISTA)*/     
+}
+
+
+p a { /*SELECIONA TODOS OS DESCENDENTES (NO CASO, ESTILO EM TODOS OS LINKS QUE ESTIVEREM DENTRO DE UM PARAGRAFO)*/
+} 
+
+h1+p { /*SELECIONA O PRÓXIMO IRMÃO ADJACENTE (NO CASO, H1 ESTÁ EM UMA LINHA ACIMA DE P - LOGO, SE TIVER 2 P o segundo P não será estilizado, somente o primeiro, que é adjacente de h1)*/
+}
+
+h1~p{ /*SELECIONA O IRMÃO GERAL (MÚLTIPLOS) - NO CASO, TODOS OS PARAGRAFOS DEPOIS DE H1,
+       INDEPENDENTE DA ORDEM DA LINHA OU SE VEM ALGO DIFERENTE DE P DEPOIS DE H1 - NÃO SELICIONA PARAGRAFOS QUE ESTÃO ANTES H1-*/
+}
+
+/*ORDEM DE PRIORIDADE DOS SELETORES: IF>ATRIBUTO/CLASS>TAG>UNIVERSAL*/
+/*# = ID;   . = CLASS; : = ESTADO; [] = ATRIBUTO; * = TOTAL;*/
+
+
+
+
+                /*ALGUMAS PROPRIEDADES*/
+.teste{
+    overflow: hidden; /* os elementos que transbordarem estarão escondidos*/
+    overflow: scroll; /* cria um scroll dentro dos limites do elemento*/
+    cursor: pointer; /* muda o cursor do usuario*/
+    box-shadow: 20px 10px 8px green; /*tamanho da sombra horizontal -> tamanho da sombra vertical -> blur -> cor*/
+    border: 4mm ridge red; /*borda com sombra interna*/
+    border: thick double #32a1ce; /*borda com duas linhas*/
+    border: 1rem solid;
+    border: solid;
+    border: dashed red;
+    border: 10px outset;
+    border-top-width: medium;
+    border-right-width: medium;
+    border-bottom-width: medium;
+    border-left-width: medium;
+    border-top-style: none;
+    border-right-style: none;
+    border-top-color: currentcolor;
+    border-right-color: currentcolor;
+    border: inherit; /*forçar propriedade herdar valor do elemento pai - exemplo: red*/
+    border: initial; /*estado inicial - no caso pode ser a cor preta, dependendo do navegador*/
+    border: revert;
+    border: revert-layer;
+    border: unset;
+}
+
+/*
+div {
+    border: 0.5rem outset pink;
+    outline: 0.5rem solid khaki;
+    box-shadow: 0 0 0 2rem skyblue;
+    border-radius: 12px;
+    font: bold 1rem sans-serif;
+    margin: 2rem;
+    padding: 1rem;
+    outline-offset: 0.5rem;
+  } */
+
+
+
+                /*UNIDADES DE MEDIDA*/
+
+p{
+    font-size: 16px; /*px = unidade absoluta - não se altera - pode acabar atrapalhando na acessibilidade*/
+    font-size: 1em; /*em = relativa ao elemento pai - multiplica o valor de referencia - tambem se adapta caso o usuario altere o tamanho da fonte do proprio navegador*/
+    /*Se o elemento pai tiver 30px o o elemento filho tiver 2em, o filho terá 60px*/
+    
+    font-size: 16rem; /*rem = unidade relativa ao elemento raiz do HTML - no caso, a propria tag HTML -> só muda se houver alguma alteração na tag HTML ou caso o usuario altere o tamanho da fonte do navegador*/
+    /*rem e o px são os mais utilizados*/
+
+    font-size: 60vh; /*vv = referente a altura da tela (no caso, ocupando 60% da altura da tela)*/
+    font-size: 80vw; /*vv = referente a largura da tela (no caso, ocupando 60% da largura da tela)*/
+
+    font-size: 60ch; /*ch = caracteres de largura (do caracter 0) no maximo*/
+}
+
+
+
+                /*Cascata (ordem de que se coloca algo)*/
+
+h1{
+    color: red;
+}
+
+  
+h1{
+    color: green; /*a cor a ser atribuida ao h1 será verde - ignorando a cor vermelha - pois o que vem depois tem mais prioridade*/
+}
+
+
+
+  /*Especificidade*/
+h1{
+    color: red;
+}
+
+.textoComClasseH1{
+    color: blue; /*a cor a ser atribuida ao h1 será azul - ignorando a cor vermelha e verde - pois especificidade (a classe) tem mais tem mais prioridade*/
+}
+  
+h1{
+    color: green; 
+}
+
+
+/*ORDEM DE PRIORIDADE (do MAIS ao MENOS): 
+Inline (style=" ") -> ID (#) -> Classes, Atributos e Pseudo-Classes (. :: [ ]) -> Elementos e Pseudo-Elementos ( : <>)
+
+
+<p>Parágrafo teste </p>
+
+                    prioridade (da Menor a Maior)
+P {}               ➔ 0-0-0-1
+P::before {}       ➔ 0-0-0-2
+.destaque {}       ➔ 0-0-1-0
+#destaque {}       ➔ 0-1-0-0
+#destaque p {}     ➔ 0-1-0-1
+(inline) style=*   ➔ 1-0-0-0
+!important         ➔ ignora todas as anteriores e se torna prioridade
+
+*/
+
+
+
+                /* Herança*/
+/*
+
+    <div>          -> pai
+        <p></p>    -> filho 
+        <h1></h1>  -> filho e irmão adjacente de <p>
+    </div>
+*/
+
+
+
+                /*Pseudo-classes*/
+/*Há Pseudo-classes com : ou ::
+relacionadas ao estado do elemento
+como verificar? 
+-> verificar se o elemento é (é o 1 filho/ é o 5 filho etc...) ou está (o elemento está desabilitado? o elemento está com foco? o elemento está marcado? etc...)
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes */
+
+a:link{ /*links que ainda não foram visitados ficarão verdes*/
+    color: lime;
+}
+
+a:visited{ /*links que foram visitados ficarão vermelhos*/
+    color: red;
+}
+
+a:hover{ /*quando passar o mouse - muda a cor */
+    color: rgb(0, 255, 255);
+}
+
+a:first-child{ /*o primeiro elemento/primeiro filho*/
+    color: brown;
+}
+
+a:last-child{ /*o último elemento/último filho*/
+    color: rgb(42, 44, 165);
+}
+
+a:nth-child(4){ /*Alterar somente o item do meio de uma lista (por exemplo) - dentro do parenteses se passa o numero do elemento a se alterar (quarto elemento = 4)*/
+    color: rgb(106, 165, 42);
+}
+
+a:nth-child(even){ /*Alterar somente os elementos pares*/
+    color: rgb(155, 42, 165);
+}
+
+a:nth-child(odd){ /*Alterar somente os elementos impares*/
+    color: rgb(42, 165, 163);
+}
+
+
+
+    /*Pseudo-Elementos*/
+/*Usam ::
+usado para utilizar uma parte de tal elemento (algo que precisaria criar um outro elemento para aplicar tal estilo ou incluir um texto)
+Ex: em vez de usar a tag <b> pra deixar em negrito a primeira linha, poderia usar o pseudo-elemento ::first-line e uma propriedade para deixar a primeira linha em negrito
+
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-Elements
+*/
+
+p::first-line{ /*alterar somente a primeira linha -> colorindo dinamicamente as palavras na primeira linha de acordo com o tamanho da tela*/
+    color: red;
+}
+
+p::first-letter{ /*alterar somente a primeira letra */
+    color: rgb(0, 255, 38);
+}
+
+p::selection{ /*alterar quando o user selecionar*/
+    background-color: rgb(234, 255, 0);
+}
+
+
+
+li::before{ /*adicionando no inicio de algo*/
+  content: "😁"; /* before e after fazem o uso de content (conteúdo)*/
+                /*content aceita textos, espaços, emojis etc...*/
+  background-color: aquamarine;
+}
+
+
+
+li::after{          /*alterar quando o user selecionar*/
+    content: " 😚"; /* before e after fazem o uso de content (conteúdo)*/
+                    /*content aceita textos, espaços, emojis etc...*/
+}
+
+
+
+                /*CSS Display*/
+
+div{
+    display: block; /*padrão, um embaixo do outro, pula uma linha, usa todo espaço disponivel na tela - aceita altura e largura etc...*/
+    display: inline; /*um do lado do outro, ignora largura*/
+    display: inline-block; /*começa a ficar um do lado do outro, na mesma linha, assim que houver o espaço necessario na tela - aceita altura e largura*/
+    display: none; /*não apresenta o elemento, mas ele continua presente*/
+    display: grid;
+    display: flex;
+}
+
+
+
+                /*CSS POSITIONS*/
+
+div{
+    position: static; /*padrão - respeita a ordem (o fluxo) que os elementos aparecem na tela - Ex.: 1,2,3,4*/
+    position: relative; /*ela respeita o fluxo (se mantem nele) porém permite utilizar as propriedades top, right, bottom e left para move-lá (e o espaço dela continua no fluxo e nao altera os outros elementos)*/                 
+    position: absolute; /*segue um elemento pai com position diferente de static ou a propria página - remove o elemento do fluxo e fica por cima - porém permite utilizar as propriedades top, right, bottom e left para move-lá */
+    position: fixed; /*remove o elemento do fluxo - mantem o elemento fixo na tela acompanha o scroll - é em relação a toda a tela - bom para menu fixo*/
+    position: sticky; /*remove o elemento do fluxo - se mantem em uma posição na tela, mas quando o scroll desce e encosta na sua parte superior o elemento se fixa e desce na tela junto com o scroll - sticky = grudar, pegajoso - bom para cabeçalhos de tabelas*/
+}
+
+
+
+                /*Modelo de Caixa CSS (box-model)*/
+div{
+    box-sizing: content-box; /*padrão*/
+    box-sizing: border-box; /*o proprio navegador faz o calculo para caber o elemento certinho na borda*/
+} 
+
+
+
