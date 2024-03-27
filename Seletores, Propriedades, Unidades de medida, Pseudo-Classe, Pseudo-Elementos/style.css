@@ -282,9 +282,23 @@ div{
 podem alterar o seu posicionamento;
 -Os grids são divididos em colunas e linhas;
 -Podemos inserir um espaçamento entre as áreas com o recurso de gap;
--Por padrão os elementos já vem com stretch definido (esticar)
+-Por padrão os elementos já vem com stretch definido (esticar/ocupar todo o espaço disponivel)
 -Por padrão o GRID tenta ordenar os elementos seguindo a ordem que foram declarados no html
-*/
+-Caso o elemento ja tenha um height e um width definidos ele seguira a posição do grid, caso não tenha, ele ficará como stretch
+-Se para grid-column-start/end ou grid-row-start/end se inicia a posição em 0 (posição igual o array), Ex.: posição 3 é 4.
+-Caso use valores POSITIVO, se posiciona na direita pra esquerda e valores POSITIVOS o contrario (esquerda para direita)
+
+
+
+
+
+  Escrevendo sempre ambas grid-column-start e grid-column-end pode tornar-se cansativo. 
+  Felizmente, grid-column é uma propriedade abreviada que aceita os dois valores de uma só vez, separados por "/".
+  Por exemplo, grid-column ou row: 2 / 4; estabelecerá que o elemento comece na 2ª linha vertical da grelha e termine na 4ª linha.
+
+
+
+    */
 
 
 
@@ -295,7 +309,17 @@ podem alterar o seu posicionamento;
     padding: 15px;
 
     display: grid;
+
     grid-template-columns: 50px auto 10%; /*largura - define as colunas, pode passar quantos valores quiser (x x x x etc... - ali tem 3 então é 3 colunas) - a 1 coluna tem 50px; 2 coluna é automatica; 3 coluna é 10% do tamanho do elemento pai*/
+    grid-template-columns: repeat(3, 300px); /*função repeat() - faz um numero ser repetido tantas vezes, no caso, repetindo 3 vezes o valor 300px (ou seja, 3 colunas de 300px) - numero de colunas de acordo com o tamanho disponivel em tela */
+    grid-template-columns: repeat(autofill, 200px); /*função repeat() - AUTOFILL = preencher numero de colunas de acordo com o tamanho disponivel em tela - ex: se ele tiver uma tela de 600px, ele preenchera com 3 colunas de 200px - ele aumenta/diminui dependendo do tamanho da tela*/
+   /*RESPONSIVIDADE -> caso os elementos presentes internamente não tenham nenhuma posição definida, eles irão se adptar ao tamanho da tela. 
+   Ex.: (são 4 itens) em uma tela de 400px: ficam 2 colunas de 200px e os itens ficam distribuidos com 2 em cada linha
+    2
+    2     -> e caso a tela seja de 800px havera 4 colunas e eles ficaram distribuidos os 4 na mesma linha*/
+
+
+
     grid-template-rows: 70% 30%; /*altura - define as linhas - (cada valor representa uma linha, seguindo a ordem de cima pra baixo - 1,2,3,4,5... - nesse caso a 1a linha tem 70% e a 2a linha 30%)*/
     gap: 20px; /*serve para dar o mesmo espaçamento entre as linhas e as colunas */
     
@@ -383,14 +407,14 @@ podem alterar o seu posicionamento;
     /*HORIZONTAL*/
     grid-column: 6; /*dizer qual coluna o item irá ocupar*/
 
-        /*Tambem pode usar assim*/
+        /*Tambem pode usar assim, para extender, dar um inicio e fim*/
     grid-column-start: 1; /*#item-1 começa na coluna 1*/
     grid-column-end: 4;  /*#item-1 termina na coluna 4 - colocar 1 numero a mais, pois ele respeita 1 a menos*/
 
      /*VERTICAL*/
      grid-row: 7; /*dizer qual linha o item irá ocupar*/
 
-         /*Tambem pode usar assim*/
+         /*Tambem pode usar assim, para extender, dar um inicio e fim*/
      grid-row-start: 2; /*#item-2 começa na linha 2 - pois na linha 1 já esta sendo ocupado pela #item-1*/
      grid-row-end: 4;  /*#item-2 termina na linha 4 */
 }
