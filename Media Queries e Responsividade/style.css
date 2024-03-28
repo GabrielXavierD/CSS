@@ -1,0 +1,95 @@
+/*Estilo padrão, caso não se encaixe dentro das larguras estabelecidas no @media*/
+h1,
+h2 {
+    color: red;
+}
+
+
+/*Media Querie = aplicar determinado estilo em determinada altura ou largura do dispositivo
+- É mais comum em largura
+- Exemplo em um Iphone Xr com a tela c/ largura de 414px
+- É melhor que as Media Queries sejam a ultima coisa do arquivo
+- O CSS lê de cima pra baixo então a ordem do Media Queria importa, então o que vem escrito depois sobresai ao que está antes
+- Caso a Midia Querie esteja em um arquivo separado, é importante q referencia esteja abaixo da referencia do arquivo original (style.css), para ser a ultima coisa a ser lida
+
+/*poderia ser 414px mas pra ter certeza que vai pegar em todos os celulares foi colocado em 450px*/
+/*Celulares*/
+@media (max-width: 450px) {
+
+    /*para todos os dispositivos com uma largura de 450px ou menos, esse estilo será aplicado*/
+    h1,
+    h2 {
+        color: green;
+    }
+}
+
+
+/*Exemplo estilizando para um Iphone SE*/
+@media(width: 375px) {
+    h1 {
+        color: purple;
+    }
+}
+
+
+/*Tablets*/
+@media (min-width: 768px) and (max-width: 1024px) { /*especificando que so vai acontecer para caso especifico entre x e y */
+    h1,
+    h2 { /*só vai ficar amarelo se a largura estiver entre 728px e 1024px*/
+        color: yellow;
+    }
+}
+
+
+
+
+/*Verificar se está horizontal - Orientação*/
+/*tem prioridade sobre o min/max width*/
+
+@media(orientation: landscape) {  /*caso o dispositivo esteja na horizontal ou a largura seja maior que a altura*/
+    h1,
+    h2 {
+        color: blue;
+    }
+}
+
+@media(orientation: portrait) {  /*caso o dispositivo esteja na vertical ou a altura seja maior que a largura*/
+   body{
+    background-color: purple;
+   }
+    h1,h2{
+        color: black;
+    }
+}
+
+
+
+
+
+@media screen {}/*determina que seja aplicado as telas*/
+@media print {}/*para impressao - comportamento ao abrir a janela do modo impressão -ex: remover elementos que nao precisa que apareça, tipo botoes, menus, deixar somente um produto etc...*/
+@media speech {}/*determina comportamento para softwares de leitura de tela/reconhecimento de fala*/
+@media{} /*quando não se passa o tipo, o media entende que é para aplicar a todos (o mesmo que @media all)*/
+
+/*Ex.: media do tipo tela e largura até no máximo de 600px, faça*/
+@media screen and (max-width: 600px){
+    body{
+        background-color: yellow;
+    }
+    h1,h2{
+        font-size: 42px;
+    }
+}
+
+/*max - até isso
+min - a partir disso*/
+
+@media print{ /*quando abri a tela de impressão o h1 não será apresentado*/
+    h1{
+        display: none;
+    }
+    h2{
+        color: aqua;
+        font-size: 120px;
+    }
+}
