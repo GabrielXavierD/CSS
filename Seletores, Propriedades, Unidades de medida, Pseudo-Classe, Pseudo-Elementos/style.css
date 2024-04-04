@@ -289,13 +289,9 @@ podem alterar o seu posicionamento;
 -Caso use valores POSITIVO, se posiciona na direita pra esquerda e valores POSITIVOS o contrario (esquerda para direita)
 
 
-
-
-
   Escrevendo sempre ambas grid-column-start e grid-column-end pode tornar-se cansativo. 
   Felizmente, grid-column é uma propriedade abreviada que aceita os dois valores de uma só vez, separados por "/".
   Por exemplo, grid-column ou row: 2 / 4; estabelecerá que o elemento comece na 2ª linha vertical da grelha e termine na 4ª linha.
-
 
 
     */

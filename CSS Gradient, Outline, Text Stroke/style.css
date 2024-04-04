@@ -1,0 +1,153 @@
+/*funciona dentro de background / background-image / border-image
+linear-gradient(angulo, cor, transição) - vertical, horizontal etc...
+
+radial-gradient(cor, transição) - arredondado no meio do gradient
+
+- Pode colocar quantas cores quiser;
+- To top, to left, to right, to bottom, to top right (...), deg = angulo;
+- % (ou qualquer unidade de medida CSS px, rm etc...) = transição;
+
+*/
+
+/*Criando variavel global - bom para ex: mudar cor do site em uma data comemorativa, tipo deixar o site vermelho no natal...*/
+:root {
+    --CorDeFundo: linear-gradient(to bottom, rgb(43, 0, 255), rgb(255, 0, 0));
+    --CorDeFundo2: linear-gradient(to top, rgb(255, 0, 0), rgb(255, 149, 0) 70%);
+}
+
+
+/*LINEAR GRADIENT*/
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(45deg, rgb(71, 0, 121) 80%, rgb(255, 217, 101));
+
+    /*Exemplo de centralização
+        display: grid;
+        place-content: center;
+        place-items: center;*/
+}
+
+/*RADIAL GRADIENT*/
+.radialgradient {
+    height: 200px;
+    width: 200px;
+
+    background-image: radial-gradient(rgb(0, 255, 51), black, purple, red, white, blue, yellow 90px);
+
+}
+
+/*FUNDO DO TEXTO COM GRADIENTE*/
+h1 {
+    background-image: linear-gradient(rgb(145, 246, 255), rgb(255, 255, 255));
+    /*Fundo do texto*/
+    width: 35vw;
+}
+
+/*COR DO TEXTO EM GRADIENTE*/
+h2 {
+    font-size: 40px;
+
+    background-image: var(--CorDeFundo2);
+    /*usando a variavel - Fundo do texto*/
+    background-clip: text;
+    /*Colocando o gradiente NO TEXTO - pode colocar só ele caso o navegador utilizado já o reconheça*/
+
+    -webkit-background-clip: text;
+    /*Alguns navegadores não estilizam/não reconhecem somente com o "background-clip: text;" 
+    então é bom colocar o vendor prefix-webkit- tambem*/
+
+    color: transparent;
+    /*a cor do h2 será transparente*/
+
+}
+
+
+/*BORDA COM GRADIENTE*/
+.blocogradiente {
+    padding: 2px;
+    height: 200px;
+    width: 200px;
+
+    /*pode ser a borda completa
+    border: 10px black solid; */
+
+    /*Ou pode escolher um lado da borda que tambem funciona para o gradiente*/
+    border-right: 8px solid white;
+
+    border-image: var(--CorDeFundo) 1;
+    /* O número pode ser de 1 até 4, são os slices/pedaços (no caso do gradiente, pode ser qualquer numero de 1 a 4 que não faz diferença).
+    border-image serve para imagens, mas nesse caso estamos usando para adicionar uma borda com gradiente*/
+
+    /*border-radius: 20px; 
+    
+    border-radius não se aplica a borda com gradiente/border-image*/
+
+}
+
+
+
+/* COMO RESOLVER O PROBLEMA DO BORDER-RADIUS
+
+::before -> coloca borda em cima
+::after -> coloca borda embaixo
+position -> colocar a borda em outros lugares */
+
+.blocogradiente::after {
+    content: "BORDA COM RADIUS";
+    color: white;
+    text-align: center;
+    /*Conteudo vazio - criando um elemento com CSS que será colocado no HTML dentro dessa div*/
+
+    height: 17px;
+    /*Altura da borda*/
+    width: 100%;
+    /*Largura da borda*/
+    display: block;
+
+    background-image: var(--CorDeFundo);
+    border-radius: 0px 120px 0px 120px;
+
+
+}
+
+
+/*O contorno não altera o total da largura e altura do elemento e pode sobrepor outros elementos*/
+
+.contorno {
+    margin: 100px;
+    height: 200px;
+    width: 200px;
+    border: 8px rgb(0, 0, 0) solid;
+
+    /*outline: 10px solid blue; pode usar assim tambem*/
+
+    outline-width: 20px;
+    outline-style: dotted;
+    /*há varios estilos*/
+    outline-color: white;
+    outline-offset: 10px;
+    /*espaçamento*/
+
+}
+
+
+
+/*Text Stroke*/
+h3 {
+    font-size: 120px;
+    color: black;
+
+    -webkit-text-stroke: 1px red;
+    /*borda com shadow
+    text-shadow: -1px -1px 0 white, 
+                -1px 1px 0 white,
+                1px -1px 0 white,
+                1px 0px 0 white; */
+
+    text-shadow:
+        -4px -4px 0 rgb(255, 225, 0),
+        -4px 4px 0 rgb(0, 255, 238),
+        4px -4px 0 rgb(255, 0, 251),
+        4px 0px 0 rgb(0, 143, 24);
+}

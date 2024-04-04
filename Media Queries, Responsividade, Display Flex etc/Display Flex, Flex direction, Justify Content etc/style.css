@@ -1,0 +1,97 @@
+/*Por padrão os elementos ficam 
+no eixo principal = canto esquerdo superior, de forma vertical, eixo Y
+
+Flex-box = alinhar elementos flexiveis dentro de uma caixa*/
+
+
+.container{ /*tag pai - container*/
+    height: 500px;
+
+    display:flex; /*pra identificar que ela é um container de flexbox*/
+    flex-direction: row; /*qual o eixo principal e qual vai ser o secundario - padrão: row/linha/horizontal (ou seja, e. principal: X e e. secundario: Y)*/
+   
+    /*flex-direction: row-reverse; horizontal inverso -> lado direito - ultimo ao primeiro
+    flex-direction: column; vertical - de cima a baixo
+    flex-direction: column-reverse; vertical reverso - do ultimo ao primeiro*/
+
+
+    /*alinhar elementos ao longo do eixo principal estabelecido*/
+    justify-content: center;            /*Agrupa os elementos no centro do eixo principal */
+
+    /*justify-content: flex-start;      Vão se agrupar no inicio do eixo principal - lado esquerdo
+    justify-content: flex-end;          Vai para o final do eixo principal - lado direito
+    justify-content: space-between;     Espaço entre os elementos -> Distribui os elementos ao longo do eixo principal - coloca o 1 elem. no inicio/canto esquerdo; o 2 no meio; o 3 no final/canto direito 
+   
+    justify-content: space-around;      Espaço entre os elementos e por fora deles 
+                                            -> Distribui os elementos ao longo do eixo principal -
+                                            coloca o 1 elem. no inicio/canto esquerdo; o 2 no meio;
+                                            o 3 no final/canto direito.
+                                            -> Inicio/Lado esquerdo há uma margem (espaçamento);
+                                            Final/Lado direito há uma margem (espaçamento). */
+
+    
+
+    /*Alinhando no eixo secundario - no caso na vertical - pois o principal estabelecido foi o row/horizontal 
+    align-items = alinha somente no eixo Y, vertical 
+    
+    align-items: flex-start; alinhando no inicio do eixo secundario
+    align-items: flex-end; alinhando no final do eixo secundario
+    align-items: center; alinhando no centro do eixo secundario
+   
+   
+    align-items: stretch; Estica (caso não tenha altura pré-definida) - fazendo os elementos ocuparem todo o espaço do eixo secundario*/
+    align-items: baseline; /*Alinha os elementos com base no conteudo dentro da tag
+                                -> Ex.: os elementos com texto são alinhados juntos com os elementos com texto
+                                        e os elementos sem texto são alinhados juntos com os elementos sem texto.*/
+
+
+
+    /*Por padrão os elementos tentam ficar alinhados/caber na mesma linha, isso pode ser alterado
+    flex-wrap: nowrap; padrão - não há mudança de linha/quebra de linha
+    flex-wrap: wrap; Elementos podem DESCER uma linha caso já estejam no final
+    flex-wrap: wrap-reverse; Elementos podem SUBIR uma linha caso já estejam no final*/
+
+
+    /*Da pra colocar o tipo de eixo principal junto com wrap */
+    flex-flow: row wrap; /*horizontal com wrap etc... -> serve pra deixar o código menor*/
+
+    /*ALINHAR ELEMENTOS EM MAIS DE UMA LINHA (X ou Y)
+    align-content: start;           As duas linhas vão para o inicio/canto superior 
+    align-content: end;             As duas linhas vão para o final/canto inferior
+    align-content: center;          As duas linhas vão para o centro
+    align-content: space-between;   Espaço entre os elementos - no caso, uma vai pra cima e outra pra baixo, com espaço no meio*/
+    align-content: space-around;    /*Espaço como se fosse uma margem entre os elementos -> com espaçamento a mais no primeiro e no ultimo elemento - no caso, uma vai pra cima e outra pra baixo, com espaço no meio*/
+
+    /*DEFINIR ESPAÇAMENTO ESPECIFICO ENTRE OS ELEMENTOS*/
+    /*gap: 4px;   Espaçamento de 4px tanto em X quanto em Y
+      gap: 4px 3px; Espaçamento de 4px entre as linhas (|) e 3px de espaçamento entre as colunas (-)*/
+
+      row-gap: 4px;      /*definindo distancia entre linhas de forma separada do "gap" */
+      column-gap: 3px;   /*definindo distancia entre colunas de forma separada do "gap" */
+}
+
+
+.div1{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+}
+
+.div2{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+}
+
+.div3{
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+}
+
+.div4{
+    height: 100px;
+    width: 100px;
+    background-color: green;
+}
+
