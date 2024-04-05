@@ -1,0 +1,124 @@
+
+                /*ALGUMAS PROPRIEDADES*/
+.teste{
+    overflow: hidden; /* os elementos que transbordarem estarão escondidos*/
+    overflow: scroll; /* cria um scroll dentro dos limites do elemento*/
+    cursor: pointer; /* muda o cursor do usuario*/
+    box-shadow: 20px 10px 8px green; /*tamanho da sombra horizontal -> tamanho da sombra vertical -> blur -> cor*/
+    border: 4mm ridge red; /*borda com sombra interna*/
+    border: thick double #32a1ce; /*borda com duas linhas*/
+    border: 1rem solid;
+    border: solid;
+    border: dashed red;
+    border: 10px outset;
+    border-top-width: medium; /*largura = medium*/
+    border-right-width: medium;
+    border-bottom-width: medium;
+    border-left-width: medium;
+    border-top-style: none;
+    border-right-style: none;
+    border-top-color: currentcolor;
+    border-right-color: currentcolor;
+    border: inherit; /*forçar propriedade herdar valor do elemento pai - exemplo: red*/
+    border: initial; /*estado inicial - no caso pode ser a cor preta, dependendo do navegador*/
+    border: revert;
+    border: revert-layer;
+    border: unset;
+}
+
+/*
+div {
+    border: 0.5rem outset pink;
+    outline: 0.5rem solid khaki;
+    box-shadow: 0 0 0 2rem skyblue;
+    border-radius: 12px;
+    font: bold 1rem sans-serif;
+    margin: 2rem;
+    padding: 1rem;
+    outline-offset: 0.5rem;
+  } */
+
+
+
+
+
+                /*Pseudo-classes*/
+/*Há Pseudo-classes com : ou ::
+relacionadas ao estado do elemento
+como verificar? 
+-> verificar se o elemento é (é o 1 filho/ é o 5 filho etc...) ou está (o elemento está desabilitado? o elemento está com foco? o elemento está marcado? etc...)
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes */
+
+a:link{ /*links que ainda não foram visitados ficarão verdes*/
+    color: lime;
+}
+
+a:visited{ /*links que foram visitados ficarão vermelhos*/
+    color: red;
+}
+
+a:hover{ /*quando passar o mouse - muda a cor */
+    color: rgb(0, 255, 255);
+}
+
+a:first-child{ /*o primeiro elemento/primeiro filho*/
+    color: brown;
+}
+
+a:last-child{ /*o último elemento/último filho*/
+    color: rgb(42, 44, 165);
+}
+
+a:nth-child(4){ /*Alterar somente o item do meio de uma lista (por exemplo) - dentro do parenteses se passa o numero do elemento a se alterar (quarto elemento = 4)*/
+    color: rgb(106, 165, 42);
+}
+
+a:nth-child(even){ /*Alterar somente os elementos pares*/
+    color: rgb(155, 42, 165);
+}
+
+a:nth-child(odd){ /*Alterar somente os elementos impares*/
+    color: rgb(42, 165, 163);
+}
+
+
+
+    /*Pseudo-Elementos*/
+/*Usam ::
+usado para utilizar uma parte de tal elemento (algo que precisaria criar um outro elemento para aplicar tal estilo ou incluir um texto)
+Ex: em vez de usar a tag <b> pra deixar em negrito a primeira linha, poderia usar o pseudo-elemento ::first-line e uma propriedade para deixar a primeira linha em negrito
+
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-Elements
+*/
+
+p::first-line{ /*alterar somente a primeira linha -> colorindo dinamicamente as palavras na primeira linha de acordo com o tamanho da tela*/
+    color: red;
+}
+
+p::first-letter{ /*alterar somente a primeira letra */
+    color: rgb(0, 255, 38);
+}
+
+p::selection{ /*alterar quando o user selecionar*/
+    background-color: rgb(234, 255, 0);
+}
+
+
+li::before{                 /*adicionando no inicio de algo*/
+  content: "😁";            /* before e after fazem o uso de content (conteúdo)*/
+                            /*content aceita textos, espaços, emojis etc...*/
+  background-color: aquamarine;
+}
+
+
+
+li::after{          /*alterar quando o user selecionar*/
+    content: " 😚"; /* before e after fazem o uso de content (conteúdo)*/
+                    /*content aceita textos, espaços, emojis etc...*/
+}
+
+
+
+                

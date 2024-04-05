@@ -1,0 +1,159 @@
+                /*SELETORES*/
+
+               /*GRID CSS
+
+-Um recurso do CSS que permite desenvolver layouts em grid;
+-É um valor da propriedade display;
+-Trabalhos com um container que contém itens;
+-O container controla a disposição dos itens, mas os itens também
+podem alterar o seu posicionamento;
+-Os grids são divididos em colunas e linhas;
+-Podemos inserir um espaçamento entre as áreas com o recurso de gap;
+-Por padrão os elementos já vem com stretch definido (esticar/ocupar todo o espaço disponivel)
+-Por padrão o GRID tenta ordenar os elementos seguindo a ordem que foram declarados no html
+-Caso o elemento ja tenha um height e um width definidos ele seguira a posição do grid, caso não tenha, ele ficará como stretch
+-Se para grid-column-start/end ou grid-row-start/end se inicia a posição em 0 (posição igual o array), Ex.: posição 3 é 4.
+-Caso use valores POSITIVO, se posiciona na direita pra esquerda e valores POSITIVOS o contrario (esquerda para direita)
+
+
+  Escrevendo sempre ambas grid-column-start e grid-column-end pode tornar-se cansativo. 
+  Felizmente, grid-column é uma propriedade abreviada que aceita os dois valores de uma só vez, separados por "/".
+  Por exemplo, grid-column ou row: 2 / 4; estabelecerá que o elemento comece na 2ª linha vertical da grelha e termine na 4ª linha.
+
+
+    */
+
+
+
+.containerComDivsDentro{
+    color: white;
+    background-color: #333;
+    border: 3px solid red;
+    padding: 15px;
+
+    display: grid;
+
+    grid-template-columns: 50px auto 10%; /*largura - define as colunas, pode passar quantos valores quiser (x x x x etc... - ali tem 3 então é 3 colunas) - a 1 coluna tem 50px; 2 coluna é automatica; 3 coluna é 10% do tamanho do elemento pai*/
+    grid-template-columns: repeat(3, 300px); /*função repeat() - faz um numero ser repetido tantas vezes, no caso, repetindo 3 vezes o valor 300px (ou seja, 3 colunas de 300px) - numero de colunas de acordo com o tamanho disponivel em tela */
+    grid-template-columns: repeat(autofill, 200px); /*função repeat() - AUTOFILL = preencher numero de colunas de acordo com o tamanho disponivel em tela - ex: se ele tiver uma tela de 600px, ele preenchera com 3 colunas de 200px - ele aumenta/diminui dependendo do tamanho da tela*/
+   /*RESPONSIVIDADE -> caso os elementos presentes internamente não tenham nenhuma posição definida, eles irão se adptar ao tamanho da tela. 
+   Ex.: (são 4 itens) em uma tela de 400px: ficam 2 colunas de 200px e os itens ficam distribuidos com 2 em cada linha
+    2
+    2     -> e caso a tela seja de 800px havera 4 colunas e eles ficaram distribuidos os 4 na mesma linha*/
+
+
+
+    grid-template-rows: 70% 30%; /*altura - define as linhas - (cada valor representa uma linha, seguindo a ordem de cima pra baixo - 1,2,3,4,5... - nesse caso a 1a linha tem 70% e a 2a linha 30%)*/
+    gap: 20px; /*serve para dar o mesmo espaçamento entre as linhas e as colunas */
+    
+    justify-content: center; /*alinha o grid no eixo horizontal - centro*/ 
+    justify-content: start; /*alinha o grid no eixo horizontal - no inicio, lado esquerdo*/ 
+    justify-content: end; /*alinha o grid no eixo horizontal - no fim, lado direito*/ 
+
+
+    align-items: center; /*alinha o grid no eixo vertical - centro*/ 
+    align-items: start; /*alinha o grid no eixo vertical - no inicio, superior*/ 
+    align-items: end; /*alinha o grid no eixo vertical - no fim, inferior*/  
+
+
+}
+    .containerComDivsDentro div {
+        background-color: #ccc;
+        border: 1px solid blue;
+        padding: 20px;  
+    }
+
+    
+/*GRID AREA*/
+/*seguindo um exemplo em que uma div contem as divisoes de um site: Cabeçalho, Sidebar, Conteúdo, Rodapé*/
+    .container{
+        color: white;
+        background-color: #333;
+        border: 3px solid red;
+        padding: 15px;
+        display: grid;
+        gap: 5px; /*serve para dar o mesmo espaçamento entre as linhas e as colunas*/
+
+        /*definindo as areas do template, grid-template-areas tambem pode ser usado para ordenar cada item, para não precisar usar grid-column/grid-row*/
+       /*quebrar uma linha para representar cada linha*/
+        grid-template-areas: "header header header header"                     /*linha 1 - cabeçalho ocupando 100% da tela*/
+                        "sidebar content content content"                      /*linha 2 - 1 texto e 3 textos*/
+                        "nomeNaoUsado nomeNaoUsado nomeNaoUsado nomeNaoUsado"  /*dando um espaço - o CSS procura a referencia, mas como ele não encontra, ele deixa vazio*/
+                        "footer footer footer footer"                          /*linha 3 - footer ocupando 100% da tela*/                     
+        /*caso ache que algo está muito pequeno, basta aumentar a quantidade de elementos ali*/;
+        /*para dar um espaço entre eles, basta usar um nome que nunca sera usado*/
+        } 
+    
+        .container div {
+            background-color: #ccc;
+            border: 1px solid blue;
+            padding: 20px;  
+        }
+        #header{
+            grid-area: header; /*qual area o id="header" representa no grid? ele representa o header*/
+            /*regra individual mas que leva em consideração o elemento pai*/
+        }
+        #sidebar{
+            grid-area: sidebar; /*qual area o id="sidebar" representa no grid? ele representa o sidebar*/
+            /*regra individual mas que leva em consideração o elemento pai*/
+            height: 50vh; /*estabelecento altura dessa area do grid*/
+        }
+
+        #content{
+            grid-area: content;
+            height: 50vh; /*estabelecento altura dessa area do grid*/
+        }
+
+        #footer{
+            grid-area: footer;  
+        }
+
+/*MANIPULANDO ITENS INDIVIDUAIS DO GRID*/
+
+.container{ /*container com 6 itens dentro*/
+    color: white;
+    background-color: #333;
+    border: 3px solid red;
+    padding: 15px;
+    display: grid;
+    gap: 5px; /*serve para dar o mesmo espaçamento entre as linhas e as colunas*/
+    grid-template-columns: auto auto auto; /*largura - define as colunas, pode passar quantos valores quiser (x x x x etc... - ali tem 3 então é 3 colunas) - a 1 coluna tem 50px; 2 coluna é automatica; 3 coluna é 10% do tamanho do elemento pai*/
+    } 
+
+    .container div {
+        background-color: #ccc;
+        border: 1px solid blue;
+        padding: 20px;  
+    }
+
+#item-1{
+    /*HORIZONTAL*/
+    grid-column: 6; /*dizer qual coluna o item irá ocupar*/
+
+        /*Tambem pode usar assim, para extender, dar um inicio e fim*/
+    grid-column-start: 1; /*#item-1 começa na coluna 1*/
+    grid-column-end: 4;  /*#item-1 termina na coluna 4 - colocar 1 numero a mais, pois ele respeita 1 a menos*/
+
+     /*VERTICAL*/
+     grid-row: 7; /*dizer qual linha o item irá ocupar*/
+
+         /*Tambem pode usar assim, para extender, dar um inicio e fim*/
+     grid-row-start: 2; /*#item-2 começa na linha 2 - pois na linha 1 já esta sendo ocupado pela #item-1*/
+     grid-row-end: 4;  /*#item-2 termina na linha 4 */
+}
+
+
+#item-3{
+    /*ALINHAMENTO DO #item-3 */
+
+    /*JUSTIFY se usa para alinhar no EIXO X - HORIZONTAL*/
+    justify-self: start; /*justify-self: posiciona na horizontal do item individual - no inicio*/
+    justify-self: end; /*justify-self: posiciona na horizontal do item individual - no fim*/
+    justify-self: start; /*justify-self: posiciona na horizontal do item individual - no inicio*/
+
+    /*ALIGN se usa para alinhar no EIXO Y - VERTICAL*/
+    align-self: center; /*posicionamento individual na vertical - centralizado*/
+    align-self: start; /*posicionamento individual na vertical - no inicio*/
+    align-self: end; /*posicionamento individual na vertical - no final*/
+    align-self: stretch; /*posicionamento individual na vertical - esticar*/
+}
