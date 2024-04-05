@@ -1,0 +1,133 @@
+body{
+  background-color: black;
+}
+
+.div1{
+  height: 200px;
+  width: 200px;
+  background-color: red;
+
+
+  /*TRANSFORMAÇÕES 2D - Eixo X e Y*/
+  /*PARA USAR MAIS DE UMA PROPRIEDADE, ELAS DEVEM ESTAR DENTRO DO MESMO TRASNFORM*/
+  transform: translate(0px, 200px) rotate(45deg) scale(2);
+
+  transform: translate(0px, 200px); /* move do ponto original para um ponto estabelecido, ACEITA NÚMEROS NEGATIVOS -> (Eixo X e Eixo Y -> NESSA ORDEM) */
+  transform: rotate(45deg); /*deg = graus; rotaciona a partir do ponto de origem = no centro*/
+  transform: scale(2); /*0.5 = metade do tam.; 1 = tam. original; 2 = dobra o elemento de tamanh -> aumentar ou diminuir o elemento*/
+  
+  transform: skew(-50deg, 20deg); /*Inclinar em X e Y - em graus - aceita num. negativos*/
+  transform: skewX(); /*Inclinar em X - em graus - aceita num. negativos*/
+  transform: skewY(); /*Inclinar em Y - em graus - aceita num. negativos*/
+
+
+    transform: matrix(scaleX, skewY, skewX, scaleY, translateX, translateY); /*Junta todas as transformações 2D - NESSA ORDEM*/
+      transform: matrix(2px, 0, 0, 0, 0, 0);
+  
+    transform-origin: 0%, 0%; /*Define onde é o ponto de origem da forma -> X e Y -> serve para mudar a origem no rotate()
+                             0%, 0%; -> ponto superior esquerdo;
+                             50%, 0% -> meio superior;
+                             100%, 0% -> superior direito;
+                             100%, 100% -> inferior direito 
+                             etc...
+    /*JS pode manipular essas TRANSFORMAÇÕES para animações etc...*/
+                             
+  
+  /*TRANSFORMAÇÕES 3D - Pode indicar o eixo: Eixo X, Eixo Y e Eixo Z (profundidade)*/
+  transform: preserve-3d; /*Deve ser colocado no elem. Pai -> Caso queira que algum elemento (filho) fique 3d, dentro de outro elemento (ignora se a tag pai é 3d ou 2d)*/
+
+  transform: translateX();
+  transform: translateY();
+  transform: translateZ();
+
+  transform: scaleX();
+  transform: scaleY();
+  transform: scaleZ();
+  
+  transform: rotateX(45deg);
+  transform: rotateY(120deg);
+  transform: rotateZ(90deg);
+  transform: rotate3d(X,Y,Z); /*prefira utilizar rotateX, Y ou Z separados -> as vezes alguns browsers não reconhecem muito bem a propriedade 3d*/
+
+/*Quando se rotaciona o Y, o que fica visivel é a parte de trás do elemento, por isso fica invertido*/
+
+/*Logo, com a parte de trás pode ser usada a propriedade:*/
+backface-visibility: visible; /*visivel = padrão, quando gira pode ver a parte de trás*/
+backface-visibility: hidden; /*hidden = escondido, quando gira não pode ver a parte de trás, ficará "invisivel"*/
+
+
+perspective: 15px; /*Perspectiva de 15px = dá uma profundidade ao rotacionar, por exemplo.
+Se aplica somente no container/pai do elemento*/
+
+   }
+
+
+.div2{
+    height: 200px;
+    width: 200px;
+    background-color: rgba(0, 0, 255, 0.829);/*deixando meio transparente pra poder ver o elem. filho atravessado*/
+    
+    transform: rotateZ(45deg) rotateX(20deg);
+    transform-style: preserve-3d; /*Permitir que elem. filho possa ser manipulado em 3D*/
+}
+
+
+.filhoDiv2{
+  background-color: rgb(0, 251, 255);
+  width: 100px;
+  height: 100px;
+
+  perspective: 400px;
+  border: 4px solid black;
+  transform: rotateY(30deg); /*Está atravessando a div2 (pai)*/
+}
+
+
+
+.card{
+    height: 200px;
+    width: 200px;
+    background-color: yellow; /*Pode colocar preto ou transparent pra desfarçar com a cor do body*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -150px;
+}
+
+.conteudo{
+  height: 200px;
+  width: 200px;
+  position: absolute;
+
+  transition: all 1s;
+  transform-style: preserve-3d; /*permitir manipular 3d nos elem. filhos, ex: backface-visibility: hidden*/
+}
+
+.card:hover .conteudo{ /*Quando o card estiver em hover o conteúdo irá rotacionar 180 graus*/
+  transform: rotateY(180deg);
+} 
+
+.front, .back{
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  background-color: #fff;
+  color: tomato;
+  font-size: 60px;
+  text-align: center;
+  line-height: 300px;
+
+  backface-visibility: hidden; /*escondendo parte de trás dos 2 elementos*/
+}
+
+.back{
+
+  background-color: #fff;
+  color: rgb(36, 33, 44);
+  transform: rotateY(180deg); 
+  
+  /*O .back já começa rotacionado 180graus no eixo Y, logo, já começa estando na parte de tras
+  -> mas como o backface-visibility: hidden; está hidden para os 2 (.front e .back), ou seja, parte de tras = escondido, 
+  o .back está invisivel -> o .front começa já estando na parte frontal e quando o front girar ele mostrará sua parte de trás,
+  que estará invisivel e o .back voltará a ficar visivel, pois mostrará sua parte da frente*/
+}

@@ -70,28 +70,68 @@ Flex-box = alinhar elementos flexiveis dentro de uma caixa*/
       column-gap: 3px;   /*definindo distancia entre colunas de forma separada do "gap" */
 }
 
-
+/*PROPRIEDADES PARA OS ELEMENTOS FILHOS*/
 .div1{
     height: 100px;
     width: 100px;
     background-color: blue;
+
+
+    order:0; /*0 = padrão segue a ordem do html, enquanto todos forem order 0, ex div 1 vai ser a 1a etc... ; serve para ordenar o elemento*/
+  
+    order:1; /*caso aja 2 filhos com o mesmo numero do order, eles iram se posicionar de forma intercalada, exemplo: um azul, um vermelho, um azul e um vermelho...
+               caso aja 3 filhos com o mesmo numero do order, é como se todos estivessem com order 0, ou seja, volta para o default 
+               e volta a levar em conta a ordenação feita no HTML*/
+
+    flex-grow: 0; /*0 = padrão os itens não vão crescer caso aja possibilidade/espaço*/
+    flex-grow: 1; /*vai crescer caso tenha espaço/vai ocupar o espaço -> cresce igualmente no máximo que puder*/
+    flex-grow: 2; /*cresce 2 vezes mais que o 1, proporcionalmente e assim por diante, não funciona numeros negativos*/
+
+
+    flex-shrink: 0;/*Não encolhe - não é válido usar números negativos, pois são unidades de proporção*/
+    flex-shrink: 1; /*1 = padrão, incolher caso necessario para caber dentro de container, é necessario o container ter uma largura máxima estabelecida*/
+    flex-shrink: 2;/*encolhe duas vezes mais*/
+
+    flex-basis: auto; /*auto = padrão (tamanho do conteudo, tamanho minimo), Define o tamanho dos itens -> não pode ter uma altura e uma largura já definida anteriormente*/
+    flex-basis: 0;    /*Continua da mesma forma (tamanho do conteudo, tamanho minimo) pois não há nenhuma altura/largura sendo definida*/
+    flex-basis: 20px; /*Tamanho de 20px pra altura e largura*/ 
+
+    flex: 0 1 auto; /*Junção de 3 propriedades = flex-grow, flex-shrink e flex-basis (NESSA ORDEM) -> Deixa o código mais compacto*/
+    
+    align-self: flex-start; /*Vai pro inicio; ordena o alinhamento, ignora os alinhamentos estabelecidos no container/pai e o restante segue o que o container/pai já havia estabelecido*/
+    
+    align-self: flex-end; /*vai pro final*/
+    align-self: center; /*centralizado*/
+
+
+
+    /*TREINAR
+    Jogos:
+    https://mastery.games/flexboxzombies/?utm_source=gabcodes&utm_medium=Pingback
+
+    http://www.flexboxdefense.com/?utm_source=gabcodes&utm_medium=Pingback
+
+    https://flexboxfroggy.com/#pt-br
+    
+    */
 }
 
 .div2{
     height: 100px;
     width: 100px;
     background-color: red;
+
+    order: 1; /*1 = é >0 então vai ficar depois de todos os elem. com order 0, independente da ordem no html*/
 }
 
 .div3{
     height: 100px;
     width: 100px;
     background-color: yellow;
+
+    order: -1; /*-1 = <0 logo, vem antes do order 0, ou seja, fica primeiro ele e depois o order 0 na ordem*/
+
 }
 
-.div4{
-    height: 100px;
-    width: 100px;
-    background-color: green;
-}
+
 
