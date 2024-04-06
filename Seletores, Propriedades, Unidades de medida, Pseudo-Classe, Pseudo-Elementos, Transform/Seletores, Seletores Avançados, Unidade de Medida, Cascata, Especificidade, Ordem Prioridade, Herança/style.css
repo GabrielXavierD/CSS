@@ -39,8 +39,37 @@ h1~p{ /*SELECIONA O IRMÃO GERAL (MÚLTIPLOS) - NO CASO, TODOS OS PARAGRAFOS DEP
        INDEPENDENTE DA ORDEM DA LINHA OU SE VEM ALGO DIFERENTE DE P DEPOIS DE H1 - NÃO SELICIONA PARAGRAFOS QUE ESTÃO ANTES H1-*/
 }
 
-/*ORDEM DE PRIORIDADE DOS SELETORES: IF>ATRIBUTO/CLASS>TAG>UNIVERSAL*/
+/*ORDEM DE PRIORIDADE DOS SELETORES: ID>ATRIBUTO/CLASS>TAG>UNIVERSAL*/
 /*# = ID;   . = CLASS; : = ESTADO; [] = ATRIBUTO; * = TOTAL;*/
+
+
+
+
+                /*SELETORES AVANÇADOS (PSEUDO-CLASSE)*/
+li:nth-child(1){ /*selecionando o filho na posicao X-> no caso, o 1o filho*/
+
+}
+
+li:nth-child(2n){
+/*(o 1n seleciona todos, já que nao tem salto de um para outro, 
+o 2n seleciona o segundo contando de 1 a 2 assim por diante) a cada 2, o 2 será:*/
+background-color: red;
+}
+
+li:nth-child(3n-1){ /*pode ser "+" ou "-"*/
+    /*3n-1 -> inicia no "a cada 3" e diminui um 
+    -> 1, 2, 3(cor) volta um/-1 fica: 1, 2(cor), 3
+    -> é diferente de 2n, por exemplo */
+    background-color: red;
+    }
+
+li:nth-child(even){ /*os pares serão:*/
+
+}
+
+li:nth-child(odd){ /*os impares serão:*/
+
+}
 
 
 

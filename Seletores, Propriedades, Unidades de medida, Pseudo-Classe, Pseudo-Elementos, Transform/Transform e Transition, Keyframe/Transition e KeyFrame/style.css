@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 8;
+  box-sizing: border-box;
+}
+
+body {
+  background: green;
+}
+
+.container {
+  width: 100%;
+  border: 2px solid white;
+  padding: 20px;
+}
+
+.elemento {
+  background-color: white;
+  width: 150px;
+  height: 150px;
+
+
+  /*A PROPRIEDADE TRANSITION DEVE SER APLICADA NO ELEMENTO QUE QUER APLICAR A TRANSIÇÃO E NÃO NO DISPARADOR*/
+  
+  transition-property: all;/*All = padrão, recomendado; quais propriedades serão utilizadas, exemplo: em um :hover -> vai usar o height? vai usar a cor? vai usar o transform? etc... */
+  transition-property: border-radius, transform;
+
+  transition-duration: 2s;/*demora 2s pra que a transição (ease) execute por completo */
+  transition-timing-function: ease;/*padrão*/
+  transition-timing-function: cubic-bezier(X, Y, X, Y);/*Igual o grafico do After Effects -> Serve pra criar seu proprio grafico de velocidade -> Ele usa X, Y do bezier 1 e X, Y do bezier 2*/
+  transition-delay: 0s;/*Atraso - quanto tempo vai demorar pra executar as 2 propriedades acima*/
+
+  /*Pode ser feito em uma unica linha,reduzindo o código*/
+  transition: transition-property, transition-duration, transition-timing-function, transition-delay;
+  transition: all 2s ease 0;
+
+  /*Como especificar a ordem de cada coisa na transição, da pra especificar o tipo da transição junto em cada tb (ease, ease-in etc...)*/
+  transition: border-radius 1s, transform 2s ease-in;
+
+  /*Exemplo 2
+
+  opacity: 0;
+  transition: opacity 1s;
+  
+  Configurando tempo da opacidade do elemento - precisa estar no :hover ex: opacity: 1;*/
+}
+
+
+.elemento:hover {/*Disparador para alterar as propriedades :hover*/
+  background-color: red;
+  border-radius: 100px;
+  transform: translateX(400px);
+}
+
+
+
+/*
+
+As transições CSS permitem alterar os valores das propriedades sem problemas, por um determinado período.
+
+A transition-timing-function: propriedade especifica a curva de velocidade do efeito de transição.
+
+A propriedade de função de tempo de transição pode ter os seguintes valores:
+- ease - especifica um efeito de transição com início lento, rápido e final lento (esse é o padrão);
+
+- linear - especifica um efeito de transição com a mesma velocidade do início ao fim, constante;
+
+- ease-in - especifica um efeito de transição com um início lento.
+
+- ease-out - especifica um efeito de transição com um final lento
+.
+- ease-in-out - especifica um efeito de transição com início e fim lentos;
+
+- cubic-bezier(n,n,n,n) - permite definir seus próprios valores em uma função de cubic-bezier;
+
+
+A transition-delay propriedade especifica um atraso (em segundos) para o efeito de transição.
+
+*/
+
+
+
+
+
+/*                                    KEYFRAMES                                    */
+
+
+
+@keyframes animacao1 {
+  /*a animação pode ter qualquer nome*/
+
+  /*Vá até na onde*/
+  from {
+    /*COMEÇA */
+    background-color: purple;
+  }
+
+  to {
+    /*TERMINA*/
+    background-color: yellow;
+  }
+
+
+  /*Ou seja, do roxo ao amarelo (passando pelas variações de cores)*/
+}
+
+
+@keyframes animacao2 {
+
+  /*Vá até na onde -> com porcentagem (pode ser porcentagem aleatoria e não precisa exatamente iniciar com 0%)*/
+  0% {
+    transform: translateX(200px);
+    background-color: purple;
+    height: 80px;
+    width: 500px;
+  }
+
+  25% {
+    /*Pode ser passo a passo tambem*/
+    background-color: rgb(255, 238, 0);
+    height: 80px;
+    width: 200px;
+  }
+
+  50% {
+    background-color: rgb(255, 0, 0);
+    width: 200px;
+    height: 500px;
+    
+  }
+
+  75% {
+    background-color: rgb(0, 8, 255);
+    width: 200px;
+    height: 200px;
+  }
+
+  100% {
+    background-color: rgb(0, 255, 204);
+    height: 500px;
+    width: 500px;
+  }
+}
+
+.elementoASerAnimado:hover{ 
+  animation: animacao2 2s ease-in alternate infinite;
+
+  /*A animação também pode ser colocada em um :hover por exemplo .
+  -> para ser iniciada somente se X coisa acontecer etc...
+  
+  -> Caso ela não esteja em nenhum disparador ela irá iniciar junto com a página
+  */
+
+ 
+}
+
+.elementoASerAnimado {
+  height: 80px;
+  width: 80px;
+  background-color: purple;
+
+
+  animation-name: animacao2;           /*escolhendo qual vai ser a animação a ser utilizada pelo seu nome*/
+  animation-duration: 2s;              /*estabelecendo o tempo de ruação da animação*/
+
+  animation: animacao2 2s ease-in alternate infinite;  /*Forma reduzida 
+  -> estabelecendo qual vai ser a animação a ser usada;
+   o seu tempo;
+   qual o tipo de velocidade;
+   repetição/duração (no caso alternate infinite).
+   */
+
+   /*
+   Outros tipos:
+   alternate -> vai até o final, do final até o começo e depois volta pro final...
+   forwards -> vai pra  frente e para no final*/
+
+
+  animation-delay: 4s; /*Tempo de delay -> animação começa depois de 4s da página iniciada*/
+  
+  animation-iteration-count: 3; /*Animação sendo executada 3 vezes*/
+  animation-iteration-count: infinite; /*Animação sendo executada infinitamente*/
+}

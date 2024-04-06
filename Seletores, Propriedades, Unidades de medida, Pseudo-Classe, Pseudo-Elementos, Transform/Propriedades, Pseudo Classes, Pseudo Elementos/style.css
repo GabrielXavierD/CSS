@@ -62,6 +62,10 @@ a:hover{ /*quando passar o mouse - muda a cor */
     color: rgb(0, 255, 255);
 }
 
+input:checked{ /*quando estiver checked faça*/
+    background-color: rgb(0, 255, 255);
+}
+
 a:first-child{ /*o primeiro elemento/primeiro filho*/
     color: brown;
 }
@@ -74,12 +78,42 @@ a:nth-child(4){ /*Alterar somente o item do meio de uma lista (por exemplo) - de
     color: rgb(106, 165, 42);
 }
 
+li:nth-child(2n){ /*pode ser lido como: de 2 em 2 faça*/
+    /*(o 1n seleciona todos, já que nao tem salto de um para outro, 
+    o 2n seleciona o segundo contando de 1 a 2 assim por diante) a cada 2, o 2 será:*/
+    
+    background-color: red;
+}
+    
+li:nth-child(3n-1){ 
+    /*pode ser "+" ou "-"*/
+    /*3n-1 -> inicia no "a cada 3" e diminui um 
+    -> 1, 2, 3(cor) volta um/-1 fica: 1, 2(cor), 3
+    -> é diferente de 2n, por exemplo */
+   
+    background-color: red;
+}
+
+li:nth-child(3n+5){ 
+    /*3n+5 -> inicia no 5 elemento e depois volta a contar de 3 em 3
+    -> 1, 2, 3, 4, 5(cor) depois -> 1, 2, 3, 4, 5(cor), 6, 7, 8(cor) */
+   
+    background-color: red;
+}
+
+
+
 a:nth-child(even){ /*Alterar somente os elementos pares*/
     color: rgb(155, 42, 165);
 }
 
 a:nth-child(odd){ /*Alterar somente os elementos impares*/
     color: rgb(42, 165, 163);
+}
+
+
+li:not(.item-especial){ /*Todos, menos o que tiver a classe .item-especial -> pode usar outros tb como: :hover, :checked, #elemento, [] etc...*/
+	color: green;
 }
 
 
