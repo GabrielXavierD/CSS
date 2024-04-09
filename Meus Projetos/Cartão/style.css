@@ -5,7 +5,12 @@
 }
 
 body {
+    height: 700px;
+    width: 100px;
     background-color: rgb(41, 34, 49);
+}
+h2{
+  
 }
 
 /*ESTILO DO CARTÃO*/
@@ -109,4 +114,6 @@ p{
 .virar { /*classe que será adicionada a .conteudo*/
     transform: rotateY(180deg);
 }
+
+
 
