@@ -4,7 +4,6 @@ p{
 }
 
 
-
 /* Evitar nome das classes super abreviados - É uma boa prática deixar bem descritivo*/
 .mc{ /*ERRADO*/
 
@@ -14,24 +13,18 @@ p{
 }
 
 
-
-
-
-/*É uma boa prática colocar os comentários em linhas individuais
-Atalho: ctrl + ; = /*  */  
+/*É uma boa prática colocar os comentários em linhas individuais -> Atalho: ctrl + ; = /*  */  
 
 
 /*É uma boa prática colocar propriedades shorthand para aumentar a velocidade de carregamento da página (principalmente em projetos grandes)
-e analisar o código para evitar excesso de linhas desnecessarias*/
+Minificar: analisar o código para evitar/remover linhas desnecessarias*/
 .div{
     margin: 20px auto;          /*Colocar 2 valores = Y e X -> eixo Y (cima e baixo com 20px) eixo X (esquerda e direita automatico)*/
     margin: 20px auto 2px 12px; /*Colocar 4 valores = Top, Right, Bottom, Left (respectivamente)*/
 } 
 
 
-
 /* Reaproveitar/Criar classes reutilizaveis */
-
 .btn{ /*todos os elementos com essa classe irão receber essa formatação*/
     height: 20px;
     width: 80px;
@@ -47,3 +40,17 @@ e analisar o código para evitar excesso de linhas desnecessarias*/
     background-color: red;
 
 }
+
+
+/*É uma boa prática declaração de váriaveis de forma generica e não de forma especifica*/
+:root{
+    --FundoVermelhO: red;   /*ERRADO*/
+    --corPrincipal: red;    /*CERTO*/
+}
+
+
+/*É uma boa prática resetar o CSS*/
+* {
+    padding: 0;
+    margin: 0;
+  }
