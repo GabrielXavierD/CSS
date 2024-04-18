@@ -1,0 +1,41 @@
+                SASS
+Variaveis:
+    $cor1: white;
+    $cor2: red;
+    $cor3: purple;
+
+Classes: 
+    .cor1{
+        color: $cor1;
+    }
+
+    .cor2{
+        color: $cor2;
+    }
+
+    .cor3{
+        color: $cor3;
+    }
+
+
+Mixin:
+@mixin nomeQualquerDoMixin (parametros a receber - Ex: $radius: 50px)
+border-radius: 50px;
+}
+
+Como usar o Mixin?
+
+.blocoQualquer{
+    @include nomeQualquerDoMixin(10px -> parametro a receber);
+}
+
+Extend:
+@extend seguido por algum seletor
+@extend .paragrafo (ai o elemento que tiver, recebe as propriedades do seletor escolhido,
+no caso de .paragrafo (recebe as suas formatações))
+
+Exemplo: 
+.p1{
+    color: yellow;
+    @extend .paragrafo; /*ele agrupa por virgula quando for gerado o CSS puro*/
+}

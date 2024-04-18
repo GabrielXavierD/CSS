@@ -1,0 +1,41 @@
+                    LESS
+Variaveis:
+    @cor1: white;
+    @cor2: red;
+    @cor3: purple;
+
+Classes: 
+    .cor1{
+        color: @cor1;
+    }
+    .cor2{
+        color: @cor2;
+    }
+    .cor3{
+        color: @cor3;
+    }
+
+Mixin:
+-Precisa de uma classe ou identificador seguido do parametro:
+
+    .classeQualquer(@parametroQualquer: 50px){
+        border-radius: @parametroQualquer;
+    }
+
+
+    /*Para usar o Mixin deve chamar a classe ou identificador de acordo com oq ele foi criado
+     seguido do parametro*/
+.blocoQualquer{
+   .classeQualquer(10px - parametro)
+}
+
+Extend:
+&:extend seguido por algum seletor dentro de parenteses
+&:extend(.paragrafo) ->ai o elemento que tiver, recebe as propriedades do seletor escolhido,
+no caso de .paragrafo (recebe as suas formatações)
+
+Exemplo: 
+.p1{
+    color: yellow;
+    &:extend(.paragrafo -> seletor como parametro);
+}

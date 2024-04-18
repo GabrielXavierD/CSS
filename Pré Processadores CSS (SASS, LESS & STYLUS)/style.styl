@@ -1,0 +1,50 @@
+                    STYLUS
+Variaveis:
+    $cor1= white;
+    $cor2= red;
+    $cor3= purple;
+
+Classes: /*pode escrever as classes com {} ou sem (sem chaves precisa identar (dar tab antes - espaçamento)
+se não, dá erro) e não tem problema não usar ;*/
+    .cor1
+        color= $cor1
+
+    .cor2
+        color= $cor2;
+
+    .cor3{
+        color= $cor3;
+    }
+
+Mixin
+/*Parece com o do less, porem nao precisa de classe/identificador*/
+
+classeQualquer(@parametroQualquer: 50px){
+        border-radius: @parametroQualquer;
+    }
+
+    
+.blocoQualquer{
+   classeQualquer(10px - parametro);
+}
+
+Extend: 
+-Segue a mesma forma do SASS:
+&:extend seguido por algum seletor dentro de parenteses
+&:extend(.paragrafo) ->ai o elemento que tiver, recebe as propriedades do seletor escolhido,
+no caso de .paragrafo (recebe as suas formatações)
+
+Exemplo: 
+
+.paragrafo{
+    font-size:40px;
+}
+
+.p1{
+    color: yellow;
+    &:extend .paragrafo; -> seletor como parametro);
+}
+
+.p2
+    color: purple
+    &:extend .paragrafo
