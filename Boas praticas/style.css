@@ -1,0 +1,49 @@
+/* Evitar declarar tag diretamente, a fim de os elementos ficarem diferentes e não todos iguais*/
+p{
+        
+}
+
+
+
+/* Evitar nome das classes super abreviados - É uma boa prática deixar bem descritivo*/
+.mc{ /*ERRADO*/
+
+}
+.minha-classe{ /*CORRETO*/
+
+}
+
+
+
+
+
+/*É uma boa prática colocar os comentários em linhas individuais
+Atalho: ctrl + ; = /*  */  
+
+
+/*É uma boa prática colocar propriedades shorthand para aumentar a velocidade de carregamento da página (principalmente em projetos grandes)
+e analisar o código para evitar excesso de linhas desnecessarias*/
+.div{
+    margin: 20px auto;          /*Colocar 2 valores = Y e X -> eixo Y (cima e baixo com 20px) eixo X (esquerda e direita automatico)*/
+    margin: 20px auto 2px 12px; /*Colocar 4 valores = Top, Right, Bottom, Left (respectivamente)*/
+} 
+
+
+
+/* Reaproveitar/Criar classes reutilizaveis */
+
+.btn{ /*todos os elementos com essa classe irão receber essa formatação*/
+    height: 20px;
+    width: 80px;
+    border-radius: 10px;
+}
+
+.btn btn-confirma{ /*Reutilizando a formatação da classe .btn e especificando 
+    qual elemento vai recebe-la (btn-confirma) e adicionando uma formtação unica dele (btn-confirma = fundo verde)*/
+    background-color: green;
+}
+
+.btn btn-remove{
+    background-color: red;
+
+}
