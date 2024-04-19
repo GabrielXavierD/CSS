@@ -24,6 +24,7 @@
 
     <title>Pagina 1</title>
 </head>
+
 <body>
     <!-- titulo com palavras chaves e titulos significativos(e que chamam a atenção) -> (p/ motores de busca encontrar a página mais facilmente) 
     1º Começa pela url: a palavra pesquisada se encaixa em alguma url? se sim, mostra como resultado da pesquisa
@@ -61,7 +62,7 @@
    <a href=""></a>
 
    <!-- Botão -->
-   <button></button>
+   <button>Botão qualquer</button>
 
    <!--Lista não ordenada -->
    <ul></ul>
@@ -101,7 +102,7 @@
 
    <!-- title = titulo para algum elemento - leitor de tela conseque fazer a leitura -->
    <div title="Exemplo de titulo: Bloco com imagens dentro"></div>
-   <button title="Botão para te redirecionar para a página 2">Página 2</button>
+   <button title="Botão para te redirecionar para a página 2">Página2</button>
 
 
    <!-- aria = define qual é o modelo de objeto (tais como um artigo, um alerta, ou algo que deslize)
@@ -111,13 +112,13 @@
    <!-- tabindex = (segue ordem 1,2,3...)para onde se vai quando da tab, ex.: passar de um campo do formulario para outro, de nome para senha e 
     depois para o botão -->
    <form action="">
-        <label for="">Nome</label>
-        <input type="text" tabindex="1">
+        <label for="nome">Nome</label>
+        <input type="text" tabindex="1" name="nome">
 
-        <label for="">Senha</label>
-        <input type="password" tabindex="2">
+        <label for="senha">Senha</label>
+        <input type="password" tabindex="2" name="senha">
 
-        <button tabindex="3"></button>
+        <button tabindex="3">Enviar dados</button>
    </form>
 
  <!-- Boa prática: código bem identado = bem alinhado
@@ -134,16 +135,35 @@ Exemplo: extensão prettier do VS CODE -->
         <input type="text" tabindex="1" id="nome" name="nome">  <!-- name serve pra quando for enviar dados para algum lugar -->
         <label for="password">Senha</label>
         <input type="password" tabindex="2" id="password" name="password">
+        <button tabindex="3">Enviar dados</button>
     </fieldset>
-    <button tabindex="3"></button>
+    
 </form>
 
 
 
 
-<button class="btn"></button>
-<button class="btn btn-confirma"></button>
-<button class="btn btn-remove"></button>
+<!-- COMPRESS HTML - SEO 
+        Diminuir tamnho do arquivo html, css, js etc... -> ajuda nos motores de busca 
+        Pode fazer manualmente ou usar ferramentas da web
+        Ex.: Online Tool;
+            Gulp;
+            Webpack (projetos grandes) -->
+            
+            
+            
+            
+    <!-- Validar o HTML
+            • Verificar os padrões;
+            • Verificar alertas e erros;
+            • Lighthouse (DevTools - inspecionar) - para verificar alertas e erros;
+            • https://validator.w3.org/ - para verificar alertas e erros MANUALMENTE -->
+
+
+
+<button class="btn">Botão</button>
+<button class="btn btn-confirma">Confirma</button>
+<button class="btn btn-remove">Remove</button>
 
 
 
