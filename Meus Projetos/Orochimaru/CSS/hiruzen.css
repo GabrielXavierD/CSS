@@ -1,0 +1,125 @@
+body{
+    
+}
+
+.card{
+    margin-top: 40px;
+}
+.conteudo {
+    /*Tamanho para que o giro seja feito parado no mesmo lugar 
+    (e não mudando do lado direito da tela para o esquerdo)*/
+    width: 520px; 
+    height: 630px;
+    transition: all 2s ease-in-out;
+    transform-style: preserve-3d;  
+}
+
+.front, .back{
+    width: 520px; 
+    height: 630px;
+    position: absolute;
+    backface-visibility: hidden;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    background-color: rgb(102, 32, 102);
+    border-radius: 6px;
+}
+
+.back{
+    transform: rotateY(-180deg);
+}
+
+.virar{ /*classe a ser adicionada/removida com JavaScript ao apertar o botao*/
+    transform: rotateY(180deg);
+}
+
+h1{
+    text-align: center;
+    margin-left: -90px;
+}
+
+button{
+    position: absolute;
+}
+
+#btnInfo:active ~ .informacao, #btnInfoBack:active ~ .informacaoBack{
+    opacity: 1;
+    visibility: visible;
+}
+#btnInfo:active ~ #imgOrochi{
+    position: absolute;
+    left: -80px;
+}
+
+#btnInfoBack:active ~ #imgOrochiBack{
+    position: absolute;
+    left: -215px;
+}
+
+#btnInfo, #btnInfoBack{
+    top: 575px; 
+}
+
+#btnInfoBack{
+    z-index: 2;
+
+}
+
+
+#btnVirar, #btnDesvirar{
+    top: 600px;
+}
+
+
+#imgOrochi{
+    position: absolute;
+    z-index: 2;
+    transform: scale(1.08);
+    top: 42px;
+    left: 140px; 
+    transition: all 1s ease-in-out;
+    filter: drop-shadow(7px 6px 2px #000000);
+
+}
+
+
+#imgOrochiBack{
+    width:439px;
+    height:794px;
+    position: absolute;
+    z-index: 1;
+    transform: scale(0.75);
+    top: -110px;
+    left: 36px; 
+    transition: all 1s ease-in-out;
+    filter: drop-shadow(7px 6px 2px #000000);
+}
+
+.informacao{
+    opacity: 0;
+    visibility: hidden;
+    margin-top: -20px;
+    margin-left: 120px;
+    font-size: 21px;
+    transition: all 1.5s ease-in-out;
+}
+
+.informacaoBack{
+    text-align: justify;
+    width: 380px;
+    opacity: 0;
+    visibility: hidden;
+    margin-top: -20px;
+    margin-left: 100px;
+    font-size: 21px;
+    transition: all 1.5s ease-in-out;
+}
+
+.informacaoBack #infoBackParag1{
+    margin-left: 22px;
+
+}
