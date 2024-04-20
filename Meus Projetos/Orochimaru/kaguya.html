@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/base.css">
     <link rel="stylesheet" href="./CSS/kaguya.css">
-    <title>Orochimaru</title>
+    <title>Meus Personagens favoritos</title>
 </head>
 
 <body>
@@ -28,41 +28,33 @@
             <div class="conteudo">
                 <div class="front">
                 <button type="button" id="btnInfo">VER INFORMAÇÕES</button>
-                <img id="imgOrochi" src="img/personagem/orochimaru.png" alt="Orochimaru">
+                <img id="imgKaguya" src="img/personagem/kaguya/kaguya.png" alt="Kaguya">
                 <div class="informacao">
-                        <h1>Informações sobre<br>Orochimaru</h1>
-                        <h2>Perfil</h2>
-                        <ul>
-                            <li><strong>Nome Completo:</strong> 大蛇丸 (Orochimaru)</li>
-                            <li><strong>Idade:</strong> Imortal (idade indeterminada)</li>
-                            <li><strong>Altura:</strong> ≅ 1,78m - 1,85m</li>
-                            <li><strong>Peso:</strong> Desconhecido</li>
-                        </ul>
-                        <h2>Afiliações</h2>
-                        <ul>
-                            <li>Ex-membro da Vila Oculta da Folha (Konohagakure)</li>
-                            <li>Fundador do Esquadrão Serpente (Hebi)</li>
-                            <li>Ex-membro da Akatsuki</li>
-                        </ul>
+                    <h1>Informações sobre Kaguya Ootsutsuki</h1>
+                    <h2 id="perfil">Perfil</h2>
+                    <ul id="perfilUl">
+                        <li><strong>Nome Completo:</strong> 大筒木カグヤ (Ōtsutsuki Kaguya)</li>
+                        <li><strong>Idade:</strong> Sua idade exata não é mencionada.</li>
+                        <li><strong>Altura:</strong> Não especificada.</li>
+                        <li><strong>Peso:</strong> Não especificado.</li>
+                    </ul>
+                    <h2 id="afiliacao">Afiliações</h2>
+                    <p id="pAfiliacao">Kaguya era originalmente uma princesa do clã Ōtsutsuki, uma raça extraterrestre com habilidades divinas.</p>
+                    
                 </div>
                 <button type="button" onclick="virar()" id="btnVirar">VIRAR</button>
             </div>
 
             <div class="back">
                 <button type="button" id="btnInfoBack">VER OUTRAS INFORMAÇÕES</button>
-                <img id="imgOrochiBack" src="img/personagem/orochimaru3.png" alt="Orochimaru">
+                <img id="imgKaguyaBack" src="img/personagem/kaguya/kaguya2.png" alt="Kaguya">
                 <div class="informacaoBack">
                 <h2>Habilidades Especiais</h2>
-                <p id="infoBackParag1">Orochimaru é um mestre em Jutsu Proibido e experimentação genética. Ele é habilidoso em
-                    manipulação de serpentes, possui vasto conhecimento médico e é capaz de transferir sua
-                    consciência para diferentes corpos, concedendo-lhe uma forma de imortalidade.</p>
-
-                <h2>Objetivos</h2>
-                <p>Orochimaru é obcecado com a busca do conhecimento e
-                    da imortalidade. Ele está disposto a fazer
-                    qualquer coisa para alcançar seus objetivos, incluindo experimentos cruéis em humanos e traição
-                    contra sua própria aldeia. Seu desejo de poder 
-                    e imortalidade o leva a perseguir constantemente novas técnicas e corpos mais fortes.</p>
+                <p id="infoBackParag1">Kaguya é uma das personagens mais poderosas da série e possui controle sobre todos os cinco elementos básicos. Ela pode criar dimensões alternativas e é capaz de controlar a energia da árvore divina.</p>
+                <h2 id="objetivo">Objetivos</h2>
+                <p id="objetivoUl">Kaguya originalmente tinha o objetivo de reunir todo o chakra do mundo em um único lugar para garantir sua imortalidade e poder absoluto. No entanto, suas ambições e métodos acabaram levando à sua derrota pelas mãos de seus filhos, Hagoromo e Hamura Ōtsutsuki.
+                </p>
+               
                 </div>
                     <button type="button" onclick="desvirar()" id="btnDesvirar">DESVIRAR</button>
                 </div>
@@ -74,7 +66,7 @@
     </main>
 
 
-    <script src="script.js"></script>
+    <script src="JS/script.js"></script>
 </body>
 
 </html>

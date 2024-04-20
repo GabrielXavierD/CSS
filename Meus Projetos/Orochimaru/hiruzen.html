@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/base.css">
     <link rel="stylesheet" href="./CSS/hiruzen.css">
-    <title>Orochimaru</title>
+    <title>Meus Personagens favoritos</title>
 </head>
 
 <body>
@@ -27,54 +27,54 @@
         <div class="card">
             <div class="conteudo">
                 <div class="front">
-                <button type="button" id="btnInfo">VER INFORMAÇÕES</button>
-                <img id="imgOrochi" src="img/personagem/orochimaru.png" alt="Orochimaru">
-                <div class="informacao">
-                        <h1>Informações sobre<br>Orochimaru</h1>
+                    <button type="button" id="btnInfo">VER INFORMAÇÕES</button>
+                    <img id="imgHiruzen" src="img/personagem/hiruzen/hiruzen.png" alt="Hiruzen">
+                    <div class="informacao">
+                        <h1>Informações sobre Hiruzen Sarutobi</h1>
                         <h2>Perfil</h2>
                         <ul>
-                            <li><strong>Nome Completo:</strong> 大蛇丸 (Orochimaru)</li>
-                            <li><strong>Idade:</strong> Imortal (idade indeterminada)</li>
-                            <li><strong>Altura:</strong> ≅ 1,78m - 1,85m</li>
-                            <li><strong>Peso:</strong> Desconhecido</li>
+                            <li><strong>Nome Completo:</strong> 猿飛ヒルゼン (Sarutobi Hiruzen)</li>
+                            <li><strong>Idade:</strong> Sua idade exata não é mencionada.</li>
+                            <li><strong>Altura:</strong> Não especificada.</li>
+                            <li><strong>Peso:</strong> Não especificado.</li>
                         </ul>
                         <h2>Afiliações</h2>
                         <ul>
-                            <li>Ex-membro da Vila Oculta da Folha (Konohagakure)</li>
-                            <li>Fundador do Esquadrão Serpente (Hebi)</li>
-                            <li>Ex-membro da Akatsuki</li>
+                            <li>Hiruzen serviu como um dos Hokages de Konohagakure, a Vila Oculta da Folha.</li>
+                            <li>Também foi membro do lendário Time Hiruzen, que consistia nele mesmo, Homura Mitokado e
+                                Koharu Utatane.</li>
                         </ul>
+                    </div>
+                    <button type="button" onclick="virar()" id="btnVirar">VIRAR</button>
                 </div>
-                <button type="button" onclick="virar()" id="btnVirar">VIRAR</button>
-            </div>
 
-            <div class="back">
-                <button type="button" id="btnInfoBack">VER OUTRAS INFORMAÇÕES</button>
-                <img id="imgOrochiBack" src="img/personagem/orochimaru3.png" alt="Orochimaru">
-                <div class="informacaoBack">
-                <h2>Habilidades Especiais</h2>
-                <p id="infoBackParag1">Orochimaru é um mestre em Jutsu Proibido e experimentação genética. Ele é habilidoso em
-                    manipulação de serpentes, possui vasto conhecimento médico e é capaz de transferir sua
-                    consciência para diferentes corpos, concedendo-lhe uma forma de imortalidade.</p>
-
-                <h2>Objetivos</h2>
-                <p>Orochimaru é obcecado com a busca do conhecimento e
-                    da imortalidade. Ele está disposto a fazer
-                    qualquer coisa para alcançar seus objetivos, incluindo experimentos cruéis em humanos e traição
-                    contra sua própria aldeia. Seu desejo de poder 
-                    e imortalidade o leva a perseguir constantemente novas técnicas e corpos mais fortes.</p>
-                </div>
+                <div class="back">
+                    <button type="button" id="btnInfoBack">VER OUTRAS INFORMAÇÕES</button>
+                    <img id="imgHiruzenBack" src="img/personagem/hiruzen/hiruzen2.png" alt="Hiruzen">
+                    <div class="informacaoBack">
+                        <h2>Habilidades Especiais</h2>
+                        <ul id="infoBackUl">
+                            <li>Hiruzen era conhecido como o "Deus Shinobi" por sua incrível habilidade em dominar
+                                diversas técnicas ninjas, incluindo as de todos os cinco elementos básicos e várias
+                                técnicas proibidas.</li>
+                            <li>Também era mestre em técnicas de selamento.</li>
+                        </ul>
+                        <h2 id="objetivo">Objetivos</h2>
+                        <p id="pObjetivo">Como líder de Konohagakure, Hiruzen tinha o objetivo de proteger sua vila e garantir a
+                            segurança de seus habitantes. Ele também se esforçava para manter a paz entre as aldeias
+                            ninja.</p>
+                    </div>
                     <button type="button" onclick="desvirar()" id="btnDesvirar">DESVIRAR</button>
                 </div>
-                </div>
-    </div>
+            </div>
+        </div>
 
 
 
     </main>
 
 
-    <script src="script.js"></script>
+    <script src="JS/script.js"></script>
 </body>
 
 </html>

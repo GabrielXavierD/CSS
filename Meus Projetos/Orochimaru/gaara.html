@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/base.css">
     <link rel="stylesheet" href="./CSS/gaara.css">
-    <title>Orochimaru</title>
+    <title>Meus Personagens favoritos</title>
 </head>
 
 <body>
@@ -27,54 +27,51 @@
         <div class="card">
             <div class="conteudo">
                 <div class="front">
-                <button type="button" id="btnInfo">VER INFORMAÇÕES</button>
-                <img id="imgOrochi" src="img/personagem/orochimaru.png" alt="Orochimaru">
-                <div class="informacao">
-                        <h1>Informações sobre<br>Orochimaru</h1>
+                    <button type="button" id="btnInfo">VER INFORMAÇÕES</button>
+                    <img id="imgGaara" src="img/personagem/gaara/gaara1.png" alt="Gaara">
+                    <div class="informacao">
+                        <h1>Informações sobre Gaara</h1>
                         <h2>Perfil</h2>
                         <ul>
-                            <li><strong>Nome Completo:</strong> 大蛇丸 (Orochimaru)</li>
-                            <li><strong>Idade:</strong> Imortal (idade indeterminada)</li>
-                            <li><strong>Altura:</strong> ≅ 1,78m - 1,85m</li>
-                            <li><strong>Peso:</strong> Desconhecido</li>
+                            <li><strong>Nome Completo:</strong> 我愛羅 (Gaara)</li>
+                            <li><strong>Idade:</strong> ≅ 16 anos no início de Naruto Shippuden.</li>
+                            <li><strong>Altura:</strong> Cerca de 1,66m.</li>
+                            <li><strong>Peso:</strong> Não especificado.</li>
                         </ul>
                         <h2>Afiliações</h2>
                         <ul>
-                            <li>Ex-membro da Vila Oculta da Folha (Konohagakure)</li>
-                            <li>Fundador do Esquadrão Serpente (Hebi)</li>
-                            <li>Ex-membro da Akatsuki</li>
+                            <li>Gaara é o Quinto Kazekage de Sunagakure, a Vila Oculta da Areia.</li>
+                            <li>Também é membro do clã Kazekage.</li>
                         </ul>
+                    </div>
+                    <button type="button" onclick="virar()" id="btnVirar">VIRAR</button>
                 </div>
-                <button type="button" onclick="virar()" id="btnVirar">VIRAR</button>
-            </div>
 
-            <div class="back">
-                <button type="button" id="btnInfoBack">VER OUTRAS INFORMAÇÕES</button>
-                <img id="imgOrochiBack" src="img/personagem/orochimaru3.png" alt="Orochimaru">
-                <div class="informacaoBack">
-                <h2>Habilidades Especiais</h2>
-                <p id="infoBackParag1">Orochimaru é um mestre em Jutsu Proibido e experimentação genética. Ele é habilidoso em
-                    manipulação de serpentes, possui vasto conhecimento médico e é capaz de transferir sua
-                    consciência para diferentes corpos, concedendo-lhe uma forma de imortalidade.</p>
-
-                <h2>Objetivos</h2>
-                <p>Orochimaru é obcecado com a busca do conhecimento e
-                    da imortalidade. Ele está disposto a fazer
-                    qualquer coisa para alcançar seus objetivos, incluindo experimentos cruéis em humanos e traição
-                    contra sua própria aldeia. Seu desejo de poder 
-                    e imortalidade o leva a perseguir constantemente novas técnicas e corpos mais fortes.</p>
-                </div>
+                <div class="back">
+                    <button type="button" id="btnInfoBack">VER OUTRAS INFORMAÇÕES</button>
+                    <img id="imgGaaraBack" src="img/personagem/gaara/gaara2.png" alt="Gaara">
+                    <div class="informacaoBack">
+                        <h2>Habilidades Especiais</h2>
+                        <p id="infoBackParag1">Gaara é um usuário habilidoso do Jutsu de Areia, uma forma avançada de
+                            controle de areia que lhe permite manipular a areia ao seu redor para atacar e defender. Ele
+                            também possui a Besta com Cauda Shukaku selada dentro de si, que lhe concede poderes
+                            adicionais.</p>
+                        <h2 id="objetivos">Objetivos</h2>
+                        <p id="objetivosBack">
+                            Inicialmente, Gaara tinha o objetivo de ser reconhecido e aceito pelos outros, já que
+                            cresceu isolado e temido por sua conexão com o Shukaku. No decorrer da série, ele trabalha
+                            para proteger sua vila e seu povo como Kazekage e busca um entender mais sobre si mesmo e
+                            sobre o papel de um líder.
+                        </p>
+                    </div>
                     <button type="button" onclick="desvirar()" id="btnDesvirar">DESVIRAR</button>
                 </div>
-                </div>
-    </div>
-
-
+            </div>
+        </div>
 
     </main>
-
-
-    <script src="script.js"></script>
+    
+    <script src="JS/script.js"></script>
 </body>
 
 </html>

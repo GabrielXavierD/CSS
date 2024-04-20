@@ -1,5 +1,6 @@
 body{
     background-color: rgb(21, 18, 23);
+  
 }
 
 .card{
@@ -57,7 +58,7 @@ button{
 
 #btnInfoBack:active ~ #imgOrochiBack{
     position: absolute;
-    left: -215px;
+    left: -230px;
 }
 
 #btnInfo, #btnInfoBack{

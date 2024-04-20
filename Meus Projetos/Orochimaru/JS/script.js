@@ -7,3 +7,6 @@ function desvirar(){
     let conteudo = document.querySelector(".conteudo");
     conteudo.classList.remove("virar");
 }
+
+
+

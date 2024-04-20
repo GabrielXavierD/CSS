@@ -1,7 +1,10 @@
 body{
-    background-color: peru;
+    background-color: #5A3C26;
 }
 
+header{
+    background-color: #5f030c;
+}
 .card{
     margin-top: 40px;
 }
@@ -26,7 +29,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-items: center;
-    background-color: rgb(109, 46, 14);
+    background-color: #D9A975;
     border-radius: 6px;
 }
 
@@ -51,14 +54,14 @@ button{
     opacity: 1;
     visibility: visible;
 }
-#btnInfo:active ~ #imgOrochi{
+#btnInfo:active ~ #imgGaara{
     position: absolute;
-    left: -80px;
+    left: -250px;
 }
 
-#btnInfoBack:active ~ #imgOrochiBack{
+#btnInfoBack:active ~ #imgGaaraBack{
     position: absolute;
-    left: -215px;
+    left: -230px;
 }
 
 #btnInfo, #btnInfoBack{
@@ -76,26 +79,25 @@ button{
 }
 
 
-#imgOrochi{
+#imgGaara{
     position: absolute;
     z-index: 2;
     transform: scale(1.08);
     top: 42px;
-    left: 140px; 
+    left: -2px; 
     transition: all 1s ease-in-out;
     filter: drop-shadow(7px 6px 2px #000000);
-
 }
 
 
-#imgOrochiBack{
-    width:439px;
-    height:794px;
+#imgGaaraBack{
+    width: 512px;
+    height: 512px;
     position: absolute;
     z-index: 1;
-    transform: scale(0.75);
-    top: -110px;
-    left: 36px; 
+    transform: scale(1);
+    top: 40px;
+    left: 5px; 
     transition: all 1s ease-in-out;
     filter: drop-shadow(7px 6px 2px #000000);
 }
@@ -121,6 +123,23 @@ button{
 }
 
 .informacaoBack #infoBackParag1{
-    margin-left: 22px;
+    width: 240px;
+    margin-left: 140px;
 
+}
+#objetivosBack{
+    width: 305px;
+    margin-top: -48px;
+    margin-left: 80px;
+}
+
+#objetivosBack{
+    width: 305px;
+    margin-top: -20px;
+    margin-left: 80px;
+}
+
+#objetivos{
+margin-left: 48px;
+margin-top: -20px;
 }

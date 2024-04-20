@@ -1,6 +1,12 @@
 body{
-    
+    background-color: #8995A3
 }
+
+header{
+    background-color:  #593D6A;
+}
+
+
 .card{
     margin-top: 40px;
 }
@@ -18,18 +24,19 @@ body{
     height: 630px;
     position: absolute;
     backface-visibility: hidden;
-
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-items: center;
-    background-color: rgb(102, 32, 102);
+    background-color: #D8DEE2;
     border-radius: 6px;
+    
 }
 
 .back{
     transform: rotateY(-180deg);
+    transition: width 0.3s ease; /* Adiciona uma transição suave para a largura */
+  
 }
 
 .virar{ /*classe a ser adicionada/removida com JavaScript ao apertar o botao*/
@@ -49,15 +56,17 @@ button{
     opacity: 1;
     visibility: visible;
 }
-#btnInfo:active ~ #imgOrochi{
+#btnInfo:active ~ #imgKaguya{
     position: absolute;
-    left: -80px;
+    left: -170px;
 }
 
-#btnInfoBack:active ~ #imgOrochiBack{
+#btnInfoBack:active ~ #imgKaguyaBack {
     position: absolute;
-    left: -215px;
+    margin-left: -340px;
 }
+
+
 
 #btnInfo, #btnInfoBack{
     top: 575px; 
@@ -74,26 +83,26 @@ button{
 }
 
 
-#imgOrochi{
+#imgKaguya{
     position: absolute;
     z-index: 2;
-    transform: scale(1.08);
-    top: 42px;
-    left: 140px; 
+    transform: scale(.97);
+    top: 2px;
+    left: 80px; 
     transition: all 1s ease-in-out;
     filter: drop-shadow(7px 6px 2px #000000);
 
 }
 
 
-#imgOrochiBack{
-    width:439px;
-    height:794px;
+#imgKaguyaBack{
+    width: 2292px;
+    height: 1996px;
     position: absolute;
     z-index: 1;
-    transform: scale(0.75);
-    top: -110px;
-    left: 36px; 
+    transform: scale(0.28);
+    top: -710px;
+    left: -890px; 
     transition: all 1s ease-in-out;
     filter: drop-shadow(7px 6px 2px #000000);
 }
@@ -109,16 +118,49 @@ button{
 
 .informacaoBack{
     text-align: justify;
-    width: 380px;
+    width: 260px;
     opacity: 0;
     visibility: hidden;
     margin-top: -20px;
-    margin-left: 100px;
+    margin-left: 180px;
     font-size: 21px;
     transition: all 1.5s ease-in-out;
 }
 
 .informacaoBack #infoBackParag1{
     margin-left: 22px;
+}
+.informacaoBack h2:not(#objetivo){
+    margin-left: -100px !important;
+}
+#perfil, #afiliacao{
+    margin-left: 110px;
+} 
 
+#perfilUl{
+    margin-left: 95px;
+    width: 310px;
+}
+
+#pAfiliacao{
+    text-align: justify;
+    margin-left: 120px;
+    width: 260px;
+}
+
+#objetivo{
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+#objetivoUl{
+    margin-top: -20px;
+    margin-left: -10px;
+    width: 294px;
+ 
+}
+
+#infoBackParag1{
+    width: 280px;
+    margin-left: 12px !important;
 }
