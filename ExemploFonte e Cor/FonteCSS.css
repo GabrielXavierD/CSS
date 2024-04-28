@@ -8,4 +8,13 @@ h2 {
 p {
     font-family: verdana;
     font-weight: bold;
-    }
+    text-indent: 20px; /*Dando recuo no texto*/
+    text-shadow: rgb(255, 0, 0) 2px 1px 1px; /*sombra no texto*/ 
+    white-space: nowrap;  /*Não permitindo quebra de linha no texto*/  
+    word-spacing: 22px; /* Espaçamento entre palavras */ 
+    letter-spacing: 4px; /* Espaçamento entre letras */
+}
+
+p#MeuParagrafo{
+    color: green;
+}
