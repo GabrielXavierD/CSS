@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Resumo SMACSS</title>
+    <style>
+        /* Base */
+        p {
+            /* Estilos para parágrafos */
+        }
+
+        h1,
+        h2,
+        h3 {
+            /* Estilos para cabeçalhos */
+        }
+
+        /* Layout */
+        .container {
+            /* Estilos para o layout da página */
+        }
+
+        .header {
+            /* Estilos para o cabeçalho */
+        }
+
+        .sidebar {
+            /* Estilos para a barra lateral */
+        }
+
+        .main-content {
+            /* Estilos para a área de conteúdo principal */
+        }
+
+        .footer {
+            /* Estilos para o rodapé */
+        }
+
+        /* Módulos */
+        .menu {
+            /* Estilos para o menu de navegação */
+        }
+
+        .card {
+            /* Estilos para cartões de produto */
+        }
+
+        .dialog-box {
+            /* Estilos para caixas de diálogo */
+        }
+
+        /* Estado */
+        .menu:hover {
+            /* Estilos quando o menu é hover */
+        }
+
+        .button:focus {
+            /* Estilos quando o botão recebe foco */
+        }
+
+        .tab.active {
+            /* Estilos para a aba ativa */
+        }
+
+        /* Temas */
+        .theme-dark {
+            /* Estilos específicos para o tema escuro */
+        }
+
+        .theme-light {
+            /* Estilos específicos para o tema claro */
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Diferença entre BEM (Block Element Modifier) e SMACSS (Scalable and Modular Architecture for CSS)</h3>
+    <h2>BEM: enfatiza uma nomenclatura específica para classes CSS<br>
+        SMACSS: organiza estilos em categorias como Base, Layout e Módulos.</h2>
+    <hr>
+    <br>
+    <article>
+        <h2>Pilares do SMACSS:</h2>
+        <ol>
+            <li>
+                <strong>Base:</strong> Este é o nível mais baixo da hierarquia, onde definimos estilos para elementos
+                HTML padrão, como tags de parágrafo, cabeçalhos, etc. São estilos gerais que se aplicam globalmente ao
+                projeto.
+            </li>
+            <li>
+                <strong>Layout:</strong> Aqui são definidos os estilos para os principais componentes de layout da
+                página, como barras laterais, áreas de conteúdo principal, cabeçalho, rodapé, etc. Estes estilos
+                estruturam a aparência geral da página.
+            </li>
+            <li>
+                <strong>Módulos:</strong> Os módulos são componentes independentes e reutilizáveis da interface do
+                usuário, como menus de navegação, cartões de produto, caixas de diálogo, etc. Eles são projetados para
+                serem autossuficientes e facilmente transferíveis entre diferentes partes do projeto.
+            </li>
+            <li>
+                <strong>Estado:</strong> Este pilar trata de como os estilos podem mudar com base em diferentes estados
+                do elemento, como hover, foco, ativo, etc. Ele ajuda a definir como os componentes interagem com o
+                usuário em diferentes contextos.
+            </li>
+            <li>
+                <strong>Temas (Themes):</strong> Embora não seja sempre aplicável, o SMACSS sugere separar os estilos
+                que são específicos para diferentes temas do projeto, como esquemas de cores diferentes ou estilos de
+                fonte.
+            </li>
+        </ol>
+
+        <h2>Outros Conceitos Importantes:</h2>
+        <ul>
+            <li><strong>Cascata e Especificidade:</strong> O SMACSS promove o uso eficiente da cascata CSS e evita a
+                especificidade excessiva, priorizando classes e evitando seletores muito específicos.</li>
+            <li><strong>Reutilização:</strong> A reutilização de estilos é enfatizada para evitar duplicação de código e
+                facilitar a manutenção.</li>
+            <li><strong>Organização Modular:</strong> Os estilos são organizados em arquivos separados e agrupados por
+                função (base, layout, módulos, etc.) para facilitar a localização e a manutenção.</li>
+            <li><strong>Nomenclatura Significativa:</strong> O SMACSS sugere uma nomenclatura significativa para classes
+                CSS, tornando mais fácil entender o propósito de cada estilo e promovendo uma melhor compreensão do
+                código.</li>
+        </ul>
+    </article>
+
+
+    <hr>
+    <h2>Exemplo de Aplicação SMACSS</h2>
+    <style>
+        /* Base */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Módulos */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        /* Estado */
+        .button:hover,
+        .button:focus {
+            background-color: #0056b3;
+        }
+
+        /* Temas (Themes) */
+        .button.secondary {
+            background-color: #6c757d;
+        }
+
+        /* Nomenclatura Significativa */
+        .header {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <div class="container">
+        <header class="header">Exemplo de Aplicação SMACSS</header>
+        <p>Este é um exemplo simples de como aplicar os conceitos do SMACSS em uma aplicação web.</p>
+        <a href="#" class="button">Botão Primário</a>
+        <a href="#" class="button secondary">Botão Secundário</a>
+    </div>
+
+    <br>
+    <h2>Explicação:</h2>
+    <ol>
+        <li>
+            <strong>Base:</strong> Definimos estilos básicos para o corpo (body) da página, como fonte, cores de fundo e
+            texto, e removemos as margens e preenchimentos padrão.
+        </li>
+        <li>
+            <strong>Layout:</strong> Criamos uma classe .container para centralizar o conteúdo da página e limitar sua
+            largura máxima.
+        </li>
+        <li>
+            <strong>Módulos:</strong> Criamos uma classe .button para estilizar botões comuns, definindo propriedades
+            como padding, cor de fundo e texto, e borda arredondada.
+        </li>
+        <li>
+            <strong>Estado:</strong> Utilizamos pseudo-classes :hover e :focus para alterar a cor de fundo do botão
+            quando o cursor do mouse está sobre ele ou quando recebe foco.
+        </li>
+        <li>
+            <strong>Temas (Themes):</strong> Definimos uma variação do botão com a classe .button.secondary, que possui
+            uma cor de fundo diferente para indicar um estilo secundário.
+        </li>
+        <li>
+            <strong>Nomenclatura Significativa:</strong> Utilizamos a classe .header para estilizar o cabeçalho da
+            página, fornecendo um tamanho de fonte maior e uma margem inferior para separá-lo do restante do conteúdo.
+        </li>
+    </ol>
+</body>
+
+</html>

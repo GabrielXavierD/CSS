@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Resumo BEM (CSS)</title>
+</head>
+
+<body>
+    <h3>Diferença entre BEM (Block Element Modifier) e SMACSS (Scalable and Modular Architecture for CSS)</h3>
+    <h2>BEM: enfatiza uma nomenclatura específica para classes CSS<br>
+        SMACSS: organiza estilos em categorias como Base, Layout e Módulos.</h2>
+    <hr>
+    <br>
+    
+    <h1>Método BEM (CSS)</h1>
+    <ul>
+        <li>FÁCIL: É uma convenção de nomes</li>
+        <li>MODULAR: Código independente e reusável</li>
+        <li>FLEXÍVEL: Use da maneira que preferir</li>
+        <li>Semântica Clara: BEM enfatiza uma semântica clara ao nomear classes CSS.</li>
+        <li>Hierarquia Definida: Estabelece uma hierarquia clara entre blocos, elementos e modificadores.</li>
+        <li>Reutilização de Código: Promove a reutilização de código, reduzindo a duplicação.</li>
+        <li>Escopo Isolado: Minimiza o impacto de estilos em outros elementos da página.</li>
+        <li>Manutenção Simplificada: Facilita a localização e a modificação de estilos específicos.</li>
+        <li>Compatibilidade com Ferramentas: É compatível com várias ferramentas de desenvolvimento.</li>
+        <li>Documentação Facilitada: Torna a documentação do código mais fácil e compreensível.</li>
+    </ul>
+
+    <h2>Resumo dos Pilares:</h2>
+    <ul>
+        <li>Blocos (Blocks): Entidades de nível mais alto na metodologia BEM.</li>
+        <li>Elementos (Elements): Partes menores e dependentes dos blocos.</li>
+        <li>Modificadores (Modifiers): Usados para alterar o estado ou a aparência de um bloco ou elemento.</li>
+    </ul>
+
+
+    <h2>Blocos (Blocks)</h2>
+    <ul>
+        <li>Os blocos são as entidades de nível mais alto na metodologia BEM.</li>
+        <li>Eles representam componentes ou partes independentes e significativas da interface do usuário.</li>
+        <li>Exemplos de blocos podem incluir botões, menus, footer, checkbox, barras laterais, formulários, entre
+            outros.</li>
+        <li>Os blocos são definidos por uma classe CSS única e descritiva que reflete seu propósito e funcionalidade.
+            Ex.: .menu</li>
+    </ul>
+
+
+
+    <h2>Elementos (Elements)</h2>
+    <ul>
+        <li>Os elementos são partes menores e dependentes dos blocos (elemento-filho - Ex.: item de menu, item de lista
+            label do checkbox...).</li>
+        <li>Eles são elementos individuais que fazem parte de um bloco e têm significado apenas dentro desse contexto.
+        </li>
+        <li>Os elementos são representados por classes CSS aninhadas sob a classe do bloco pai.</li>
+        <li>Essas classes geralmente têm o formato (seguindo o exemplo anterior)
+            <code>.menu__item (se usa 2 underline)</code>, onde
+            <code>.menu</code> é o nome do bloco pai e <code>item</code> é o nome do elemento específico.
+        </li>
+    </ul>
+
+    <h2>Modificadores (Modifiers)</h2>
+    <ul>
+        <li>Os modificadores são usados para alterar o estado ou a aparência de um bloco ou elemento.</li>
+        <li>Eles permitem criar variações de um bloco ou elemento sem precisar reescrever todo o CSS.</li>
+        <li>Ex.: disabled, checked, full-width, dark...</li>
+        <li>Os modificadores são representados por classes CSS adicionais aplicadas ao bloco ou elemento base.</li>
+        <li>Essas classes geralmente têm o formato (seguindo o exemplo anterior)
+            <code>.menu--dark (menu com variação dark)</code> ou
+            <code>.menu__item--dark (item do menu com variação dark)</code>, onde <code>--dark</code> é o nome do modificador.
+        </li>
+    </ul>
+
+    <br>
+    <hr>
+    <h2>BOAS PRÁTICAS COM BEM</h2>
+    <h3>Exemplo 1</h3>
+    <article class="card">
+        <div class="card__header">
+            <h1 class="card__title">Lorem Ipsum Title</h1>
+        </div>
+
+        <div class="card_content">
+            <img src="fundo.jpg" alt="" class="card__image">
+            <p class="card__text">Lorem ipsum dolor sit amet.</p>
+            <p class="card__text">Lorem ipsum dolor sit <a href="" class="card_content_text_link">amet</a>.</p>
+        </div>
+    </article>
+
+    <br>
+    <hr>
+
+    <h3>Exemplo 2</h3>
+    <div class="users">
+        <div class="users__item">USUARIO</div>
+        <div class="users__item">USUARIO</div>
+        <div class="users__item">USUARIO</div>
+    </div> 
+
+    <br>
+
+    <div class="users users--active">
+        <div class="users__item users__item--admin">ADMIN</div>
+        <div class="users__item">USUARIO</div>
+        <div class="users__item">USUARIO</div>
+    </div>
+    
+    <style>
+            .users { /*Bloco original - estado padrão*/
+                color: rgb(16, 160, 0);
+            }
+
+            .users--active { /*Modificador - alterando bloco original para a div com os usuarios ativos*/
+                background-color: rgb(111, 79, 69);
+            }
+
+            .users__item { /*Elemento*/
+                font-size: 14px;
+            }
+
+            .users__item--admin { /*Modificador*/
+                color: rgb(0, 255, 187);
+                font-size: 22px;
+                font-weight: bold;
+            }
+    </style>
+
+</body>
+</html>
