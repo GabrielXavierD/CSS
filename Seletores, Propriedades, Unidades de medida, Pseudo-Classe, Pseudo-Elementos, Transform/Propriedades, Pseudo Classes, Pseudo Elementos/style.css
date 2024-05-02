@@ -1,16 +1,29 @@
 
                 /*ALGUMAS PROPRIEDADES*/
 .teste{
+
+    /*Orientação de escrita*/
+    writing-mode: vertical-lr; /*Vertical, lado esquerdo e direita*/
+    writing-mode: vertical-rl;
+    writing-mode: horizontal-tb;
+    writing-mode: sideways-lr;
+    writing-mode: sideways-rl;
+
+
+    margin: 20px 40px; /*todos os lados ou top/bottom e right/left ou top right bottom left*/
+    padding: 20px 40px; /*todos os lados ou top/bottom e right/left ou top right bottom left*/
     overflow: hidden; /* os elementos que transbordarem estarão escondidos*/
     overflow: scroll; /* cria um scroll dentro dos limites do elemento*/
     cursor: pointer; /* muda o cursor do usuario*/
     box-shadow: 20px 10px 8px green; /*tamanho da sombra horizontal -> tamanho da sombra vertical -> blur -> cor*/
+    
     border: 4mm ridge red; /*borda com sombra interna*/
     border: thick double #32a1ce; /*borda com duas linhas*/
     border: 1rem solid;
     border: solid;
     border: dashed red;
     border: 10px outset;
+    border-width: 20px 40px; /*todos os lados ou top/bottom e right/left ou top right bottom left*/
     border-top-width: medium; /*largura = medium*/
     border-right-width: medium;
     border-bottom-width: medium;

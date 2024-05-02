@@ -1,7 +1,9 @@
 /*Por padrão os elementos ficam 
-no eixo principal = canto esquerdo superior, de forma vertical, eixo Y
+no eixo principal = canto esquerdo superior, de forma vertical, eixo Y - elem. filhos um do lado do outro
 
-Flex-box = alinhar elementos flexiveis dentro de uma caixa*/
+-Antes se usava float
+-Flex-box = alinhar elementos flexiveis dentro de uma caixa
+-Aceita o uso de gap*/
 
 
 .container{ /*tag pai - container*/
@@ -48,7 +50,7 @@ Flex-box = alinhar elementos flexiveis dentro de uma caixa*/
 
     /*Por padrão os elementos tentam ficar alinhados/caber na mesma linha, isso pode ser alterado
     flex-wrap: nowrap; padrão - não há mudança de linha/quebra de linha
-    flex-wrap: wrap; Elementos podem DESCER uma linha caso já estejam no final
+    flex-wrap: wrap; Elementos podem DESCER/QUEBRAR uma linha caso já estejam no final
     flex-wrap: wrap-reverse; Elementos podem SUBIR uma linha caso já estejam no final*/
 
 
@@ -61,6 +63,15 @@ Flex-box = alinhar elementos flexiveis dentro de uma caixa*/
     align-content: center;          As duas linhas vão para o centro
     align-content: space-between;   Espaço entre os elementos - no caso, uma vai pra cima e outra pra baixo, com espaço no meio*/
     align-content: space-around;    /*Espaço como se fosse uma margem entre os elementos -> com espaçamento a mais no primeiro e no ultimo elemento - no caso, uma vai pra cima e outra pra baixo, com espaço no meio*/
+
+
+
+    place-content: start start; /*forma resumida para justify-content e align-items - usa os mesmos valores*/
+    place-content: start;
+
+    place-items: start start; /*forma resumida para align-items e justify-content - usa os mesmos valores*/
+    place-items: start;
+
 
     /*DEFINIR ESPAÇAMENTO ESPECIFICO ENTRE OS ELEMENTOS*/
     /*gap: 4px;   Espaçamento de 4px tanto em X quanto em Y

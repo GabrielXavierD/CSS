@@ -1,19 +1,18 @@
-                /*SELETORES*/
-
-               /*GRID CSS
+                /*GRID CSS
 
 -Um recurso do CSS que permite desenvolver layouts em grid;
 -É um valor da propriedade display;
 -Trabalhos com um container que contém itens;
--O container controla a disposição dos itens, mas os itens também
-podem alterar o seu posicionamento;
+-O container controla a disposição dos itens, mas os itens também podem alterar o seu posicionamento;
 -Os grids são divididos em colunas e linhas;
 -Podemos inserir um espaçamento entre as áreas com o recurso de gap;
 -Por padrão os elementos já vem com stretch definido (esticar/ocupar todo o espaço disponivel)
 -Por padrão o GRID tenta ordenar os elementos seguindo a ordem que foram declarados no html
 -Caso o elemento ja tenha um height e um width definidos ele seguira a posição do grid, caso não tenha, ele ficará como stretch
--Se para grid-column-start/end ou grid-row-start/end se inicia a posição em 0 (posição igual o array), Ex.: posição 3 é 4.
+-Para grid-column-start/end ou grid-row-start/end se inicia a posição em 0 (posição igual o array), Ex.: posição 3 é 4.
 -Caso use valores POSITIVO, se posiciona na direita pra esquerda e valores POSITIVOS o contrario (esquerda para direita)
+-display: grid -> libera pra usar GAP ou grid-template-columns
+- Deve ser colocado no elemento em que envolve a parte que você quer transformar em colunas
 
 
   Escrevendo sempre ambas grid-column-start e grid-column-end pode tornar-se cansativo. 
@@ -25,7 +24,7 @@ podem alterar o seu posicionamento;
 
 
 
-.containerComDivsDentro{
+.containerComDivsDentro{ /*Elemento que envolve o que vai virar colunas*/
     color: white;
     background-color: #333;
     border: 3px solid red;
@@ -33,17 +32,24 @@ podem alterar o seu posicionamento;
 
     display: grid;
 
+    grid-template-columns: 1fr 1fr; /*fr = unidade fracionaria (boa pratica usar em grid) = distribui o espaço (AO MÁXIMO) que sobra pra ambos os elem.*/
     grid-template-columns: 50px auto 10%; /*largura - define as colunas, pode passar quantos valores quiser (x x x x etc... - ali tem 3 então é 3 colunas) - a 1 coluna tem 50px; 2 coluna é automatica; 3 coluna é 10% do tamanho do elemento pai*/
-    grid-template-columns: repeat(3, 300px); /*função repeat() - faz um numero ser repetido tantas vezes, no caso, repetindo 3 vezes o valor 300px (ou seja, 3 colunas de 300px) - numero de colunas de acordo com o tamanho disponivel em tela */
+    
+    grid-template-columns: repeat(3, 300px); /*função repeat() - faz um numero ser repetido tantas vezes, no caso, repetindo 3 vezes o valor 300px (ou seja, 3 colunas de 300px) - numero de colunas de acordo com o tamanho disponivel em tela -> quando se tem muitas colunas com mesmos valores ex.: em vez de escrever 20 vezes o 1fr se escreve repeat(20, 1fr)*/
     grid-template-columns: repeat(autofill, 200px); /*função repeat() - AUTOFILL = preencher numero de colunas de acordo com o tamanho disponivel em tela - ex: se ele tiver uma tela de 600px, ele preenchera com 3 colunas de 200px - ele aumenta/diminui dependendo do tamanho da tela*/
    /*RESPONSIVIDADE -> caso os elementos presentes internamente não tenham nenhuma posição definida, eles irão se adptar ao tamanho da tela. 
    Ex.: (são 4 itens) em uma tela de 400px: ficam 2 colunas de 200px e os itens ficam distribuidos com 2 em cada linha
     2
     2     -> e caso a tela seja de 800px havera 4 colunas e eles ficaram distribuidos os 4 na mesma linha*/
 
-
+    grid-template-columns: repeat(auto-fit, 200px); /*auto-fit = tente encaixar quantos itens forem possiveis (no caso, enquanto houver espaço ele continuara colocando uma coluna de 200px)*/
+    grid-template-columns: repeat(auto-fit, minmax(150px, 200px)); /*minmax = valor minimo e maximo -> tente encaixarquantos itens forem possiveis com minimo 150px de altura e maximo 200px*/
 
     grid-template-rows: 70% 30%; /*altura - define as linhas - (cada valor representa uma linha, seguindo a ordem de cima pra baixo - 1,2,3,4,5... - nesse caso a 1a linha tem 70% e a 2a linha 30%)*/
+    grid-auto-rows: auto; /*auto = linhas são adicionadas automaticamente*/
+    grid-auto-rows: 200px auto; /*1º linha com 200px de altura e o restante auto*/
+
+
     gap: 20px; /*serve para dar o mesmo espaçamento entre as linhas e as colunas */
     
     justify-content: center; /*alinha o grid no eixo horizontal - centro*/ 
@@ -55,7 +61,11 @@ podem alterar o seu posicionamento;
     align-items: start; /*alinha o grid no eixo vertical - no inicio, superior*/ 
     align-items: end; /*alinha o grid no eixo vertical - no fim, inferior*/  
 
+    place-content: start start; /*forma resumida para justify-content e align-items - usa os mesmos valores*/
+    place-content: start;
 
+    place-items: start start; /*forma resumida para align-items e justify-content - usa os mesmos valores*/
+    place-items: start;
 }
     .containerComDivsDentro div {
         background-color: #ccc;
@@ -72,7 +82,7 @@ podem alterar o seu posicionamento;
         border: 3px solid red;
         padding: 15px;
         display: grid;
-        gap: 5px; /*serve para dar o mesmo espaçamento entre as linhas e as colunas*/
+        gap: 5px; /*serve para dar o mesmo espaçamento entre as linhas e as colunas - 1º VALOR É DE LINHAS e o 2º de COLUNAS*/
 
         /*definindo as areas do template, grid-template-areas tambem pode ser usado para ordenar cada item, para não precisar usar grid-column/grid-row*/
        /*quebrar uma linha para representar cada linha*/
@@ -108,13 +118,13 @@ podem alterar o seu posicionamento;
             grid-area: footer;  
         }
 
-/*MANIPULANDO ITENS INDIVIDUAIS DO GRID*/
-
-.container{ /*container com 6 itens dentro*/
+/*MANIPULANDO ITENS INDIVIDUAIS DO GRID (DENTRO DO ELEM. PAI)*/
+.container{ /*container com 6 itens dentro - PAI*/
     color: white;
     background-color: #333;
     border: 3px solid red;
     padding: 15px;
+   
     display: grid;
     gap: 5px; /*serve para dar o mesmo espaçamento entre as linhas e as colunas*/
     grid-template-columns: auto auto auto; /*largura - define as colunas, pode passar quantos valores quiser (x x x x etc... - ali tem 3 então é 3 colunas) - a 1 coluna tem 50px; 2 coluna é automatica; 3 coluna é 10% do tamanho do elemento pai*/
@@ -126,9 +136,13 @@ podem alterar o seu posicionamento;
         padding: 20px;  
     }
 
-#item-1{
+#item-1{ /*ELEM. FILHO A SER MANIPULADO*/
     /*HORIZONTAL*/
     grid-column: 6; /*dizer qual coluna o item irá ocupar*/
+    grid-column: 1 / 3; /*Expandindo o elemento da coluna 1 até a coluna 3*/
+    grid-column: 1 / -1; /*Expandir até ao máximo = -1 (quando não se sabe a quantidade de colunas)*/
+    grid-column: span 2; /*span = expandir 2 colunas (a partir da coluna em que o elem. filho nasceu)*/
+    grid-column: 2 / span 3; /*Comece da coluna 2 e expanda até a 3*/
 
         /*Tambem pode usar assim, para extender, dar um inicio e fim*/
     grid-column-start: 1; /*#item-1 começa na coluna 1*/
@@ -156,4 +170,7 @@ podem alterar o seu posicionamento;
     align-self: start; /*posicionamento individual na vertical - no inicio*/
     align-self: end; /*posicionamento individual na vertical - no final*/
     align-self: stretch; /*posicionamento individual na vertical - esticar*/
+
+    place-self: start start;  /*forma resumida para align-self e justify-self - usa os mesmos valores*/
+    place-self: start;
 }

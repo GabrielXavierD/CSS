@@ -14,7 +14,7 @@ main {
     overflow-x: hidden;
 }
 
-main a {
+main #githublink {
     opacity: 0.6;
     z-index: 4;
     text-decoration: none;
@@ -78,5 +78,17 @@ main a h3 {
 
 footer {
     height: 10vh;
+    width: 100vw;
     background-color: #131313;
+    display: inline-block;
+    
+}
+
+footer a{
+    font-size: 20px;
+    color: rgb(244, 244, 244);
+    text-decoration: none;
+    position: relative;
+    top: 20px;
+    margin-left: 25%;
 }
