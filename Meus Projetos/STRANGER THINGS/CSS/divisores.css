@@ -1,0 +1,46 @@
+.divisor{
+    z-index: 2;
+    position: absolute;
+    top: 1100px;
+}
+.divisor2{
+    z-index: 2;
+    position: absolute;
+    top: 1820px;
+}
+
+.divisor3{
+    z-index: 2;
+    position: absolute;
+    top: 2620px;
+}
+
+
+.grupofloresta{
+    z-index: 2;
+    position: absolute;
+    left: -10px;
+ }
+ 
+.grupofloresta2{
+    position: absolute;
+    top: 450px;
+    left: -10px;
+    transform: rotateX(180deg);
+}
+
+.floresta{
+    position: absolute;
+}
+
+#floresta2{
+    left: 578px;
+}
+#floresta3{
+    left: 1160px;
+}
+#floresta4{
+    left: 1720px;
+ 
+}
+
