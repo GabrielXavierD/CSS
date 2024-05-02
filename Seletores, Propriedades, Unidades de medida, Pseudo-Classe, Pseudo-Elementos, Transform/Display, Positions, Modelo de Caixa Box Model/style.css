@@ -3,9 +3,9 @@
                 /*CSS Display
 
 div{
-    display: block; padrão, um embaixo do outro, pula uma linha, usa todo espaço disponivel na tela - aceita altura e largura etc...
-    display: inline; um do lado do outro, ignora largura
-    display: inline-block; começa a ficar um do lado do outro, na mesma linha, assim que houver o espaço necessario na tela - aceita altura e largura
+    display: block; bloco - um embaixo do outro, pula uma linha, usa todo espaço disponivel na tela - aceita altura e largura etc...
+    display: inline; padrão - um do lado do outro, ignora largura -> ñ é possivel definir valores do box model ( width, height, margin(top/bottom) etc)
+    display: inline-block; recebe propriedades do box model - começa a ficar um do lado do outro, na mesma linha, assim que houver o espaço necessario na tela - aceita altura e largura
     display: none; não apresenta o elemento, mas ele continua presente
     display: grid;
     display: flex;
@@ -17,17 +17,25 @@ div{
 
 div{
     position: static; padrão - respeita a ordem (o fluxo) que os elementos aparecem na tela - Ex.: 1,2,3,4
-    position: relative; ela respeita o fluxo (se mantem nele) porém permite utilizar as propriedades top, right, bottom e left para move-lá (e o espaço dela continua no fluxo e nao altera os outros elementos)                 
-    position: absolute; segue um elemento pai com position diferente de static ou a propria página - remove o elemento do fluxo e fica por cima - porém permite utilizar as propriedades top, right, bottom e left para move-lá
-    position: fixed; remove o elemento do fluxo - mantem o elemento fixo na tela acompanha o scroll - é em relação a toda a tela - bom para menu fixo
+    position: relative; ela respeita o fluxo (se mantem nele) o espaço do elem. continua no fluxo e nao altera os outros elementos)                 
+    position: absolute; segue um elemento pai com position diferente de static ou a propria página - remove o elemento do fluxo e fica por cima . Ex.: botão acima da borda do elem. pai
+    position: fixed; remove o elemento do fluxo - mantem o elemento fixo na tela acompanha o scroll - é em relação a toda a tela - bom para menu fixo. Ex.: "Neste site usamos cookies."
     position: sticky; remove o elemento do fluxo - se mantem em uma posição na tela, mas quando o scroll desce e encosta na sua parte superior o elemento se fixa e desce na tela junto com o scroll - sticky = grudar, pegajoso - bom para cabeçalhos de tabelas
 }
 
+
+ao modificar o POSITION se pode usar TOP, RIGHT, BOTTOM E LEFT e o z-index também
 
 
                 Modelo de Caixa CSS (box-model)
 div{
     box-sizing: content-box; padrão - adiciona espaço ao tamanho
     box-sizing: border-box; diminui espaço ao tamanhoo - proprio navegador faz o calculo para caber o elemento certinho na borda
+
+    box-sizing: border-box;
+    As vezes pode acontecer de um footer ultrapassar o layout (e criar um scroll)
+    WIDTH = PADDING + BORDER
+    Assim, uma forma de fazer com que não some padding e nem border e respeite apenas
+    o tamanho do width estabelecido no footer, é colocar border-box
 } 
 
