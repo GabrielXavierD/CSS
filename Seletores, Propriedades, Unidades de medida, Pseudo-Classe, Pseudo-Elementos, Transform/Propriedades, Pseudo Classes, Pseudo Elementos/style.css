@@ -71,6 +71,10 @@ a:visited{ /*links que foram visitados ficarão vermelhos*/
     color: red;
 }
 
+.btn:active{ /*Quando clica no botão - ativa quando clica*/
+    color: red;
+}
+
 a:hover{ /*quando passar o mouse - muda a cor */
     color: rgb(0, 255, 255);
 }
@@ -86,6 +90,8 @@ a:first-child{ /*o primeiro elemento/primeiro filho*/
 a:last-child{ /*o último elemento/último filho*/
     color: rgb(42, 44, 165);
 }
+
+
 
 a:nth-child(4){ /*Alterar somente o item do meio de uma lista (por exemplo) - dentro do parenteses se passa o numero do elemento a se alterar (quarto elemento = 4)*/
     color: rgb(106, 165, 42);
@@ -114,8 +120,6 @@ li:nth-child(3n+5){
     background-color: red;
 }
 
-
-
 a:nth-child(even){ /*Alterar somente os elementos pares*/
     color: rgb(155, 42, 165);
 }
@@ -129,7 +133,9 @@ li:not(.item-especial){ /*Todos, menos o que tiver a classe .item-especial -> po
 	color: green;
 }
 
-
+li:not(:first-child, :last-child, .terceiro){ /*Todos, menos o 1º filho :first-child, o último filho :last-child e a classe .terceiro*/
+	color: green;
+}
 
     /*Pseudo-Elementos*/
 /*Usam ::
@@ -155,8 +161,10 @@ p::selection{ /*alterar quando o user selecionar*/
 
 li::before{                 /*adicionando no inicio de algo*/
   content: "😁";            /* before e after fazem o uso de content (conteúdo)*/
-                            /*content aceita textos, espaços, emojis etc...*/
+                            /*content aceita textos, espaços, emojis etc...
+                            Precisa adicionar algum display*/
   background-color: aquamarine;
+  display: block;
 }
 
 
