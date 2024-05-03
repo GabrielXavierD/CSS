@@ -13,3 +13,22 @@ body {
     border: 1px solid black; /*borda para a div*/
 }
 
+
+div{
+    background-color: lightblue;
+    background-image: url();
+    background-repeat: no-repeat;
+    background-repeat: repeat-x;
+    background-repeat: repeat-y;
+    background-size: 200px 200px;
+    background-size: contain; /*Contem a imagem no valor 100%  do container*/
+    background-size: cover; /*Cobre a area inteira*/
+    background-position: center; 
+    background-position: top center; /*posição superior centro*/
+    background: color, url(), repetição, posicionamento, size;
+
+   
+   background-image: linear-gradient(top, green, red, blue);
+   background-image: linear-gradient(45deg, green 0%, red 20%, blue 40%); /*% = quando irá começar*/
+   background-image: radial-gradient(circle green, red, blue)
+}
