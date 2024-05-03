@@ -22,7 +22,7 @@ body{
 
 
     transform: matrix(scaleX, skewY, skewX, scaleY, translateX, translateY); /*Junta todas as transformações 2D - NESSA ORDEM*/
-      transform: matrix(2px, 0, 0, 0, 0, 0);
+    transform: matrix(2px, 0, 0, 0, 0, 0);
   
     transform-origin: 0%, 0%; /*Define onde é o ponto de origem da forma -> X e Y -> serve para mudar a origem no rotate()
                              0%, 0%; -> ponto superior esquerdo;
@@ -38,7 +38,7 @@ body{
 
   transform: translateX();
   transform: translateY();
-  transform: translateZ();
+  transform: translateZ(); /*Profundidade*/
 
   transform: scaleX();
   transform: scaleY();
@@ -54,7 +54,6 @@ body{
 /*Logo, com a parte de trás pode ser usada a propriedade:*/
 backface-visibility: visible; /*visivel = padrão, quando gira pode ver a parte de trás*/
 backface-visibility: hidden; /*hidden = escondido, quando gira não pode ver a parte de trás, ficará "invisivel"*/
-
 
 perspective: 15px; /*Perspectiva de 15px = dá uma profundidade ao rotacionar, por exemplo.
 Se aplica somente no container/pai do elemento*/
@@ -79,15 +78,14 @@ Se aplica somente no container/pai do elemento*/
 
   perspective: 400px;
   border: 4px solid black;
-  transform: rotateY(30deg); /*Está atravessando a div2 (pai)*/
+  transform: rotateY(30deg); /*Está atravessando a div2 (pai) - pode ser manipulado pois o elem. pai tem preserve-3d*/
 }
-
 
 
 .card{
     height: 200px;
     width: 200px;
-    background-color: yellow; /*Pode colocar preto ou transparent pra desfarçar com a cor do body*/
+    background-color: yellow; /*Pode colocar preto ou transparent pra disfarçar com a cor do body*/
     position: absolute;
     top: 50%;
     left: 50%;

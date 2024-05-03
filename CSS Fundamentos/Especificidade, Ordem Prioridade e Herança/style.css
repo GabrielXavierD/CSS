@@ -1,0 +1,44 @@
+              /*Especificidade*/
+h1{
+    color: red;
+}
+
+.textoComClasseH1{
+    color: blue; /*a cor a ser atribuida ao h1 será azul - ignorando a cor vermelha e verde - pois especificidade (a classe) tem mais tem mais prioridade*/
+}
+  
+h1{
+    color: green; 
+}
+
+
+
+
+
+                /*ORDEM DE PRIORIDADE (do MAIS ao MENOS especifico): 
+Inline (style=" ") -> ID (#) -> Classes, Atributos e Pseudo-Classes (. :: [ ]) -> Elementos e Pseudo-Elementos ( : <>)
+
+<p>Parágrafo teste </p>
+
+                    prioridade (da Menor a Maior)
+P {}               ➔ 0-0-0-1
+P::before {}       ➔ 0-0-0-2
+.destaque {}       ➔ 0-0-1-0
+#destaque {}       ➔ 0-1-0-0
+#destaque p {}     ➔ 0-1-0-1
+(inline) style=*   ➔ 1-0-0-0
+!important         ➔ ignora todas as anteriores e se torna prioridade
+
+*/
+
+
+
+                /* Herança*/
+/*
+    <div>          -> pai
+        <p></p>    -> filho 
+        <h1></h1>  -> filho e irmão adjacente de <p>
+    </div>
+*/
+
+

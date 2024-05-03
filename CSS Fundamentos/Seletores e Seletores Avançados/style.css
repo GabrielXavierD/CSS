@@ -1,0 +1,78 @@
+                /*SELETORES*/
+
+*{ /*SELETOR UNIVERSAL - TODA A PÁGINA*/
+    margin: 0;
+    padding: 0;
+}
+
+input[type="nome"], 
+h1[class="titulo"]{ /*informar no []  atributo e o valor que o elemento precisa ter*/
+    background-color: crimson; /*alterando cor de fundo do input especifico - com "nome"*/
+}
+
+h1,h2,h3{/*EXEMPLO DE SELETOR DE TEXTO*/
+}
+
+.container{/*SELETOR UNIVERSAL - TODA A PÁGINA*/
+}
+
+p.azul{   /*SELETOR DE CLASSE DENTRO DE ELEMENTO (NO CASO, PARAGRAFO COM CLASSE AZUL)*/
+}
+
+p .azul{   /*SELETOR DE CLASSE DENTRO DE ELEMENTO (NO CASO, PARAGRAFO COM UM ELEMENTO C/ CLASSE AZUL DENTRO DELE, EX: <p><a class="azul"></a></p>)*/
+}
+
+#cabecalho { /*SELECIONA PELO ID*/
+} 
+
+li>a { /*SELECIONA O FILHO DIRETO (NO CASO, LINK DENTRO DA LISTA)*/     
+}
+
+
+p a { /*SELECIONA TODOS OS DESCENDENTES (NO CASO, ESTILO EM TODOS OS LINKS QUE ESTIVEREM DENTRO DE UM PARAGRAFO)*/
+} 
+
+h1+p { /*SELECIONA O PRÓXIMO IRMÃO ADJACENTE (NO CASO, H1 ESTÁ EM UMA LINHA ACIMA DE P - LOGO, SE TIVER 2 P o segundo P não será estilizado, somente o primeiro, que é adjacente de h1)*/
+}
+
+h1~p{ /*SELECIONA O IRMÃO GERAL (MÚLTIPLOS) - NO CASO, TODOS OS PARAGRAFOS DEPOIS DE H1,
+       INDEPENDENTE DA ORDEM DA LINHA OU SE VEM ALGO DIFERENTE DE P DEPOIS DE H1 - NÃO SELICIONA PARAGRAFOS QUE ESTÃO ANTES H1-*/
+}
+:has()
+
+
+
+/*ORDEM DE PRIORIDADE DOS SELETORES: ID>ATRIBUTO/CLASS>TAG>UNIVERSAL*/
+/*# = ID;   . = CLASS; : = ESTADO; [] = ATRIBUTO; * = TOTAL;*/
+
+
+
+
+                /*SELETORES AVANÇADOS (PSEUDO-CLASSE)*/
+li:nth-child(1){ /*selecionando o filho na posicao X-> no caso, o 1o filho*/
+
+}
+
+li:nth-child(2n){
+/*(o 1n seleciona todos, já que nao tem salto de um para outro, 
+o 2n seleciona o segundo contando de 1 a 2 assim por diante) a cada 2, o 2 será:*/
+background-color: red;
+}
+
+li:nth-child(3n-1){ /*pode ser "+" ou "-"*/
+    /*3n-1 -> inicia no "a cada 3" e diminui um 
+    -> 1, 2, 3(cor) volta um/-1 fica: 1, 2(cor), 3
+    -> é diferente de 2n, por exemplo */
+    background-color: red;
+    }
+
+li:nth-child(even){ /*os pares serão:*/
+
+}
+
+li:nth-child(odd){ /*os impares serão:*/
+
+}
+
+
+

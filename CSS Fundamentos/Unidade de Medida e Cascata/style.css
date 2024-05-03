@@ -1,0 +1,39 @@
+
+                /*UNIDADES DE MEDIDA*/
+
+p{
+    font-size: 16px; /*px = unidade absoluta - não se altera - pode acabar atrapalhando na acessibilidade*/
+    font-size: 10%; /*% = em relação ao elemento pai*/
+    font-size: 1em; /*em = relativa ao elemento pai - multiplica o valor de referencia - tambem se adapta caso o usuario altere o tamanho da fonte do proprio navegador*/
+    /*Se o elemento pai tiver 30px o o elemento filho tiver 2em, o filho terá 60px*/
+    
+    /*ACESSIBILIDADE*/
+    font-size: 16rem; /*rem = unidade relativa a raiz = HTML - no caso, a propria tag HTML
+    -> só muda se houver alguma alteração na tag HTML ou caso o usuario altere o tamanho da fonte do navegador*/
+    /*rem e o px são os mais utilizados*/
+
+    font-size: 60vh; /*vv = referente a altura da tela (no caso, ocupando 60% da altura da tela)*/
+    font-size: 80vw; /*vv = referente a largura da tela (no caso, ocupando 60% da largura da tela)*/
+
+    font-size: 60ch; /*ch = caracteres de largura (do caracter 0) no maximo*/
+
+    font-size: calc(100vw / 3); /*1/3 da tela*/
+    font-size: calc(100% - 20px); /*Remove 20px de 100%*/
+    font-size: calc(100vw - 100px); /*Remove 100px de 100vw*/
+}
+
+
+
+
+                /*Cascata (ordem de que se coloca algo)*/
+
+h1{
+    color: red;
+}
+
+  
+h1{
+    color: green; /*a cor a ser atribuida ao h1 será verde - ignorando a cor vermelha - pois o que vem depois tem mais prioridade*/
+}
+
+
