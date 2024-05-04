@@ -154,7 +154,14 @@
          /*Tambem pode usar assim, para extender, dar um inicio e fim*/
      grid-row-start: 2; /*#item-2 começa na linha 2 - pois na linha 1 já esta sendo ocupado pela #item-1*/
      grid-row-end: 4;  /*#item-2 termina na linha 4 */
-}
+
+     order: 2; /*MEXER NO HTML E MUDAR A ORDEM (MAS NÃO ALTERA A ESTRUTURA ESCRITA NO HTML - SÓ VISUALMENTE)*/
+
+
+    }
+
+
+ 
 
 
 #item-3{
