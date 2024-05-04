@@ -6,6 +6,7 @@
 - Caso a Midia Querie esteja em um arquivo separado, é importante q referencia esteja abaixo da referencia do arquivo original (style.css), para ser a ultima coisa a ser lida
 - min = a partir disso
 - max = até isso
+- É uma boa prática escrever a media querie somente no final do código, depois das outras definições ou ser o último css linkado 
 
 Como especificar?
     ⚫width;
@@ -49,6 +50,7 @@ h2 {
 }
 
 /*Tablets*/
+/*As duas condições precisam estar verdadeiras para ocorrer*/
 @media (min-width: 768px) and (max-width: 1024px) { /*especificando que so vai acontecer para caso especifico entre x e y */
     h1,
     h2 { /*só vai ficar amarelo se a largura estiver entre 728px e 1024px*/
@@ -57,7 +59,14 @@ h2 {
 }
 
 
-
+/*Outro exemplo*/
+/*As duas condições NÃO precisam estar verdadeiras para ocorrer*/
+@media (min-width: 1000px), (max-width: 900px) { /*acima de 1000px faça e abaixo de 900px faça  */
+    h1,
+    h2 { 
+        color: yellow;
+    }
+}
 
 
 /*Verificar se está horizontal - Orientação*/
@@ -130,3 +139,74 @@ h2 {
     background-color: blue;
   }
 } 
+
+
+
+
+  /****************************************************************************************************************************/
+                                                         /* Imagem */
+
+/* Imagem responsiva  */                                                         
+img{
+    max-width: 100%; /*100% do elem. pai*/
+    display: block;
+  }
+
+  /* OBJECT */                                                         
+img{
+    object-fit: contain;
+    object-fit: cover; /*Faz o mesmo que background-size: cover; porém, para imagens*/
+    object-fit: fill;
+    object-fit: none;
+    object-fit: scale-down;
+
+
+    /*Posicionar onde a imagem será cortada = backgroun-position */
+    object-position: center;
+    object-position: top;
+    object-position: right; 
+    object-position: bottom;
+    object-position: left;
+    object-position: top left; /*etc...*/
+  }
+
+  /****************************************************************************************************************************/
+                                                        /*GRID RESPONSIVO (SEM MEDIA QUERIE)*/
+
+ /*uso de fr em Grid para responsividade*/
+div{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px); /*auto-fit: cria o máximo de colunas que der respeitando o tamanho fixo escolhido (não usar fr)*/
+}
+
+/*Outra opção, para não ficar com espaço vázio*/
+div{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    /*auto-fit: cria o máximo de colunas que der respeitando
+     o tamanho minmax = continue criando enquanto houver espaço pra 300px, caso não tenha, quebre para 1 coluna (1fr = fr = tamanhomaximo)*/
+}
+
+div{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/****************************************************************************************************************************/
+                                                         /* Max-width*/
+.blocoTexto{
+    max-width: 600px; /*div cresce até 600px e abaixo disso, diminui sem quebrar o elem. na tela*/
+    font-size: 10ch; /*ch = largura do caractere 0*/
+}
+.blocoTexto{
+    max-width: 60ch; /*div cresce até 60ch e abaixo disso, diminui sem quebrar o elem. na tela*/
+}
+
+
+
+/****************************************************************************************************************************/
+                                                         /* Texto*/
+p{
+    word-break: break-all; /*quebrar todas as palavras*/
+    font-size: 10ch; /*ch = largura do caractere 0*/
+}
