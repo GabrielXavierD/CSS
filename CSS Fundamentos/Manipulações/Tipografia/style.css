@@ -11,4 +11,6 @@ p{
     text-shadow: 5px 5px 5px gray; /*X, Y, blur e cor*/
     letter-spacing: 10rem; /*Espaçamento entre as letras*/
     word-spacing: 2rem; /*espaçamento entre palavras*/
+    word-break: break-all; /*quebrar todas as palavras*/
+    font-size: 10ch; /*ch = largura do caractere 0*/
 }
