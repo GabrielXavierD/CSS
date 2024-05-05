@@ -6,7 +6,7 @@ no eixo principal = canto esquerdo superior, de forma vertical, eixo Y - elem. f
 -Aceita o uso de gap*/
 
 
-.container{ /*tag pai - container*/
+.container{ /*tag pai - container - PRORIPRIEDADES ELEMENTO PAI*/
     height: 500px;
 
     display:flex; /*pra identificar que ela é um container de flexbox*/
@@ -140,7 +140,7 @@ no eixo principal = canto esquerdo superior, de forma vertical, eixo Y - elem. f
     width: 100px;
     background-color: yellow;
 
-    order: -1; /*-1 = <0 logo, vem antes do order 0, ou seja, fica primeiro ele e depois o order 0 na ordem*/
+    order: -1; /*-1 = <0 logo, vem antes do order 0, ou seja, fica primeiro ele e depois o order 0, na ordem*/
 
 }
 

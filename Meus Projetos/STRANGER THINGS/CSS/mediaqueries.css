@@ -1,0 +1,61 @@
+/* Estilos padrão para todos os dispositivos */
+
+/* Estilos para telas menores, como smartphones */
+@media only screen and (max-width: 767px) {
+    body {
+        font-size: 14px; /* Reduzindo o tamanho da fonte */
+    }
+
+    .secao1 h1 {
+        font-size: 24px; /* Reduzindo o tamanho do título */
+    }
+
+    .secao1 h3 {
+        font-size: 18px; /* Reduzindo o tamanho do subtítulo */
+    }
+
+    .divisor,
+    .divisor2,
+    .divisor3 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%; /* Reduzindo a largura do divisor */
+    }
+
+    .relogio .tempoTexto {
+        font-size: 18px; /* Reduzindo o tamanho do texto do relógio */
+    }
+    .relogio {
+        position: absolute;
+        margin-left: -140%;
+        font-size: 18px; /* Reduzindo o tamanho do texto do relógio */
+    }
+}
+
+/* Estilos para tablets e dispositivos de tamanho médio */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    body {
+        font-size: 16px; /* Ajustando o tamanho da fonte */
+    }
+
+    .secao1 h1 {
+        font-size: 36px; /* Ajustando o tamanho do título */
+    }
+
+    .secao1 h3 {
+        font-size: 24px; /* Ajustando o tamanho do subtítulo */
+    }
+
+    .divisor,
+    .divisor2,
+    .divisor3 {
+        width: 60%; /* Ajustando a largura do divisor */
+    }
+
+    .relogio .tempoTexto {
+        position: relative;
+        left: -10%;
+        font-size: 24px; /* Ajustando o tamanho do texto do relógio */
+    }
+}
