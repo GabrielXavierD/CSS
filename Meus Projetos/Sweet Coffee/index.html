@@ -6,65 +6,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mediaqueries.css">
     <title>Sweet Coffee</title>
 </head>
 
 <body>
     <main>
         <header>
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Cardápio</a></li>
-                <li><a href="#">Sobre</a></li>
-            </ul>
+            <nav>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Cardápio</a></li>
+                    <li><a href="#">Sobre</a></li>
+                </ul>
+            </nav>
         </header>
 
         <section class="parte1">
-            <img src="assets/img/cafe.png" alt="Xícara de café">
-            <h1>Sweet Coffee</h1>
-            <p>Bem-vindo ao Sweet Coffee, onde cada gole é uma história. Desperte seus sentidos com nossas
+            <img src="assets/img/cafe.png" alt="Xícara de café" class="xicara">
+            <h1 class="parte1__nomeEmpresa">Sweet Coffee</h1>
+            <p class="parte1__textoEmpresa">Bem-vindo ao Sweet Coffee, onde cada gole é uma história. Desperte seus sentidos com nossas
                 especialidades de café feitas com amor. Experimente a combinação perfeita de sabor e conforto em uma
                 jornada sensorial única.</p>
-            <button>ACESSE NOSSO CARDÁPIO</button>
+            <button class="parte1__btn">ACESSE NOSSO CARDÁPIO!</button>
         </section>
 
         <div class="divisor">
-            <img src="assets/img/divisor.png" alt="Papel rasgado do divisor de conteúdo" srcset="" id="papelRasgado">
-            <img src="assets/img/divisorTape.png" alt="Fita do divisor de conteúdo" id="fita">
+            <img src="assets/img/divisor.png" alt="Papel rasgado do divisor de conteúdo" srcset="" class="papelRasgado">
+            <img src="assets/img/divisor.png" alt="Papel rasgado do divisor de conteúdo" srcset="" class="papelRasgado2">
+            <img src="assets/img/divisor.png" alt="Papel rasgado do divisor de conteúdo" srcset="" class="papelRasgado3">
+            <img src="assets/img/divisor.png" alt="Papel rasgado do divisor de conteúdo" srcset="" class="papelRasgado4">
+            <img src="assets/img/divisor.png" alt="Papel rasgado do divisor de conteúdo" srcset="" class="papelRasgado5">
+            <img src="assets/img/divisor.png" alt="Papel rasgado do divisor de conteúdo" srcset="" class="papelRasgado6">
+            <img src="assets/img/divisor.png" alt="Papel rasgado do divisor de conteúdo" srcset="" class="papelRasgado7">
+            <img src="assets/img/divisor.png" alt="Papel rasgado do divisor de conteúdo" srcset="" class="papelRasgado8">
+            <img src="assets/img/divisor.png" alt="Papel rasgado do divisor de conteúdo" srcset="" class="papelRasgado9">
+            <img src="assets/img/divisor.png" alt="Papel rasgado do divisor de conteúdo" srcset="" class="papelRasgado10">
+            <img src="assets/img/divisorTape.png" alt="Fita do divisor de conteúdo" class="fita">
         </div>
 
         <section class="parte2">
+            <div class="parte2__bloco">
             <h1>Visite-nos!</h1>
-            <img src="assets/img/mapPin.png" alt="Pino do mapa">
+            <img src="assets/img/mapPin.png" alt="Pino do mapa" class="parte2__PinoDoMapa">
             <iframe title="Mapa - localização"
                 src="https://www.google.com/maps/d/u/0/embed?mid=1r0iZyPfV6Cqg9wwN1nbCuUGS0OI02aA&ehbc=2E312F&noprof=1"
-                width="640" height="280"></iframe>
+                 class="parte2__Mapa"></iframe>
+                </div>
         </section>
 
+
+
+        <footer>
+            <div class="footer-itens">Localização<br>
+                Av. Principal, 123 - Paranapiacaba, Santo André<br> SP, 09162.
+            </div>
+            <div class="footer-itens"> Horário de Funcionamento<br>
+                Segunda a Sexta das 8h às 20h;<br>
+                Sábado e Domingo, das 9h às 18h.</div>
+            <div class="footer-itens">
+                Contato<br>
+                Telefone:<a href="tel:(+55) 94002-8922">(+55) 94002-8922</a>;<br>
+                E-mail:<a href="mailto:">contato@sweetcoffee.com </a>
+            </div>
+    
+            <div class="footer-itens a">
+                Redes Sociais<br>
+                <a href="http://facebook.com" target="_blank">Facebook</a><br>
+                <a href="http://instagram.com" target="_blank">Instagram</a><br>
+                <a href="http://twitter.com" target="_blank">Twitter</a><br>
+            </div>
+        </footer>
     </main>
-    <footer>
-        <div class="footer-itens">Localização
-            Rua Principal, 123 - Centro, Cidade
-            
-            
-            
-           </div>
-           <div class="footer-itens"> Horário de Funcionamento
-            Segunda a Sexta das 8h às 20h;
-            Sábado e Domingo, das 9h às 18h.</div>
-    <div class="footer-itens">
-        Contato
-        Telefone: (XX) XXXX-XXXX;
-        E-mail: contato@cafearomatico.com
-    </div>
- 
-    <div class="footer-itens">
-        Redes Sociais
-        Facebook
-       Instagram
-       Twitter
-    </div></footer>
+  
     <script src="script.js"></script>
 </body>
 
