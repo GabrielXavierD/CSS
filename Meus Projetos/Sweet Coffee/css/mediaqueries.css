@@ -44,27 +44,17 @@
     font-size: 9.375rem;
 }
 
-.parte2__Mapa {
-    position: relative;
-    top: 2px !important;
-    width: 80vw;
-    height: 30vh;
-}
+
 
 
 }
-
-
-
 
 
 footer{
-    height: 5rem;
+    height: 50vh !important;
     background-repeat: repeat;
     font-size: 2vh;
-}
-
-
-@media screen and (max-width: 700px){
     
 }
+
+
