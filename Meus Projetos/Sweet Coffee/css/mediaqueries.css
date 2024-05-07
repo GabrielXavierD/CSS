@@ -1,0 +1,70 @@
+@media screen and (min-width: 1500px) and (max-width: 2300px){
+    header {
+       height: 5vh;
+       }
+   header nav ul li{
+    font-size: 3vh;
+   }
+   main{
+    position: relative;
+   }
+   .parte1{
+   
+    height: max-content;
+   }
+
+   button{
+    position: relative;
+    height: 6vh  !important;
+    width: 30vw !important;
+    font-size: 3vh !important;
+   }
+
+   .divisor{
+    position: absolute;
+    z-index: 2;
+    margin: 1% 0px;
+    transform: scale(101%);
+   }
+   .parte1__textoEmpresa {
+    font-size: 3.5vh;
+   }
+
+   .parte2{
+    height: max-content;
+    top: 6.25rem;
+   }
+
+
+.parte2__bloco {
+    left: auto;
+    right: auto;
+}
+.parte2__bloco h1 {
+    font-size: 9.375rem;
+}
+
+.parte2__Mapa {
+    position: relative;
+    top: 2px !important;
+    width: 80vw;
+    height: 30vh;
+}
+
+
+}
+
+
+
+
+
+footer{
+    height: 5rem;
+    background-repeat: repeat;
+    font-size: 2vh;
+}
+
+
+@media screen and (max-width: 700px){
+    
+}
