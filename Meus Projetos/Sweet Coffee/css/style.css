@@ -1,0 +1,252 @@
+/**FONT**/
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&display=swap');
+
+@font-face {
+    font-family: Railey;
+    src: url("../assets/font/railey/Railey-PersonalUse.ttf");
+}
+
+.chewy-regular {
+    font-family: "Chewy", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.chau-philomene-one-regular {
+    font-family: "Chau Philomene One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/**FONT**/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+  
+}
+
+main {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #7C4C41;
+    height: 48px;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+ul li {
+    margin: 10px 0px;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+li a::before{
+    position: absolute;
+     visibility: hidden;
+    top: 35px;
+    content: "";
+    width: 100px;
+    height: 4px;
+    background-color: red; 
+}
+
+
+
+.parte1 {
+    background-color: #EDE2C8;
+    height: 920px;
+    width: 100vw;
+    background-attachment: scroll;
+}
+
+.xicara {
+    position: relative;
+    left: -210px;
+    top: 200px;
+    transform: scale(1.8);
+}
+
+.parte1__nomeEmpresa {
+    position: relative;
+    top: -288px;
+    left: 464px;
+    font-family: Railey;
+    font-size: 215px;
+}
+
+.parte1__textoEmpresa {
+    position: relative;
+    top: -320px;
+    left: 496px;
+    width: 62%;
+    font-family: "Chewy";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.parte1__btn {
+    position: relative;
+    top: -270px;
+    left: 660px;
+    width: 550px;
+    height: 140px;
+    border-radius: 100px;
+    background-color: #BD4E3A;
+    font-size: 46.7px;
+    font-family: "Chau Philomene One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+    border: none;
+    transition: all 0.5s;
+}
+
+.parte1__btn:hover{
+    background-color: #773325;
+    border: 4px solid #230e0a;
+    cursor: pointer;
+}
+
+.divisor {
+    position: absolute;
+    z-index: 2;
+    top: 52.5rem;
+    left: -2.5rem;
+    display: flex;
+    background-color: linear-gradient( #EDE2C8 0%, #ff0000 100%);
+}
+
+.papelRasgado {
+    z-index: 2;
+    top: -100px;
+    left: -60px;
+}
+
+.papelRasgado2 {
+    z-index: 2;
+    margin-left: -60px;
+}
+
+.papelRasgado3 {
+    z-index: 2;
+    margin-left: -60px;
+}
+
+.papelRasgado4 {
+    z-index: 2;
+    margin-left: -120px;
+}
+
+.papelRasgado5 {
+    z-index: 2;
+    margin-left: -60px;
+}
+
+.papelRasgado6 {
+    z-index: 2;
+    margin-left: -70px;
+}
+
+.papelRasgado7 {
+    z-index: 2;
+    margin-left: -90px;
+}
+.papelRasgado8 {
+    z-index: 2;
+    margin-left: -110px;
+}
+.papelRasgado9 {
+    z-index: 2;
+    margin-left: -120px;
+}
+.papelRasgado10 {
+    z-index: 2;
+    margin-left: -130px;
+}
+
+
+.fita {
+    position: absolute;
+    z-index: 2;
+    top: -100px;
+    left: -500px;
+    transform: scale(0.22) rotateZ(62deg);
+}
+
+
+.parte2 {
+    background-color: #F1C787;
+    height: 850px;
+    width: 100vw;
+    top: 100px;
+    background-image: url("../assets/img/padrao1.png");
+    background-attachment: fixed;
+    background-blend-mode: soft-light;
+    background-size: cover;
+}
+
+
+
+.parte2 h1 {
+    position: relative;
+    top: 98px;
+    left: 432px;
+    width: 63%;
+    font-family: "Chewy";
+    font-weight: 800;
+    font-style: normal;
+    font-size: 150px;
+    text-align: justify;
+    -webkit-text-fill-color: #FD6C52;
+    -webkit-text-stroke: 2px #311e19;
+}
+
+.parte2__PinoDoMapa {
+    position: relative;
+    left: 112px;
+    top: -255px;
+    transform: rotateZ(-45deg) scale(0.22);
+    filter: contrast(100);
+}
+
+.parte2__Mapa {
+    margin-top: 80px;
+    margin-left: -120px;
+    width: 720px;
+    height: 480px;
+}
+
+
+footer{
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-evenly;
+    background-image: url("../assets/img/footer.png");
+    height: 80px !important;
+    text-align: center;
+    font-size: 18px;
+}
+
+.footer-itens a:hover{
+    color: #773325;
+    text-decoration: underline;
+}
