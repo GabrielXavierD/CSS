@@ -1,0 +1,19 @@
+.grupo{
+    /* border: 1px solid black; */
+
+    border-color: black; /*TOP, RIGHT, BOTTOM, LEFT*/
+    border-color: black red green purple;
+    border-top-color: yellow; /*ESPECIFICANDO - TOP, RIGHT, BOTTOM, LEFT*/
+    
+    border-radius: 20px;
+    border-bottom-left-radius: 210px; /*ESPECIFICANDO - TOP, RIGHT, BOTTOM, LEFT*/
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 10px;
+
+    border-top: 10px; /*TOP, RIGHT, BOTTOM, LEFT*/
+    border-width: 10px 120px 70px 122px; /*TOP, RIGHT, BOTTOM, LEFT*/
+    border-bottom-width: 20px; /*ESPECIFICANDO - TOP, RIGHT, BOTTOM, LEFT*/
+    
+    border-image: url("fundo1.jpg"); /*Imagem como borda*/
+    border-style: solid; /*Há vários estilos*/
+}
