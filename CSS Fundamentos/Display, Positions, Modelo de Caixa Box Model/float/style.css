@@ -1,0 +1,41 @@
+.conteudo{
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+}
+.conteudo1{
+    background-color: red;
+    float: right; 
+    /* Float = Elem. flutuante, fica sobre outros elementos 
+    -> cria um fluxo diferenciado de acordo com o valor inserido = left, right, none; */
+}
+
+.conteudo2{
+    background-color: green;
+    float: left; /* Float = Elem. flutuante, fica sobre outros elementos 
+    (É como se os elem. embaixo ñ existissem pra esse elem. c/ float (como se ele estivesse em um plano acima)) */
+}
+.conteudo3{
+    height: 400px;
+    width: 400px;
+    background-color: blue;
+}
+
+.bloco {
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    float: left; /*alinhando os 3 blocos um do lado do outro 
+    (os 3 estão no mesmo plano, logo, eles não ficam em cima um do outro e sim do lado um do outro)*/
+    margin: 10px;
+}
+
+.bloco1 {
+    background-color: rgb(0, 255, 217);
+}
+.bloco2 {
+    background-color: rgb(0, 255, 217);
+}
+.bloco3 {
+    background-color: rgb(0, 255, 217);
+}
