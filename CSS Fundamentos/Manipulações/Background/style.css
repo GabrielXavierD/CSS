@@ -1,6 +1,43 @@
-.imagem {
-    background-image: url(656x0.jpg);
+body {
+    background-image: url(images2.jpg);
+    background-size: 100%;
+}
+
+.minhadiv {
     width: 500px;
     height: 300px;
-    background-color: green;
+    background-image: url(images.jpg); /*definindo imagem de fundo para a div*/
+    background-size: 200px 100px; /*tamanho do fundo da div/imagem, da pra colocar %  % tb */
+    background-repeat: no-repeat; /*imagem nao se repete (para preencher o elemento)*/
+    background-position: top center; /*posição superior centro*/
+    border: 1px solid black; /*borda para a div*/
+}
+
+
+div{
+    background: color, url(), repetição, posicionamento, size;
+
+    background-color: lightblue;
+    
+    background-image: url();
+
+    background-repeat: no-repeat;
+    background-repeat: repeat;
+    background-repeat: repeat-x;
+    background-repeat: repeat-y;
+
+    background-size: 200px 200px;
+    background-size: contain; /*Contem a imagem no valor 100%  do container*/
+    background-size: cover; /*Cobre a area inteira*/
+
+    background-position: center;
+    /*primeiro valor: left, center, right || segundo valor: top, center, bottom*/
+    background-position: top center; /*X e Y - posição superior centro*/
+
+    background-attachment: fixed; /*Imagem fixa como plano de fundo - conteúdo se movimenta e a imagem fica fixa no fundo*/
+    background-attachment: scroll; /*Imagem utiliza o scroll da tela - img se movimenta junto com o conteúdo*/
+   
+    background-image: linear-gradient(top, green, red, blue);
+    background-image: linear-gradient(45deg, green 0%, red 20%, blue 40%); /*% = quando irá começar*/
+    background-image: radial-gradient(circle green, red, blue)
 }
