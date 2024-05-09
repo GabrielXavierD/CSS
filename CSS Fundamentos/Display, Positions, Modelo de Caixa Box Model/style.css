@@ -3,8 +3,8 @@
                 /*CSS Display
 
 div{
-    display: block; bloco - um embaixo do outro, pula uma linha, usa todo espaço disponivel na tela - aceita altura e largura etc...
-    display: inline; padrão - um do lado do outro, ignora largura -> ñ é possivel definir valores do box model ( width, height, margin(top/bottom) etc)
+    display: block; bloco - um embaixo do outro, pula uma linha, usa todo espaço disponivel na tela - aceita altura e largura etc... ex.: div
+    display: inline; padrão - linha a linha, um do lado do outro, ignora width -> ñ é possivel definir valores do box model ( width, height, margin(top/bottom) etc)
     display: inline-block; recebe propriedades do box model - começa a ficar um do lado do outro, na mesma linha, assim que houver o espaço necessario na tela - aceita altura e largura
     display: none; não apresenta o elemento, mas ele continua presente
     display: grid;
