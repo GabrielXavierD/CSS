@@ -3,8 +3,8 @@
 
 p{
     font-size: 16px; /*px = unidade absoluta - não se altera - pode acabar atrapalhando na acessibilidade*/
-    font-size: 10%; /*% = em relação ao elemento pai*/
-    font-size: 1em; /*em = relativa ao elemento pai - multiplica o valor de referencia - tambem se adapta caso o usuario altere o tamanho da fonte do proprio navegador*/
+    font-size: 10%; /*% = em relação ao elemento pai ou que o browser utiliza como referencia - Ex.: 16px = 100%; 32px = 200%*/
+    font-size: 1em; /*em = relativa ao elemento pai (mais usado que o %) - multiplica o valor de referencia - tambem se adapta caso o usuario altere o tamanho da fonte do proprio navegador*/
     /*Se o elemento pai tiver 30px o o elemento filho tiver 2em, o filho terá 60px*/
     
     /*ACESSIBILIDADE*/
@@ -12,8 +12,8 @@ p{
     -> só muda se houver alguma alteração na tag HTML ou caso o usuario altere o tamanho da fonte do navegador*/
     /*rem e o px são os mais utilizados*/
 
-    font-size: 60vh; /*vv = referente a altura da tela (no caso, ocupando 60% da altura da tela)*/
-    font-size: 80vw; /*vv = referente a largura da tela (no caso, ocupando 60% da largura da tela)*/
+    font-size: 60vh; /*vh = referente a altura da tela (no caso, ocupando 60% da altura da tela)*/
+    font-size: 80vw; /*vw = referente a largura da tela (no caso, ocupando 60% da largura da tela)*/
 
     font-size: 60ch; /*ch = caracteres de largura (do caracter 0) no maximo*/
 
