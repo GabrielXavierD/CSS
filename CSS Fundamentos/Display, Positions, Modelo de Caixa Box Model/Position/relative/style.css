@@ -1,0 +1,31 @@
+/*CSS POSITIONS
+
+div{
+    position: relative; ela respeita o fluxo (se mantem nele) o espaço do elem. continua no fluxo e nao altera os outros elementos)                 
+}
+
+ao modificar o POSITION se pode usar TOP, RIGHT, BOTTOM E LEFT e o z-index também
+*/
+
+
+body {
+    background: #007fc7;
+}
+
+.container {
+    background: #FFF;
+    width: 800px;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+
+p{
+  width: 200px;
+}
+.relative{
+    position: relative;
+    border: 1px solid red;
+    top: -20px;
+    left: 80px;
+}
