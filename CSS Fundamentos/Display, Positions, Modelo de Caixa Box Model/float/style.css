@@ -1,7 +1,9 @@
+
+
 .conteudo{
     height: 200px;
     width: 200px;
-    border: 1px solid black;
+    border: 1px solid black;   
 }
 .conteudo1{
     background-color: red;
@@ -21,6 +23,56 @@
     background-color: blue;
 }
 
+
+
+
+
+
+.principal{
+    border: 5px solid black;
+    background:purple;
+}
+
+.clear{
+    clear: both; /*LIMPAR O FLUXO EM = left, right, both, none*/
+}
+.grupo{
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;  
+    float: left;  /*Outra opção é remover o float das divs que a div .principal para de ficar bugada*/
+}
+.grupo1{
+    background-color: red;
+    
+}
+
+.grupo2{
+    background-color: green;
+    
+}
+.grupo3{
+    background-color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .bloco {
     height: 200px;
     width: 200px;
@@ -39,3 +91,4 @@
 .bloco3 {
     background-color: rgb(0, 255, 217);
 }
+

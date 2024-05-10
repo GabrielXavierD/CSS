@@ -8,13 +8,41 @@
     <title>Float</title>
 </head>
 <body>
+
     <div class="conteudo conteudo1">A</div>
     <div class="conteudo conteudo2">B</div>
     <div class="conteudo conteudo3">C</div>
+    <br>
 
+    <div class="principal">
+        <!-- Elementos flutuantes dentro de uma div, deixam ela com um comportamento estranho
+        fica estreita em cima e para arrumar isso se usa o clear -->
+
+        <!-- E para se utilizar imagem dentro das divs com float, se deve usar o clear pra limpar o fluxo flutuante  -->
+       <!-- Quando se usa float nos elem. filhos eles ñ deixam o elem. pai expandir (no caso a cor de fundo) até que eles ocupem todo o espaçamento -->
+       <!-- Ao limpar o fluxo o elem. pai (que não está flutuando/com float) expande para aparecer corretamente -->
+       <!-- Elem. flutuantes (filhos) não empurram a div pai - logo a div pai mantem todos os elem. filhos c/ float dentro dela -->
+        <div class="grupo grupo1">A</div>
+        <div class="grupo grupo2">B</div>
+        <div class="grupo grupo3">C</div>
+
+        <!-- Para evitar que a div principal fique bugada, se cria uma div, com clear - assim, a div principal consegue se expandir 
+        - Outra opção é remover o float das divs que a div .principal para de ficar bugada 
+        - Sempre que se usar elem. flutuante/float deve se usar o CLEAR ao final dele p/ limpar o fluxo-->
+        <div class="clear"></div>
+        <p class="clear">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus sapiente assumenda adipisci impedit distinctio iure delectus dignissimos laudantium ipsam non, amet soluta aperiam veritatis natus! Amet commodi culpa inventore necessitatibus.
+        Commodi blanditiis, quidem sequi, beatae nesciunt sed sapiente similique, itaque natus atque inventore nobis obcaecati eaque non temporibus laboriosam. Corrupti non est neque magni veniam quos animi minus accusamus dolorem?
+        Iure quibusdam veritatis eveniet totam et temporibus amet, praesentium fugiat nemo enim aperiam, minima culpa quasi perferendis soluta vero? Impedit vel eligendi voluptates, cumque possimus magnam magni dolor quam eos.
+        Corporis sit officia, itaque assumenda quasi eum delectus suscipit magni, autem et harum fugiat saepe incidunt quaerat nisi vero? Repellat atque voluptas harum totam reprehenderit modi et maiores nam sequi!</p>
+    </div>
     <br>
     <div class="bloco bloco1">A</div>
+    <p class="clear">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, magnam officiis. Neque similique tenetur amet deleniti tempora? Ea quas, eos laborum natus, laudantium, eius ut neque exercitationem adipisci magnam sit.
+    Nostrum tempora rerum obcaecati sequi tenetur quidem asperiores fugiat mollitia voluptatem veniam atque autem perspiciatis in aperiam amet incidunt vel officia deserunt ab maiores, aliquid aut ipsum. Perferendis, rem eaque!
+    Tenetur, cumque? Reprehenderit, magni. Architecto ex neque accusamus facere voluptas quaerat repudiandae ipsam nam pariatur maiores, doloribus voluptates tempore quod aliquid perferendis atque enim quae. Nam praesentium dicta ex dolorem?</p> 
     <div class="bloco bloco2">B</div>
     <div class="bloco bloco3">C</div>
+
+  
 </body>
 </html>
