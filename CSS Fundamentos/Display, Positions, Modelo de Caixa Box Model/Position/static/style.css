@@ -1,0 +1,29 @@
+
+
+                /*CSS POSITIONS
+
+div{
+    position: static; padrão - respeita a ordem (o fluxo) que os elementos aparecem na tela - Ex.: 1,2,3,4
+}
+
+ao modificar o POSITION se pode usar TOP, RIGHT, BOTTOM E LEFT e o z-index também
+*/
+
+body {
+    background: #007fc7;
+}
+
+.container {
+    background: #FFF;
+    width: 800px;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+h1{
+    position: static;
+}
+
+p{
+    position: static;
+}
