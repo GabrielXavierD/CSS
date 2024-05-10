@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>inline e inline-block</title>
+</head>
+
+<body>
+    <!-- display: inline; padrão - linha a linha, um do lado do outro, ignora width (sua largura é de acordo com seu conteúdo)
+         -> ñ é possivel definir valores do box model ( width, height, margin(top/bottom) etc) -->
+
+    <!-- Exemplos de elem. inline -->
+    <a href="">Lorem, ipsum dolor.</a>
+    <span>SPAN ipsum dolor.</span>
+    <img src="fundo1.jpg" alt="Paisagem">
+
+
+    <br>
+
+    <!-- display: inline-block; recebe propriedades do box model - começa a ficar um abaixo do outro
+        (sua largura é de acordo com seu conteúdo)  -->
+
+    <!-- Exemplos de elem. inline-block
+    deve ser definido display:inline-block; -->
+ 
+    <span class="borda">Lorem, ipsum dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit minima nemo
+        architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptatum consequuntur
+        veritatis, quos maxime temporibus.</span>
+    <span class="borda">Lorem, ipsum dolor.</span>
+</body>
+
+</html>
