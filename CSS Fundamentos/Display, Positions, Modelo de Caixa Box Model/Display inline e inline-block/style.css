@@ -1,0 +1,22 @@
+/* <!-- display: inline; padrão - linha a linha, um do lado do outro, ignora width (sua largura é de acordo com seu conteúdo)
+-> ñ é possivel definir valores do box model ( width, height, margin(top/bottom) etc) -->
+
+display: inline-block; recebe propriedades do box model - fica um do lado do outro e 
+quando não há mais espaço na mesma linha, quebra a linha e 
+começa a ficar um abaixo do outro (sua largura é de acordo com seu conteúdo)  */
+
+
+img{
+    width: 20%;
+}
+
+ .link{
+    display: inline-block; 
+}
+
+
+.borda{
+    border: 1px solid red;
+    padding: 10px;
+     display: inline-block; 
+}
