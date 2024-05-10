@@ -1,0 +1,36 @@
+
+                /*CSS POSITIONS
+
+div{
+    position: absolute; segue um elemento pai com position diferente de static ou a propria página - remove o elemento do fluxo e fica por cima . Ex.: botão acima da borda do elem. pai
+}
+
+
+ao modificar o POSITION se pode usar TOP, RIGHT, BOTTOM E LEFT e o z-index também
+*/
+
+body {
+    background: #007fc7;
+}
+
+.container {
+    background: #FFF;
+    width: 800px;
+    margin: 10px auto;
+    padding: 10px;
+    position: relative;
+}
+
+
+
+p{
+    width: 200px;
+}
+
+.absolute{
+    position: absolute;
+    top: 0px;
+    background-color: #f2f2f2;
+    border: 1px solid red;
+    right: 20px;
+}
