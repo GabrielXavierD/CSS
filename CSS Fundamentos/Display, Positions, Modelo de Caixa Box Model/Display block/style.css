@@ -1,0 +1,5 @@
+/* display: block; bloco - um embaixo do outro, pula uma linha, usa todo espaço disponivel na tela - aceita altura e largura etc... ex.: div */
+
+.borda{
+    border: 1px solid red;
+}
