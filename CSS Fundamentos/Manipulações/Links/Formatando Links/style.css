@@ -1,0 +1,29 @@
+body{
+    background-color: rgb(85, 61, 61);
+}
+a {
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+/* Deve se manter essa ordem: */
+/*Links não visitados*/
+a:link {
+    color: #b9c941;
+}
+
+/*Links Visitados*/
+a:visited {
+    color: #ff0000;
+}
+
+/*Links Hover, passa o cursor sobre o link*/
+a:hover {
+    color: #FFF;
+    background: #6d790f;
+}
+
+/*Links Ativos, quando clicado*/
+a:active {
+    color: #00ff5e;
+}
