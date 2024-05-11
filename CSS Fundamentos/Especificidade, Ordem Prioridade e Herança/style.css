@@ -21,14 +21,19 @@ Inline (style=" ") -> ID (#) -> Classes, Atributos e Pseudo-Classes (. :: [ ]) -
 <p>Parágrafo teste </p>
 
                     prioridade (da Menor a Maior)
-P {}               ➔ 0-0-0-1
-P::before {}       ➔ 0-0-0-2
+*{}                ➔ 0-0-0-0 
+p {}               ➔ 0-0-0-1
+p::before {}       ➔ 0-0-0-2
 .destaque {}       ➔ 0-0-1-0
 #destaque {}       ➔ 0-1-0-0
 #destaque p {}     ➔ 0-1-0-1
 (inline) style=*   ➔ 1-0-0-0
-!important         ➔ ignora todas as anteriores e se torna prioridade
+!important         ➔ ignora todas as anteriores e se torna prioridade (é uma boa prática tentar resolver os problemas antes de ter que utilizar o !important - evita que o código fique confuso)
+A regra mais especifica é a que se aplica
 
+Em caso de seletores iguais, sempre o ultimo será aplicado
+p {}               ➔ 0-0-0-1
+p{}                ➔ 0-0-0-2
 */
 
 
