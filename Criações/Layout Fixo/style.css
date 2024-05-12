@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    background-color: #f2f2f2;
+}
+
+.container{
+    width: 720px;
+    margin: 0 auto;
+    background: #fff;
+}
+.marca{
+    height: 100px;
+    background: #9e9e9e;
+    text-align: center;
+    line-height: 100px;
+}
+
+.conteudo{
+    width: 520px;
+    float: right;
+}
+
+.conteudo-principal {
+    border: 1px solid black;
+    width: 320px;
+    float: left;
+}
+.conteudo-secundario {
+    border: 1px solid black;
+    width: 180px;
+    float: right;
+    background: #d1d1d1;
+}
+
+/* 320 + 180 = 500px -> sobra 20px pra completar 520 do .conteudo -> 20px é o espaçamento */
+.conteudo-secundario h2,
+.conteudo-secundario p {
+    padding: 2px 15px 25px 15px;
+}
+
+
+
+.navegacao{
+    width: 180px;
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #d1d1d1;
+}
+/* 520 + 180 = 700px -> o container ter 720px -> 20px de espaço */
+
+
+ul li{
+    padding: 0px 10px;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+p{
+    margin-top: 20px;
+}
+.rodape{
+    clear: both; /*boa prática usar clear por último caso use float nos elem. anteriores */
+    background: #c4c4c4;
+    padding: 5px;
+}
