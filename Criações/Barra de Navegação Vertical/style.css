@@ -13,12 +13,13 @@ ul a{
     text-indent: 40px; /*RECUO*/
     line-height: 40px; /*Tamanho da linha em que o texto está dentro -> o texto fica centralizado por line-height tem o mesmo tamanho que height*/
     /*font-size e line-height "trabalham juntos -font-size: tam. q a fonte vai ficar dentro da linha & line-height: tam. q a linha da fonte vai ter"*/
-    background: url(img/menu.png) no-repeat left;
+    background: #f7b600 url(img/menu.png) no-repeat left; /*caso a imagem não carregue por algum motivo, há uma cor para compensar*/
 }
 
 a:hover{
     background-position: right;
-    #fff;
+    background-color: #f99200; /*Caso a imagem não carregue, há uma cor para compensar*/
+    color: #fff;
 }
 
 /*  A img original tem 400px e é dividida em 2 lados
