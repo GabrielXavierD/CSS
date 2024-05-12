@@ -1,0 +1,42 @@
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ul a{
+    width: 200px; /*tamanho máximo da imagem original*/
+    height: 40px;
+    border: 1px solid red;
+    display: block; /*a = inline (tamanho do conteudo) -> block pra estabelecer uma largura e altura */
+    color:#000;
+    text-decoration: none;
+    text-indent: 40px; /*RECUO*/
+    line-height: 40px; /*Tamanho da linha em que o texto está dentro -> o texto fica centralizado por line-height tem o mesmo tamanho que height*/
+    /*font-size e line-height "trabalham juntos -font-size: tam. q a fonte vai ficar dentro da linha & line-height: tam. q a linha da fonte vai ter"*/
+    background: #f7b600 url(img/menu.png) no-repeat left; /*caso a imagem não carregue por algum motivo, há uma cor para compensar*/
+}
+
+a:hover, .selecionado a{
+    background-position: right;
+    background-color: #f99200; /*Caso a imagem não carregue, há uma cor para compensar*/
+    color: #fff;
+}
+
+/*  A img original tem 400px e é dividida em 2 lados
+    o lado amarelo tem 200px, o lado laranja tem 200px 
+    E estão um do lado do outro
+
+    ao iniciar o background do lado esquerdo (left)
+    a imagem se inicia do lado amarelo 
+    (pois o tamanho estabelecido para o link foi de 200px,
+    ou seja, só mostra uma cor de cada vez)
+
+    ao passar o mouse sobre o link (a)
+    o lado direito (right) da imagem
+    fica a mostra, ou seja,
+    o lado laranja
+
+    para visualizar isso
+    basta aumentar o tamanho do link para
+    250px
+ */
