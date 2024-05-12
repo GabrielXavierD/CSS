@@ -1,0 +1,45 @@
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ul a{
+    width: 200px; /*tamanho máximo da imagem original*/
+    height: 40px;
+    border: 1px solid red;
+    display: block; /*a = inline (tamanho do conteudo) -> block pra estabelecer uma largura e altura */
+    color:#000;
+    text-decoration: none;
+    text-indent: 40px; /*RECUO*/
+    line-height: 40px; /*Tamanho da linha em que o texto está dentro -> o texto fica centralizado por line-height tem o mesmo tamanho que height*/
+    /*font-size e line-height "trabalham juntos -font-size: tam. q a fonte vai ficar dentro da linha & line-height: tam. q a linha da fonte vai ter"*/
+    background: #f7b600 url(img/menu.png) no-repeat left; /*caso a imagem não carregue por algum motivo, há uma cor para compensar*/
+}
+
+a:hover{
+    background-position: right;
+    background-color: #f99200; /*Caso a imagem não carregue, há uma cor para compensar*/
+    color: #fff;
+}
+
+/* Exemplo 2 - 
+Cada body de cada página do site tem um id diferente,
+então em cada página a formatação estará em um link diferente
+
+é uma boa prática especificar uma class para qual nav é 
+(no caso, estou formatando a nav .navegacao-lateral)
+pois assim, em uma página com vários links ou navegações
+as formatações podem ser diferenciadas
+
+Ex. de leitura: na página #home para a nav .navegacao-lateral com
+algum elem. filho com class .home formate o link(a) 
+*/
+#home .navegacao-lateral .home a,
+#produtos .navegacao-lateral .produtos a,
+#conta .navegacao-lateral .conta a,
+#sobre .navegacao-lateral .sobre a,
+#contato .navegacao-lateral .contato a{
+    background-position: right;
+    background-color: #f99200;
+    color: #fff;
+}
