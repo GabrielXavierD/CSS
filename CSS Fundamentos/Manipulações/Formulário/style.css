@@ -1,0 +1,41 @@
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+fieldset{
+    margin: 1em 0;
+    padding: 1em;
+    border: 1px solid #ccc;
+    background: #f8f8f8;
+}
+
+legend{
+    font-weight: bold;
+}
+
+label{
+    
+    display: block; /*label = inline*/
+    cursor: pointer;
+}
+input{
+    border: 1px solid rgb(255, 0, 0);
+    width: 100%;
+}
+
+/* input[type="radio"]{ 
+    o seletor de atributo é novo e não tem muito suporte pra navegadores antigos = é uma boa prática utilizar classes
+} */
+
+input.radio, input.checkbox, input.submit{ 
+   width: auto;
+}
+
+.radio{
+    margin-right: 1em;
+}
+textarea{
+    width: 100%;
+    height: 10em;
+}
+
