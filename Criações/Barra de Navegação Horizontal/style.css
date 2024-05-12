@@ -1,0 +1,40 @@
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 720px;
+    background: #159cb0 url(img/fundo-horizontal.png) repeat-x;
+    float: left; /*Pra não bugar, poderia usar clear both, mas se usou o mesmo que a li -> boa prática*/
+}
+
+
+ul li{
+    float: left; /*Boa prática para deixa-los lado a lado em vez de usar display*/
+}
+
+ul a {
+    display: block;
+    padding: 0 2em;
+    line-height: 2.2em; /*Pode isso usar em vez de padding superior*/
+    text-decoration: none;
+    color: #fff;
+    background: url(img/divisor.png) repeat-y left top;
+}
+
+ul .primeiro a{
+    background: none;
+}
+ul a:hover{
+    color: #085662;
+    background: #44cade;
+}
+
+
+#home .navegacao-lateral .home a,
+#produtos .navegacao-lateral .produtos a,
+#conta .navegacao-lateral .conta a,
+#sobre .navegacao-lateral .sobre a,
+#contato .navegacao-lateral .contato a{
+    color: #085662;
+    background: #44cade;
+} 
