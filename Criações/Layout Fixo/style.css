@@ -26,12 +26,10 @@ body{
 }
 
 .conteudo-principal {
-    border: 1px solid black;
     width: 320px;
     float: left;
 }
 .conteudo-secundario {
-    border: 1px solid black;
     width: 180px;
     float: right;
     background: #d1d1d1;
