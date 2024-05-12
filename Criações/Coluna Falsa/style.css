@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    background-color: #f2f2f2;
+}
+
+.container{
+    width: 960px;
+    margin: 0 auto;
+    background: #fff url(img/coluna.png) repeat-y left top; /*COLUNA FALSA*/
+    min-width: 720px; /*Estabelecendo uma largura minima fixa, para que ao diminuir o layout não se desmonte ou fique com o texto pra fora*/
+    max-width: 1280px; /*Estabelecendo uma largura maxima fixa */
+    
+}
+.marca{
+    width: 100%;
+    height: 200px;
+    background: #225992 url(img/cabecalho2.jpg) no-repeat center;
+    text-align: center;
+    line-height: 200px;
+}
+
+/* .imagem{
+    width: 90%;
+    overflow: hidden; Como a imagem sai pra fora da div, usei o overflow pra esconder o conteúdo que ultrapassar
+} */
+img.img-noticia{
+    border: 1px solid rgb(255, 0, 0);
+    width: 94%;
+    padding: 2%;
+    max-width: 600px; /*utilizando o tamanho máximo da propria imagem - para não prejudicar sua exibição*/
+}
+
+
+.conteudo{
+    width: 75%; /*520px -> ~=75% */
+    float: right;
+}
+
+.conteudo-principal {
+    width: 64%; /*320px -> ~=64% */
+    float: left;
+}
+.conteudo-secundario {
+    width: 34%; /*180px -> ~=36% */
+    float: right;
+    background: #d1d1d1;
+}
+
+/* 320 + 180 = 500px -> sobra 20px pra completar 520 do .conteudo -> 20px é o espaçamento */
+.conteudo-secundario h2,
+.conteudo-secundario p {
+    padding: 2px 15px 25px 15px;
+}
+
+
+
+.navegacao{
+    width: 23%; /*180px -> ~=25% */
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* background: #d1d1d1; */
+}
+/* 520 + 180 = 700px -> o container ter 720px -> 20px de espaço */
+
+
+ul li{
+    padding: 0px 10px;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+p{
+    margin-top: 20px;
+}
+.rodape{
+    clear: both; /*boa prática usar clear por último caso use float nos elem. anteriores */
+    background: #c4c4c4;
+    padding: 5px;
+}
