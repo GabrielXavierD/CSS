@@ -1,0 +1,56 @@
+body{
+    background-color: blue;
+}
+
+.caixa{
+    width: 400px;
+    background: #dedede url(img/topo.png) no-repeat left top;
+}
+
+h2{
+    padding: 10px 20px 0 20px;
+}
+
+.caixa p{
+    padding: 0 20px 20px 20px;
+    background: url(img/baixo.png) no-repeat left bottom;
+}
+
+
+
+
+
+.caixa2{ /*Com sombra inteira*/
+    width: 400px;
+    background: #dedede url(img/topo2.png) no-repeat left top;
+}
+
+.caixa2 h2{
+    padding: 10px 20px 0 20px;
+}
+
+.caixa2 p{
+    padding: 0 20px 20px 20px;
+    background: url(img/baixo2.png) no-repeat left bottom;
+}
+
+
+.caixa3{ /*Com sombra inteira - dentro do paragrafo*/
+    width: 400px;
+    background: #dedede url(img/fundo-arredondamento.png) repeat-y;
+}
+
+.caixa3 h2{
+    padding: 10px 20px 0 20px;
+    background: url(img/topo2.png) no-repeat left top;
+
+}
+.caixa3 p {
+    padding: 0 20px;
+    margin-bottom: 0;
+}
+.caixa3 .ultimo{
+    width: 400px; /*Largura da img baixo2*/
+    height: 24px; /*Altura da img baixo2*/
+    background: url(img/baixo2.png) no-repeat left bottom;
+}
