@@ -1,0 +1,70 @@
+html, body{ /*O parallax precisa ocupar 100% da altura no html, body*/
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #777;
+    height: 100%;
+}
+
+.conteudo{
+    background-color: white;
+    color: #777;
+    text-align: justify;
+    padding: 50px 80px;
+}
+
+h3{
+    text-transform: uppercase;
+    color: #111;
+    text-align: center;
+}
+
+
+p{
+    margin-bottom: 20px;
+}
+/*EFEITO PARALLAX*/
+
+.caixa{ /*formatação generica*/
+    height: 100%;
+    opacity: 0.8;
+    background-repeat: no-repeat !important; /*p/ todas as img ñ repetir*/
+    background-size: cover !important; /*p/ todas as img cobrirem completamente*/
+    background-position: center !important; /*p/ todas as img cobrirem estarem centralizadas*/
+    background-attachment: fixed !important; /*p/ todas as img estarem c/ FIXED = pra dar o efeito do Parallax*/
+    position: relative !important;
+}
+
+.img1{ /*formatação especifica*/
+    background: url(../img/imagem1.jpg);
+}
+.img2{/*formatação especifica*/
+    background: url(../img/imagem2.jpg);
+}
+.img3{/*formatação especifica*/
+    background: url(../img/imagem3.jpg);
+}
+.img4{/*formatação especifica*/
+    background: url(../img/imagem4.jpg);
+}
+
+.conteudo-titulo{
+    position: absolute;
+    left: 0; /* usa 0 em vez de % - pra começar no canto esquerdo 0 e poder ajustar a posição -> Só 50% na esquerda e top não fica centralizado corretamente*/
+    top: 45%; /*deve se observar se fica ok*/
+    width: 100%; /*usando 100% da tela pra conseguir ajustar a posição center*/
+    background-color: rgba(255, 157, 0, 0.302);
+    text-align: center; /*Agora sim - centralizando o conteudo interno (elem filho com texto) - o elem filho se centraliza*/
+}
+
+.conteudo-titulo span.titulo{ /*AJUSTANDO PROBLEMA P/ CENTRALIZAR*/
+    color: rgb(255, 255, 255);
+    background-color: #111;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 5px;
+}
+
+
+
+
+
