@@ -1,0 +1,29 @@
+/*box-sizing é uma propriedade um pouco nova, então é necessário utilizar os prefixos
+para os navegadores antigos reconhecerem*/
+
+
+.caixa{
+    background: rgb(0, 76, 255);
+    height: 300px;
+    width: 300px;
+    padding: 50px; /*O padding faz parte do tamanho total da caixa, ou seja, há 400px ali*/
+    margin: 10px;
+}
+
+.caixa2{
+    background: rgb(255, 0, 0);
+    height: 300px;
+    width: 300px;
+    padding: 50px; /*O padding faz parte do tamanho total da caixa, ou seja, há 400px ali*/
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box; /*border-box = PADDING não contabiliza no tamanho da caixa*/
+    margin: 10px;
+}
+
+.caixa3{
+    background: rgb(72, 255, 0);
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+}

@@ -1,3 +1,10 @@
+/*Alguns navegadores não tem suporte pra border-radius logo precisamos
+fazer o uso de prefixos (pra browsers mais antigos)
+    -webkit-
+    -moz-
+    (...)
+*/
+
 .caixa{
     background: rgb(108, 150, 247);
     height: 300px;
@@ -11,7 +18,12 @@
     background: rgb(108, 150, 247);
     height: 300px;
     width: 300px;
+    
+    -webkit-border-radius: 20px 0px 10px 120px; /*CHROME / SAFARI*/
+    -moz-border-radius: 20px 0px 10px 120px; /*MOZILLA FIREFOX*/
+    
     border-radius: 20px 0px 10px 120px; /*top, right, bottom left || canto esquerdo e inferior direito, canto superior direito e inferior esquerdo*/
+    
     padding: 10px;
     margin: 10px;
 }
