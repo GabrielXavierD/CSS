@@ -1,0 +1,17 @@
+.caixa{
+    background: rgb(108, 150, 247);
+    height: 300px;
+    width: 300px;
+    border-radius: 150px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.caixa2{
+    background: rgb(108, 150, 247);
+    height: 300px;
+    width: 300px;
+    border-radius: 20px 0px 10px 120px; /*top, right, bottom left || canto esquerdo e inferior direito, canto superior direito e inferior esquerdo*/
+    padding: 10px;
+    margin: 10px;
+}
