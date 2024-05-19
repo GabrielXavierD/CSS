@@ -21,3 +21,25 @@ p{
     word-spacing: 2rem; /*espaçamento entre palavras*/
     word-break: break-all; /*quebrar todas as palavras*/
 }
+
+
+h1 {
+    font-size: 22px;
+    }
+h2 {
+    font-style: italic;
+    font-size: small;
+    }
+p#um {
+    font-family: verdana;
+    font-weight: bold;
+    text-indent: 20px; /*Dando recuo no texto*/
+    text-shadow: rgb(255, 0, 0) 2px 1px 1px; /*sombra no texto*/ 
+    white-space: nowrap;  /*Não permitindo quebra de linha no texto*/  
+    word-spacing: 22px; /* Espaçamento entre palavras */ 
+    letter-spacing: 4px; /* Espaçamento entre letras */
+}
+
+p#MeuParagrafo{
+    color: green;
+}

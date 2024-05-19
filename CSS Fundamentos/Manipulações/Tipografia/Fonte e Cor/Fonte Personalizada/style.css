@@ -1,0 +1,34 @@
+@font-face{ /*Define uma fonte personalizada*/
+    font-family: "Ancient-Medium"; /*Escrever nome da fonte do mesmo jeito que ela aparece*/
+    src: url("fontes/Ancient-Medium.woff");
+}
+
+@font-face{
+    font-family: "BringHeart";
+    src: url("fontes/BringHeart.woff");
+}
+
+@font-face{
+    font-family: "MadelinaScript";
+    src: url("fontes/MadelinaScript.woff");
+}
+
+
+
+
+h1{
+    font-size: 6em;
+    font-family: "Ancient-Medium";
+}
+
+
+h2{
+    font-size: 6em;
+    font-family: "BringHeart";
+}
+
+
+h3{
+    font-size: 6em;
+    font-family: "MadelinaScript";
+}
