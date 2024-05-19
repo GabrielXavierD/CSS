@@ -1,0 +1,22 @@
+#grad, #grad2{
+  margin: 0 auto;
+}
+
+#grad {
+    width: 400px;
+    height: 400px;
+    background: rgb(93, 93, 93);
+  }
+
+#grad h2{
+  color: white;
+  text-shadow: 4px 20px 20px rgb(255, 0, 0); /*mov. horizontal, mov. vertical, blur, cor*/
+}  
+
+
+#grad2 {
+    width: 400px;
+    height: 400px;
+    background: blue;
+    box-shadow: 4px 20px 20px 20px rgb(255, 0, 0); /*mov. horizontal, mov. vertical, blur, spred (espalhamento), cor*/
+  }  
