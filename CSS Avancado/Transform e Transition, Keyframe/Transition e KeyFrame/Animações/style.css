@@ -9,84 +9,29 @@ PARA OS NAVEGADORES ANTIGOS RECONHECEREM
 
 #grad, #grad2{
   margin: 0 auto;
+  
 }
 
 #grad {
     width: 400px;
     height: 400px;
-    position: relative; 
-    background: purple;
-
-    -webkit-animation: mudaCorBg 3s 2s 2 alternate; /*FORMA REDUZIDA */
-    -moz-animation: mudaCorBg 3s 2s 2 alternate; /*FORMA REDUZIDA */
-    -o-animation: mudaCorBg 3s 2s 2 alternate; /*FORMA REDUZIDA */
-    animation: mudaCorBg 3s 2s 2 alternate; /*FORMA REDUZIDA */
-    
-    /*
-    animation-name: mudaCorBg;        Nome da anim.
-    animation-duration: 3s;           Duração da anim.  
-    animation-delay: 2s;              Delay inicial da anim.
-    animation-iteration-count: 2;     Quantas vezes a anim. vai repetir
-    animation-direction: alternate;   Direção da anim.: alternate (inicial ao final), reverse (inverte: do final ao inicial)
+   background: orange;
+  }
   
-    TAMBEM É PRECISO APLICA O PREFIXO EM CADA PROPRIEDADE OU NA PROPRIEDADE REDUZIDA
-    PREFIXO PRIMEIRO E DPS PADRÃO
- 
-      -webkit-animation-name: mudaCorBg;
-      -moz-animation-name: mudaCorBg;
-      -o-animation-name: mudaCorBg;
-      animation-name: mudaCorBg;
-    */
-  
-  }
+  #grad:hover {
+   width: 500px;
+   background: green;
+   transition: width 2s, background 5s;  /*propriedade a ter a transição e tempo ou usar all (p/ todas + tempo)*/
+   -webkit-transition: width 2s, background 5s;
+   -moz-transition: width 2s, background 5s;
+   -ms-transition: width 2s, background 5s;
+   -o-transition: width 2s, background 5s;
 
-/*From = de, inicia de; To = para, termina em
-Pode ser usado % tambem: 0%{}; 10%{}; 50%{}; 100%{} etc...
-*/
-
-@keyframes mudaCorBg{  
-    from{                     /*Estado inicial*/
-      background: purple;
-      border-radius: 0px;
-      top: 0;
-      left: 0;
+   /*
+  transition
+  transition-delay
+  transition-duration
+  transition-property
+  transition-timing-function
+   */
 }
-    to{                        /*Estado final*/
-      background: green;
-      border-radius: 200px;
-      top: 200px;
-      left: 200px;
-}
-}
-
-
-/*PREFIXO
-
-@-webkit-keyframes mudaCorBg{  
-  from{ 
-    background: rgb(93, 93, 93);
-  }
-  to{   
-    background: green;
-  }
-}
-
-@-moz-keyframes mudaCorBg{  
-  from{ 
-    background: rgb(93, 93, 93);
-  }
-  to{   
-    background: green;
-  }
-}
-
-@-o-keyframes mudaCorBg{  
-  from{ 
-    background: rgb(93, 93, 93);
-  }
-  to{  
-    background: green;
-  }
-}
-
-*/
