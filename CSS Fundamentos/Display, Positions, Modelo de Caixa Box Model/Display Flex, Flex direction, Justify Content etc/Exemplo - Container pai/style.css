@@ -1,0 +1,28 @@
+.conteudo{
+    background: #dcdcdc;
+    
+    height: 600px;
+    display: flex;
+
+    /*row (padrão) | row-reverse | column | column-reverse*/
+    flex-direction: row;
+
+    /*flex-wrap: quebra
+    nowrap (padrão - aperta os itens pra caber no container) | wrap (quebra) | wrap-reverse*/
+    flex-wrap: nowrap;
+
+
+    /*justify-content: alinha na horizontal (x)
+    flex-start (padrão - lado superior esquerdo) | flex-end (lado superior direto) | center | space-between | space-around | space-evenly | initial| inherit*/
+    justify-content: space-around;
+
+    /*align-items: alinha na vertical (y)
+    stretch (padrão) | normal | center | positional alignment | flex-start | flex-end | baseline (alinha com base na linha superior do texto) | initial | inherit*/
+    align-items: flex-start;
+}
+
+.item{
+    margin: 10px;
+    background: green;
+    border: 1px solid black;
+}
