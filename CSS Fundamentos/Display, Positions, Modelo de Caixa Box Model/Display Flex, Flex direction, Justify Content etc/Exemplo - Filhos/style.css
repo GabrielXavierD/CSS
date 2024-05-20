@@ -1,0 +1,50 @@
+.conteudo {
+    background: #dcdcdc;
+    height: 600px;
+    display: flex;
+}
+
+.item {
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    background: rgb(0, 255, 0);
+    border: 1px solid black;
+}
+
+.ordem1 {
+    /*Ordem dos elementos filhos, valor padrão = 0 -...+*/
+    order: 1;
+
+    /*Proporção que um item vai crescer, valor padrão = 0, maior o num. maior o espaço que ocupa*/
+    flex-grow: 1; /*ocupa todo o espaço disponivel, cresce até o final do container*/
+
+    /*Proporção de encolhimento/redução, valor padrão = 0, maior o num. maior redução*/
+    flex-shrink: 1;
+
+    /*Indica o tamanho inicial do flex item antes da distribuição de espaço restante,
+      valor padrão = auto (tamanho automatico// o tamanho definido no height/width)*/
+    flex-basis: 150px;
+}
+
+.ordem2 {
+    order: 2;
+    flex-grow: 2;
+    flex-shrink: 2;
+}
+
+.ordem3 {
+    order: 3;
+    flex-grow: 3;
+    flex-shrink: 3;
+}
+
+.ordem4 {
+    order: 4;
+    flex-grow: 4;
+    flex-shrink: 4;
+}
+
+.ordem5 {
+    order: -1;
+}
