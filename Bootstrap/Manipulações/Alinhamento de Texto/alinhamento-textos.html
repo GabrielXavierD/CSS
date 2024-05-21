@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <title>Bootstrap - Alinhamento de textos</title>
+  </head>
+
+  <body style="margin-bottom: 200px;padding: 16px;">
+
+
+    <!-- Parágrafo justificado -->
+    <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum elementum quam, a viverra ligula fringilla tempus. Ut tempor, dui eu semper aliquet, sem nisi pellentesque libero, suscipit porttitor risus magna vel lorem.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum elementum quam, a viverra ligula fringilla tempus. Ut tempor, dui eu semper aliquet, sem nisi pellentesque libero, suscipit porttitor risus magna vel lorem.</p>
+
+    <br>
+    <br>
+
+    <!-- 
+        Alinhamento responsivo - 
+        Estrutura: class="text-<tela>-<alinhamento>"
+            Tela: sm, md, lg, xl
+            Alinhamento: left, center, right
+     -->
+
+     <!-- Alinhamento aplicado de acordo com o tamanho da tela:
+          Se for >= ao tamanho X faça o alinhamento;
+          Caso for menor, fica no local padrão, na esquerda; -->
+
+    <p class="text-sm-center">tela &gt;= 576px</p><!--Small-->
+    <p class="text-md-center">tela &gt;=  768px</p><!--Medium-->
+    <p class="text-lg-center">tela &gt;= 992px</p><!--Large-->
+    <p class="text-xl-center">tela &gt;= 1200px</p><!--Extra Large-->
+
+    <br>
+    <br>
+
+    <!-- Elemento Block para inline -->
+    <!-- Classe bg-success = aplica uma cor de fundo VERDE (sucess) 
+         Classe d-inline = converte o elem. pra inline-->
+    <h1 class="bg-success d-inline">h1 Lorem ipsum dolor</h1>
+    <p class="bg-success d-inline">p Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+    <br>
+    <br>
+
+    <!-- Elemento Inline para Block -->
+    <!-- Classe d-block = converte o elem. pra block -->
+    <span class="bg-success d-block">Lorem ipsum dolor 1</span>
+    <br>
+    <span class="bg-success d-block">Lorem ipsum dolor 2</span>
+
+    <br>
+    <br>
+
+    <!-- Elemento Inline-Block -->
+    <!-- Classe bg-warning = aplica uma cor de fundo AMARELA (warning) -->
+    <!-- Classe d-inline-block = converte o elem. pra inline-block -->
+
+    <!-- inline = elem. em linha; ñ aceita width, height, padding e margin; tem o tamanho do elem.
+         block = elem. um abaixo do outro; aceita width, height, padding e margin; se expande ao máximo da tela.
+         inline-block = se comporta como inline; elem. em linha; aceita width, height, padding e margin -->
+    <div class="bg-warning">
+        <h3 class="bg-success d-inline-block">inline block</h3>
+        <h3 class="bg-success d-inline-block" style="margin-top: 50px;width: 400px;">inline block com margin e width</h3>
+    </div>
+    
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
