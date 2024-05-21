@@ -1,0 +1,13 @@
+@media print{
+    h1::after{
+        content: " (IMPRESSÃO)";
+    }
+    h1{
+        color: red;
+    }
+}
+
+/*em vez de usar o @media e o seu tipo, ela pode ser referenciada direto no link do css
+
+<link rel="stylesheet" type="text/css" href="css/telaImpressao.css" media="print">
+*/

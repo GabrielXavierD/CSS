@@ -1,0 +1,229 @@
+/*Media Querie = aplicar determinado estilo em determinada altura ou largura do dispositivo
+- É mais comum em largura
+- Exemplo em um Iphone Xr com a tela c/ largura de 414px
+- É melhor que as Media Queries sejam a ultima coisa do arquivo
+- O CSS lê de cima pra baixo então a ordem do Media Queria importa, então o que vem escrito depois sobresai ao que está antes
+- Caso a Midia Querie esteja em um arquivo separado, é importante q referencia esteja abaixo da referencia do arquivo original (style.css), para ser a ultima coisa a ser lida
+- min = a partir disso
+- max = até isso
+- É uma boa prática escrever a media querie somente no final do código, depois das outras definições ou ser o último css linkado 
+
+Como especificar?
+    ⚫width;
+    ⚫color;
+    ⚫height; 
+    ⚫color-index;
+    ⚫device-width;     ->pegando/usando largura do proprio dispositivo
+    ⚫device-height;    ->pegando/usando altura do proprio dispositivo
+    ⚫monochrome;
+    ⚫resolution;
+    ⚫orientation;
+    ⚫scan;
+    ⚫aspect-ratio;
+    ⚫grid;
+    ⚫device-aspect-ratio;
+
+
+/* EXEMPLOS
+
+/*Estilo padrão, caso não se encaixe dentro das larguras estabelecidas no @media*/
+h1,
+h2 {
+    color: red;
+}
+
+
+/*- Poderia ser 414px mas pra ter certeza que vai pegar em todos os celulares foi colocado em 450px*/
+/*Celulares*/
+@media (max-width: 450px) { /*para todos os dispositivos com uma largura de 450px ou menos, esse estilo será aplicado*/
+    h1,
+    h2 {
+        color: green;
+    }
+}
+
+/*Exemplo estilizando para um Iphone SE*/
+@media(width: 375px) {
+    h1 {
+        color: purple;
+    }
+}
+
+/*Tablets*/
+/*As duas condições precisam estar verdadeiras para ocorrer*/
+@media (min-width: 768px) and (max-width: 1024px) { /*especificando que so vai acontecer para caso especifico entre x e y */
+    h1,
+    h2 { /*só vai ficar amarelo se a largura estiver entre 728px e 1024px*/
+        color: yellow;
+    }
+}
+
+
+/*Outro exemplo*/
+/*As duas condições NÃO precisam estar verdadeiras para ocorrer*/
+@media (min-width: 1000px), (max-width: 900px) { /*acima de 1000px faça e abaixo de 900px faça  */
+    h1,
+    h2 { 
+        color: yellow;
+    }
+}
+
+
+/*Verificar se está horizontal - Orientação*/
+/*tem prioridade sobre o min/max width*/
+@media(orientation: landscape) {  /*caso o dispositivo esteja na horizontal ou a largura seja maior que a altura*/
+    h1,
+    h2 {
+        color: blue;
+    }
+}
+
+@media(orientation: portrait) {  /*caso o dispositivo esteja na vertical ou a altura seja maior que a largura*/
+   body{
+    background-color: purple;
+   }
+    h1,h2{
+        color: black;
+    }
+}
+
+
+
+
+
+/* TIPOS DE MÍDIA
+    • all: Para todos os dispositivos.
+    • braille: Para dispositivos táteis.
+    • embossed: Para dispositivos que imprimem em braile
+    • handheld: Para dispositivos portáteis, geralmente com telas pequenas e banda limitada (ex.: celulares com telas pequenas).
+    • print: Para impressão em papel.
+    • aural: sintetizadores de voz.
+    • projection: Para apresentações de slides/PPS.
+    • screen: Para monitores ou dispositivos com telas coloridas e resolução adequada.
+    • speech: Para sintetizadores de voz.
+    • tty: teleimpressores e terminais.
+    • tv: Para dispositivos como televisores, ou seja, com baixa resolução, quantidade de cores e scroll limitados. 
+
+    Exemplo de utilização:
+
+    <link rel="stylesheet" media="print" href="print.css" /> 
+    
+    Exemplos de resoluções de telas:
+
+    -320 pixels – Smartphones no modo retrato;
+    -480 pixels – Smartphones no modo paisagem;
+    -600 pixels – Tablets pequenos. Ex: Amazon Kindle (600×800);
+    -768 pixels – Tablets maiores em modo retrato. Ex: iPad (768×1024);
+    -1024 pixels – Tablets maiores em modo paisagem, monitores antigos.
+        
+    
+    */
+
+/* Exemplo: */
+    @media screen {}/*determina que seja aplicado as telas*/
+    @media print {}/*para impressao - comportamento ao abrir a janela do modo impressão -ex: remover elementos que nao precisa que apareça, tipo botoes, menus, deixar somente um produto etc...*/
+    @media speech {}/*determina comportamento para softwares de leitura de tela/reconhecimento de fala*/
+    @media{} /*quando não se passa o tipo, o media entende que é para aplicar a todos (o mesmo que @media all)*/
+
+/*Ex.: media do tipo tela e largura até no máximo de 600px, faça*/
+@media screen and (max-width: 600px){
+    body{
+        background-color: yellow;
+    }
+    h1,h2{
+        font-size: 42px;
+    }
+}
+
+
+@media print{ /*quando abri a tela de impressão o h1 não será apresentado*/
+    h1{
+        display: none;
+    }
+    h2{
+        color: aqua;
+        font-size: 120px;
+    }
+}
+
+
+/* Exemplo: para que fundo seja na cor azul para telas com largura IGUAL ou MAIOR a 480px:*/
+
+/*estabelecendo um valor minimo (ou seja, sem um valor máximo definido) 
+-> tudo que for igual ou superior ao valor minimo X irá ficar com essa formatação)*/
+@media screen and (min-width: 480px) { 
+  body {
+    background-color: blue;
+  }
+} 
+
+
+
+
+  /****************************************************************************************************************************/
+                                                         /* Imagem */
+
+/* Imagem responsiva  */                                                         
+img{
+    max-width: 100%; /*100% do elem. pai*/
+    display: block;
+  }
+
+  /* OBJECT */                                                         
+img{
+    object-fit: contain;
+    object-fit: cover; /*Faz o mesmo que background-size: cover; porém, para imagens*/
+    object-fit: fill;
+    object-fit: none;
+    object-fit: scale-down;
+
+
+    /*Posicionar onde a imagem será cortada = backgroun-position */
+    object-position: center;
+    object-position: top;
+    object-position: right; 
+    object-position: bottom;
+    object-position: left;
+    object-position: top left; /*etc...*/
+  }
+
+  /****************************************************************************************************************************/
+                                                        /*GRID RESPONSIVO (SEM MEDIA QUERIE)*/
+
+ /*uso de fr em Grid para responsividade*/
+div{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px); /*auto-fit: cria o máximo de colunas que der respeitando o tamanho fixo escolhido (não usar fr)*/
+}
+
+/*Outra opção, para não ficar com espaço vázio*/
+div{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    /*auto-fit: cria o máximo de colunas que der respeitando
+     o tamanho minmax = continue criando enquanto houver espaço pra 300px, caso não tenha, quebre para 1 coluna (1fr = fr = tamanhomaximo)*/
+}
+
+div{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/****************************************************************************************************************************/
+
+                                                         /* Max-width*/
+.blocoTexto{
+    max-width: 600px; /*div cresce até 600px e abaixo disso, diminui sem quebrar o elem. na tela*/
+    font-size: 10ch; /*ch = largura do caractere 0*/
+}
+.blocoTexto{
+    max-width: 60ch; /*div cresce até 60ch e abaixo disso, diminui sem quebrar o elem. na tela*/
+}
+
+
+/****************************************************************************************************************************/
+                                                         /* Texto*/
+p{
+    word-break: break-all; /*quebrar todas as palavras*/
+    font-size: 10ch; /*ch = largura do caractere 0*/
+}

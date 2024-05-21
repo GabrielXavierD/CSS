@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+
+    <title>Bootstrap - breakpoints</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <style type="text/css">
+        
+        /*Small devices (landscape phones)*/
+        /* As larguras minimas de exibição do site são os Breakpoints (pontos de quebra/interrupção -> ponto onde se muda o layout)*/
+        @media (min-width: 576px) {
+            body::after{
+            content:">=576";
+          }
+          body{
+            background: red;
+          }
+        }
+
+        /*Medium devices (tablets, 768px e superior)*/
+        @media (min-width: 768px) {
+          body::after{
+            content:">=768";
+          }
+          body{
+            background: blue;
+          }
+        }
+
+        /*Large devices (desktops, 992px e superior)*/
+        @media (min-width: 992px) {
+          body::after{
+            content:">=992";
+          }
+          body{
+            background: green;
+          }
+        }
+
+        /*Extra large devices (large desktops, 1200px e superior)*/
+        @media (min-width: 1200px) {
+          body::after{
+            content:">=1200";
+          }
+          body{
+            background: rgb(255, 0, 255);
+          }
+        }
+
+        @media (min-width: 1500px) {
+          body::after{
+            content:">=1500";
+          }
+          body{
+            background: rgb(255, 234, 0);
+          }
+        }
+
+
+        /**************************/
+        /* Extra small devices (portraint phones) */
+        @media (max-width: 575px) {
+          body::after{
+            content:"<=575";
+          }
+          body{
+            background: #870000;
+          }
+        }
+
+        /* Small devices (Landscape Phones) */
+        @media (max-width: 767px) {
+          body::after{
+            content:"<=767";
+          }
+          body{
+            background: rgb(255, 77, 0);
+          }
+        }
+
+
+        /* Medium devices (Tablets) */
+        @media (max-width: 991px) {
+          body::after{
+            content:"<=991";
+          }
+          body{
+            background: rgb(50, 255, 255);
+          }
+        }
+
+        /* Large devices (Desktops) */
+        @media (max-width: 1199px) {
+          body::after{
+            content:"<=1199";
+          }
+          body{
+            background: rgb(255, 91, 184);
+          }
+        }
+
+        /*************** MAIS CORRETO ****************/
+
+          /* Extra small devices (portrait phones, less than 576px)*/
+          @media (max-width: 575.98px) { ... }
+
+          /* Small devices (landscape phones, less than 768px)*/
+          @media (max-width: 767.98px) { ... }
+
+          /* Medium devices (tablets, less than 992px)*/
+          @media (max-width: 991.98px) { ... }
+
+          /* Large devices (desktops, less than 1200px)*/
+          @media (max-width: 1199.98px) { ... }
+
+
+        /******************************************/
+        /*Extra small devices (portrait phones, menor que 576px)*/
+        @media () {}
+
+        /*Small devices (landscape phones, 576px e maiores)*/
+        @media () and () {}
+
+        /*Medium devices (tablets, 768px e maiores)*/
+        @media () and () {}
+
+        /*Large devices (desktops, 992px e maiores)*/
+        @media () and () {}
+
+        /*Extra large devices (large desktops, 1200px  e maiores)*/
+        @media () {}
+
+
+
+      
+
+    </style>
+
+      <link rel="stylesheet" href="css/impressao.css">
+      <link rel="stylesheet" type="text/css" href="css/telaImpressao.css" media="print">
+  </head>
+
+  <body style="margin-bottom: 200px; width: 600px; margin: 0 auto;">
+
+<!-- Há tamanhos e larguras mais compativeis e corretas de se usar aqui:
+     Link: https://getbootstrap.com/docs/4.0/layout/overview/ -->
+
+
+
+    <h1>BOM DIA!</h1>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
