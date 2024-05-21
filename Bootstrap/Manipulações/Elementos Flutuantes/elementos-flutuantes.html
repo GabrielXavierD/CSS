@@ -11,23 +11,34 @@
     <title>Bootstrap - Elementos flutuantes</title>
   </head>
 
-  <body style="margin-bottom: 200px;padding: 16px;">
+  <body style="margin-bottom: 200px; padding: 16px;">
 
 
-    <!-- Elementos flutuantes -->
+    <!-- CLASSES Elementos flutuantes -->
+    <!-- Classe float-POSIÇÃO 
+         
+         Para ñ bugar o fundo do elem. pai 
+         (quando se usa float, o pai, perde a altura e o fundo fica "bugado")
+         deve usar o clear, ou seja, classe: clearfix -->
     <div style="border: 1px solid red;" class="clearfix">
         <div class="bg-success float-left">Float Left</div>
         <div class="bg-warning float-right">Float Right</div>
+        <div class="bg-warning float-none">Float None (não flutuar)</div>
     </div>
 
     <!-- Posicionamento fixo - top e bottom -->
-    <h1 class="bg-success fixed-bottom">Título do conteúdo fixo</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum elementum quam, a viverra ligula fringilla tempus. Ut tempor, dui eu semper aliquet, sem nisi pellentesque libero, suscipit porttitor risus magna vel lorem.</p>
+    <!-- Classe fixed-POSIÇÃO-->
+    <!-- <h1 class="bg-success fixed-top">Título do conteúdo fixo top</h1> -->
+    <h1 class="bg-success fixed-bottom">Título do conteúdo fixo bottom</h1>
+    <p>Texto do conteúdo fixo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum elementum quam, a viverra ligula fringilla tempus. Ut tempor, dui eu semper aliquet, sem nisi pellentesque libero, suscipit porttitor risus magna vel lorem.</p>
+    
+
 
     <!-- 
-        Float responsivo - float-<tela>-<direcao>
-            tela: sm, md, lg, xl
-            alinhamento: left, right
+        Float responsivo
+        Estrutura: float-<tela>-<direcao>
+            Tela: sm, md, lg, xl
+            Alinhamento: left, right
      -->
     <div class="float-sm-right">tela &gt;= 576px * </div><!--Small-->
     <div class="float-md-right">tela &gt;=  768px * </div><!--Medium-->
@@ -37,10 +48,9 @@
     <br>
     <br>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum elementum quam, a viverra ligula fringilla tempus. Ut tempor, dui eu semper aliquet, sem nisi pellentesque libero, suscipit porttitor risus magna vel lorem.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum elementum quam, a viverra ligula fringilla tempus. Ut tempor, dui eu semper aliquet, sem nisi pellentesque libero, suscipit porttitor risus magna vel lorem.</p>
 
-    <!-- Colar no topo (sticky) -->
+    <!-- Colar ao encostar no topo (sticky) -->
+    <!-- sticky-top (não tem bottom) -->
     <ul class="list-inline bg-warning sticky-top">
       <li class="list-inline-item">Item 1</li>
       <li class="list-inline-item">Item 2</li>
