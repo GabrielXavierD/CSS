@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+
+  <title>Bootstrap - NAVEGAÇÃO</title>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+  <!-- *Navegação
+       *É possivel definir tipos de navegação:
+        nav-pills (navegação com arredondamento nos itens ativos)
+                  - active -> aplicada no elem. filho link (a) 
+                              (pra definir que a pagina X é ativa no momento)
+        nav-tabs (navegação por abas)
+                  - active -> aplicada no elem. filho link (a) 
+                              (pra definir que a pagina X é ativa no momento)
+
+       *Classes: 
+              *nav>ul>li>a
+              *Classes na tag NAV -> usando nav pra criar navegação
+               navbar -> aplicada na tag NAV -> define uma que é navbar e formata os itens a esquerda 
+               navbar-expand-TAMANHO -> aplicada na tag NAV -> RESPONSAVEL PELA RESPOSIVIDADE DA BARRA DE NAV. -> alinha os itens um do lado do outro de acordo com o tamanho definido
+               navbar-COR (dark, light etc...)-> define a cor da fonte
+               bg-COR -> define a cor do Background da navegação
+
+              *Classe p/ logo -> nav>a+ul>li>a
+               navbar-brand -> aplicado ao logo (geralmente no link a) -> define o logo da barra de navegação
+
+              *Classe p/ ul
+               navbar-nav -> aplicada na ul -> define que a ul é a navegação da tag NAV
+               
+              *Classe p/ li
+               nav-item -> no ele. filho, geralmente no li -> define que esse elem. é um link dessa navegação 
+              
+              *Classe p/ link (a)
+               nav-link -> no link a -> aplica uma formatação
+               
+              *ul>li>a 
+              *Classes na tag UL -> Usando a tag UL pra criar navegação
+               nav -> no elem. pai, geralmente no ul -> define que é uma barra de navegação e deixa os itens em inline (um do lado do outro)
+               nav-item -> no ele. filho, geralmente no li -> define que esse elem. é um link dessa navegação 
+               nav-link -> no link a -> aplica uma formatação
+                 
+               nav-item+nav-link = formatação: dá um espaçamento entre os itens
+
+
+    *NAV bar responsiva
+    *Hamburguer = ele aparece de acordo com o tamanho definido na classe navbar-expand-TAMANHO da tag NAV -> Ex.: sm = aparece quando a tela estiver muito pequena
+    navbar-toggler -> define que é o alternador da navbar -> adicionado no botão que ira alternar (hamburguer) -> borda arredondada
+    data-toggle="collapse" -> alternar entre exiber e esconder os itens do menu hamburguer -> adicionado também no botão
+    data-target="#" -> define o ID que queremos abrir ao clicar no botão -> adicionado também no botão
+    navbar-toggler-icon -> define os 3 risquinhos do hamburguer -> adicionado no span (que fica dentro do botao com toggle)
+        
+    collapse navbar-collapse -> aplicado na div (com a ul>li>a dentro) -> serve para colapsar/ocultar os itens para só aparecerem quando clicar no menu hamburguer
+    (navbar-collapse = formata os itens colapsados e não ficar bugado)
+
+    *TAMANHOS DO BOOTSTRAP
+    xs, sm, md, lg, xl, xxl
+
+    *Classes para o Elem. filho link (a)
+        active                 (ativo/atual) 
+        disabled               (link inativo)        
+
+    *Opções de alinhamento: 
+        (por padrão já vem alinhado a esquerda)
+        justify-content-center (centralizado)
+        justify-content-end    (alinhado a direita)
+        flex-column            (nav em colunas) 
+       
+     *Estrutura ex.:
+        Elem. pai (nav): navbar alinhamento navbar-COR bg-COR 
+        Elem. pai (UL):  nav tipo alinhamento m(pode usar margin pra definir onde os elem. vao ficar. ex.: mr-, ml- etc...)
+        Elem. filho (LI): nav-item
+        Elem. filho (link a): nav-link ACTIVE/DISABLED   
+    -->
+  <h2 class="">Navegação simples UL</h2>
+    <ul class="nav">
+      <li class="nav-item">
+        <a href="" class="nav-link">NAV SIMPLES</a>
+      </li>
+      <li class="nav-item">
+        <a href="" class="nav-link">NAV SIMPLES</a>
+      </li>
+      <li class="nav-item">
+        <a href="" class="nav-link">NAV SIMPLES</a>
+      </li>
+      <li class="nav-item">
+        <a href="" class="nav-link">NAV SIMPLES</a>
+      </li>
+    </ul>
+
+
+  <br><br>
+
+  <h2 class="">Navegação Pills</h2>
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a href="" class="nav-link active">nav-pills ACTIVE</a>
+      </li>
+      <li class="nav-item">
+        <a href="" class="nav-link disabled">nav-pills DISABLED</a>
+      </li>
+      <li class="nav-item">
+        <a href="" class="nav-link">nav-pills</a>
+      </li>
+    </ul>
+
+
+  <br><br>
+
+  <h2 class="">Navegação por abas</h2>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a href="" class="nav-link active">NAV-TABS ACTIVE</a>
+      </li>
+      <li class="nav-item">
+        <a href="" class="nav-link">NAV-TABS</a>
+      </li>
+      <li class="nav-item">
+        <a href="" class="nav-link">NAV-TABS</a>
+      </li>
+    </ul>
+
+
+  <br><br>
+
+  <h2 class="">Navegação com Alinhamento</h2>
+    <ul class="nav nav-tabs justify-content-center ">
+      <li class="nav-item">
+        <a href="" class="nav-link active">NAV-TABS ACTIVE</a>
+      </li>
+      <li class="nav-item">
+        <a href="" class="nav-link">NAV-TABS</a>
+      </li>
+      <li class="nav-item">
+        <a href="" class="nav-link">NAV-TABS</a>
+      </li>
+    </ul>
+
+
+  <br><br>
+
+  <h2>Barra de navegação simples NAV</h2>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+
+    <a href="" clas="navbar-brand">Chalé Hotel - Logo</a>
+
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a href="" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="" class="nav-link">Home</a>
+      </li>
+      
+    </ul>
+  </nav>
+
+  <h2>Barra de navegação com menu responsivo (Hamburguer)</h2>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+
+    <a href="" clas="navbar-brand">Chalé Hotel - Logo</a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#hamburguerMostraEsconde">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="hamburguerMostraEsconde">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a href="" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="" class="nav-link">Home</a>
+        </li>
+      </ul>
+    </div>
+
+  </nav>
+
+
+  <h2>Barra de navegação com formulário</h2>
+
+
+
+  <h2>Barra de navegação com menu dropdown</h2>
+
+
+  <!--Cores
+    opções: bg-primary, bg-secondary, bg-success, bg-info,
+    bg-warning, bg-danger, bg-light, bg-dark
+    -->
+  <h2>Cores</h2>
+
+
+  <!--Alinhamentos
+    opções: fixed-top, fixed-bottom, sticky
+    -->
+  <h2>Alinhamentos</h2>
+
+
+  <h1>Lorem ipsum dolor sit amet</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et libero id erat tristique fermentum placerat a
+    erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed ac lobortis quam.
+    Nunc vestibulum tincidunt arcu, at scelerisque velit ornare et. Vestibulum ut malesuada nibh.</p>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
