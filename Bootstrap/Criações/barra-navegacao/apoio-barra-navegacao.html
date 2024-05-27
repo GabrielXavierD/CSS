@@ -153,7 +153,7 @@
   <h2>Barra de navegação simples NAV</h2>
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
 
-    <a href="" clas="navbar-brand">Chalé Hotel - Logo</a>
+    <a href="" class="navbar-brand">Chalé Hotel - Logo</a>
 
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
@@ -175,7 +175,7 @@
   <h2>Barra de navegação com menu responsivo (Hamburguer)</h2>
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
 
-    <a href="" clas="navbar-brand">Chalé Hotel - Logo</a>
+    <a href="" class="navbar-brand">Chalé Hotel - Logo</a>
     <button class="navbar-toggler" data-toggle="collapse" data-target="#hamburguerMostraEsconde">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -200,21 +200,95 @@
   <br><br>
 
   <h2>Barra de navegação com formulário</h2>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <a href="" class="navbar-brand">Chalé Hotel - Logo</a>
+  <button class="navbar-toggler" data-toggle="collapse" data-target="#hamburguerMostraEsconde2">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="hamburguerMostraEsconde2">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a href="" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="" class="nav-link">Home</a>
+      </li>
+    </ul>
+
+    <!-- O form é colocado dentro da div que irá esconder/mostrar itens -->
+    <form action="" class="form-inline">
+      <input type="text" name="" id="" class="form-control" placeholder="pesquisar...">
+      <button class="btn btn-outline-success">Ok</button>
+    </form>
+  </div>
+</nav>
 
 
   <br><br>
   
   <h2>Barra de navegação com menu dropdown</h2>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <a href="" class="navbar-brand">Chalé Hotel - Logo</a>
+  <button class="navbar-toggler" data-toggle="collapse" data-target="#hamburguerMostraEsconde3">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
+  <div class="collapse navbar-collapse" id="hamburguerMostraEsconde3">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a href="" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="" class="nav-link">Sobre</a>
+      </li>
+
+      <!--Dropdown se coloca na li que haverá itens p/ dropdown-->
+      <li class="nav-item dropdown"> 
+        
+        <!--dropdown-toggle aplicado no link "pai"-> adiciona uma seta p/ baixo, sinaliza q é de dropdown -->
+        <!-- data-toggle="dropdown" -> responsavel por exibir/esconder os itens -->
+        <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Serviços</a> 
+       
+        <!-- dropdown-menu -> aplicado na lista de itens que será mostrada ao clicar no pai -->
+        <div class="dropdown-menu">
+
+          <!-- dropdown-item -> aplicado no elem. filho do dropdown-menu -> aplica formatações -->
+          <a href="" class="dropdown-item">Serviço1</a>
+          <a href="" class="dropdown-item">Serviço2</a>
+        </div>
+     
+      </li>
+    </ul>
+  </div>
+</nav>
 
   <br><br>
 
   <!--Cores
     opções: bg-primary, bg-secondary, bg-success, bg-info,
     bg-warning, bg-danger, bg-light, bg-dark
+
+    navbar-COR e bg-COR
     -->
   <h2>Cores</h2>
-
+  <nav class="navbar navbar-expand-sm navbar-dark bg-danger">
+    <a href="" class="navbar-brand">Chalé Hotel - Logo</a>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a href="" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="" class="nav-link">Home</a>
+      </li>
+    </ul>
+  </nav>
 
   <br><br>
 
@@ -222,7 +296,23 @@
     opções: fixed-top, fixed-bottom, sticky
     -->
   <h2>Alinhamentos</h2>
-
+  <!-- fixed-top -> fixada no topo da tela 
+       fixed-bottom -> fixado no final da tela
+       sticky-top -> fica fixa no topo, mas quando chega no ponto inicial fica "grudada"-->
+  <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-info">
+    <a href="" class="navbar-brand">Chalé Hotel - Logo</a>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a href="" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="" class="nav-link">Home</a>
+      </li>
+    </ul>
+  </nav>
 
   <br><br>
   
@@ -231,6 +321,21 @@
     erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed ac lobortis quam.
     Nunc vestibulum tincidunt arcu, at scelerisque velit ornare et. Vestibulum ut malesuada nibh.</p>
 
+  <h1>Lorem ipsum dolor sit amet</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et libero id erat tristique fermentum placerat a
+      erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed ac lobortis quam.
+      Nunc vestibulum tincidunt arcu, at scelerisque velit ornare et. Vestibulum ut malesuada nibh.</p>
+
+  <h1>Lorem ipsum dolor sit amet</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et libero id erat tristique fermentum placerat a
+      erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed ac lobortis quam.
+      Nunc vestibulum tincidunt arcu, at scelerisque velit ornare et. Vestibulum ut malesuada nibh.</p>
+
+  <h1>Lorem ipsum dolor sit amet</h1>
+   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et libero id erat tristique fermentum placerat a
+      erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed ac lobortis quam.
+      Nunc vestibulum tincidunt arcu, at scelerisque velit ornare et. Vestibulum ut malesuada nibh.</p>
+      
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
