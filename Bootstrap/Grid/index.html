@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>GRID</title>
+  </head>
+  <body>
+<!-- GRID BOOTSTRAP = usam mobile-firt -> máximo/total de 12 colunas, definem as larguras maximas a serem utilizadas 
+     a soma dos grids devem ser <=12
+     Link: https://getbootstrap.com.br/docs/4.1/layout/grid/ 
+     o tamanho se adapta de acordo com os dipositivos ativando os breakpoints-->
+   
+
+     <!-- É preciso criar rows (linhas) e colocar o conteudo;
+          -As rows ocupam todo o espaçamento do container(Elem. Pai).
+       
+        CLASSES
+        -Pode ser colocada uma de cada no elem., ai se adapta pra cada tipo de tela/uma formatação diferente pra cada tipo de tela
+        -Se o tamanho colocado for maior que 12, ex.: 6, 6 e 6 o 3 Elem. cai pra proxima linha
+        Para EXTRA-SMALL: 
+        col-NumDeColunas/Item (maximo 12) 
+        12 = todo o espaço do container
+        6 = metade do espaço total
+      
+        Para SMALL:
+        col-sm-NumDeColunas/Item (maximo 12) 
+
+        Para MEDIUM:
+        col-md-NumDeColunas/Item (maximo 12)   
+
+        Para LARGE:
+        col-lg-NumDeColunas/Item (maximo 12)        
+
+        Para EXTRA-LARGE:
+        col-xl-NumDeColunas/Item (maximo 12)   
+      -->
+    <div class="container marcador-container">
+     
+      <div class="row"> <!-- Row = cria um flex container, em linha, um na frente do outro, pode ser colocado conteudos-->
+          
+        <!-- Colocando os grids, usando tds as classes (não é necessario usar tds as classes) -->
+        <div class="marcador col-6 col-sm-2 col-md-10 col-lg-2 col-xl-10"></div> <!-- flex-items -->
+        <div class="marcador col-6 col-sm-10 col-md-2 col-lg-10 col-xl-2">Area 2</div>
+        
+      </div>
+
+      <div class="row marcador">
+        
+    <!-- Colocando os grids, usando tds as classes (não é necessario usar tds as classes) -->
+    <div class="marcador col-md-6 col-xl-4">
+      <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, nisi?</h2>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, nisi? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, nisi? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, nisi?</p>
+      <button class="btn btn-warning">Veja mais</button>
+    </div> <!-- flex-items -->
+
+
+    <div class="marcador col-md-6 col-xl-4">
+      <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, nisi?</h2>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, nisi? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, nisi? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, nisi?</p>
+      <button class="btn btn-warning">Veja mais</button>
+    </div>
+
+    <div class="marcador col-md-6 col-xl-4">
+      <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, nisi?</h2>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, nisi? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, nisi? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, nisi?</p>
+      <button class="btn btn-warning">Veja mais</button>
+    </div>
+
+
+      </div>
+      <div class="row marcador">
+        Conteúdos
+      </div>
+
+      <div class="row marcador">
+       Rodapé
+      </div>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+  </body>
+</html>
