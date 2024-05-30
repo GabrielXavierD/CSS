@@ -31,38 +31,42 @@
 
   <body>
 
+
+    <!-- row = flex container > elem. filho = flex items -->
     <div class="container">
 
-      <h2>Alinhamento vertical (align-items-ALINHAMENTO: start, center, end)</h2>
-      <div class="row">
-        <div class="col">Área 1</div>
-        <div class="col">Área 2</div>
-        <div class="col">Área 3</div>
+      <h2>Alinhamento vertical (align-items-ALINHAMENTO: start, center, end) no Container (Pai)</h2>
+      <div class="marcador row align-items-center">
+        <div class="col borda">Área 1</div>
+        <div class="col borda">Área 2</div>
+        <div class="col borda">Área 3</div>
       </div>
 
-      <h2>Alinhamento horizontal individual (align-self-ALINHAMENTO: start, center, end)</h2>
-      <div class="row">
-        <div class="col">Área 1</div>
-        <div class="col">Área 2</div>
-        <div class="col">Área 3</div>
+
+      <!-- Align-self(proprio elem. - no caso, os flex items) -->
+      <h2>Alinhamento vertical individual (align-self-ALINHAMENTO: start, center, end)</h2>
+      <div class="marcador row">
+        <div class="col borda align-self-start">Área 1</div>
+        <div class="col borda align-self-center">Área 2</div>
+        <div class="col borda align-self-end">Área 3</div>
       </div>
 
-      <h2>Alinhamento horizontal colunas (justify-content-ALINHAMENTO: start, center, end)</h2>
-      <div class="row">
+      <h2>Alinhamento horizontal colunas (justify-content-ALINHAMENTO: start, center, end) no Container (Pai) </h2>
+      <div class="row justify-content-end">
         <div class="marcador col-2">Área 1</div>
         <div class="marcador col-2">Área 2</div>
         <div class="marcador col-2">Área 3</div>
       </div>
 
-      <h2>Distribuição (justify-content-ALINHAMENTO: around, between, end)</h2>
-      <div class="row">
+      <h2>Distribuição (justify-content-ALINHAMENTO: around, between, end) no Container (Pai) </h2>
+      <div class="row borda justify-content-around">
         <div class="marcador col-2">Área 1</div>
         <div class="marcador col-2">Área 2</div>
         <div class="marcador col-2">Área 3</div>
       </div>
 
-      <h2>Removendo espaçamento</h2>
-      <div class="row">
+      <h2>Removendo espaçamento - no Container (Pai) </h2>
+      <div class="row ">
         <div class="borda col-2">Área 1</div>
         <div class="borda col-2">Área 2</div>
         <div class="borda col-2">Área 3</div>
