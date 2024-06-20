@@ -26,8 +26,8 @@
     padding: 0px;
 }
 
-body{
-  
+html, body{
+  background-color: #AC804D;
 }
 
 main {
@@ -37,34 +37,19 @@ main {
     overflow-x: hidden;
 }
 
-header {
-    background-color: #7C4C41;
+
+.bg-dark {
+    background-color: #7C4C41 !important;
     height: 48px;
 }
 
-header nav ul {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-ul li {
-    margin: 10px 0px;
-    list-style: none;
-    font-size: 1.5rem;
+.navbar-toggler{
+    margin-top: -12px !important;
 }
 
 a {
     text-decoration: none;
-    color: white;
-}
-li a::before{
-    position: absolute;
-     visibility: hidden;
-    top: 35px;
-    content: "";
-    width: 100px;
-    height: 4px;
-    background-color: red; 
+    color: white !important;
 }
 
 
@@ -89,6 +74,7 @@ li a::before{
     left: 464px;
     font-family: Railey;
     font-size: 215px;
+    color: black !important;
 }
 
 .parte1__textoEmpresa {
@@ -101,6 +87,7 @@ li a::before{
     font-style: normal;
     font-size: 20px;
     text-align: justify;
+    color: black !important;
 }
 
 .parte1__btn {
@@ -135,53 +122,6 @@ li a::before{
     background-color: linear-gradient( #EDE2C8 0%, #ff0000 100%);
 }
 
-.papelRasgado {
-    z-index: 2;
-    top: -100px;
-    left: -60px;
-}
-
-.papelRasgado2 {
-    z-index: 2;
-    margin-left: -60px;
-}
-
-.papelRasgado3 {
-    z-index: 2;
-    margin-left: -60px;
-}
-
-.papelRasgado4 {
-    z-index: 2;
-    margin-left: -120px;
-}
-
-.papelRasgado5 {
-    z-index: 2;
-    margin-left: -60px;
-}
-
-.papelRasgado6 {
-    z-index: 2;
-    margin-left: -70px;
-}
-
-.papelRasgado7 {
-    z-index: 2;
-    margin-left: -90px;
-}
-.papelRasgado8 {
-    z-index: 2;
-    margin-left: -110px;
-}
-.papelRasgado9 {
-    z-index: 2;
-    margin-left: -120px;
-}
-.papelRasgado10 {
-    z-index: 2;
-    margin-left: -130px;
-}
 
 
 .fita {
@@ -220,10 +160,17 @@ li a::before{
     -webkit-text-stroke: 2px #311e19;
 }
 
+
+.parte2_blocoMapa{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6px;
+}
 .parte2__PinoDoMapa {
     position: relative;
     left: 112px;
-    top: -255px;
+    top: -495px;
     transform: rotateZ(-45deg) scale(0.22);
     filter: contrast(100);
 }
@@ -237,16 +184,17 @@ li a::before{
 
 
 footer{
+    color: black !important;
     padding: 10px 0px;
     display: flex;
     justify-content: space-evenly;
-    background-image: url("../assets/img/footer.png");
+    /* background-image: url("../assets/img/footer.png"); */
     height: 80px !important;
     text-align: center;
     font-size: 18px;
 }
 
 .footer-itens a:hover{
-    color: #773325;
+    color: #773325; 
     text-decoration: underline;
 }

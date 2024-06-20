@@ -6,21 +6,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/mediaqueries.css">
+    <link rel="stylesheet" href="css/style.css">
+
     <title>Sweet Coffee</title>
 </head>
 
 <body>
     <main>
         <header>
-            <nav>
-                <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Cardápio</a></li>
-                    <li><a href="#">Sobre</a></li>
-                </ul>
-            </nav>
+            <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+
+                <a href="" class="navbar-brand">Sweet Coffee</a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#hamburguerMostraEsconde">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse" id="hamburguerMostraEsconde">
+                  <ul class="navbar-nav ml-auto md-display-6">
+                    <li class="nav-item">
+                      <a href="" class="nav-link">Início</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="" class="nav-link">Cardápio</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="" class="nav-link">Sobre</a>
+                    </li>
+                  </ul>
+                </div>
+            
+              </nav>
         </header>
 
         <section class="parte1">
@@ -32,28 +50,23 @@
             <button class="parte1__btn">ACESSE NOSSO CARDÁPIO!</button>
         </section>
 
+
         <div class="divisor">
-            <img src="assets/img/divisor.png" alt="Papel rasgado do divisor de conteúdo" srcset="" class="papelRasgado">
-            <img src="assets/img/divisor.png" alt="Papel rasgado do divisor de conteúdo" srcset="" class="papelRasgado2">
-            <img src="assets/img/divisor.png" alt="Papel rasgado do divisor de conteúdo" srcset="" class="papelRasgado3">
-            <img src="assets/img/divisor.png" alt="Papel rasgado do divisor de conteúdo" srcset="" class="papelRasgado4">
-            <img src="assets/img/divisor.png" alt="Papel rasgado do divisor de conteúdo" srcset="" class="papelRasgado5">
-            <img src="assets/img/divisor.png" alt="Papel rasgado do divisor de conteúdo" srcset="" class="papelRasgado6">
-            <img src="assets/img/divisor.png" alt="Papel rasgado do divisor de conteúdo" srcset="" class="papelRasgado7">
-            <img src="assets/img/divisor.png" alt="Papel rasgado do divisor de conteúdo" srcset="" class="papelRasgado8">
-            <img src="assets/img/divisor.png" alt="Papel rasgado do divisor de conteúdo" srcset="" class="papelRasgado9">
-            <img src="assets/img/divisor.png" alt="Papel rasgado do divisor de conteúdo" srcset="" class="papelRasgado10">
+            <img src="assets/img/divisor1.png" alt="Papel rasgado do divisor de conteúdo" srcset="" class="papelRasgado2">
             <img src="assets/img/divisorTape.png" alt="Fita do divisor de conteúdo" class="fita">
         </div>
+
 
         <section class="parte2">
             <div class="parte2__bloco">
             <h1>Visite-nos!</h1>
+            <div class="parte2_blocoMapa">
             <img src="assets/img/mapPin.png" alt="Pino do mapa" class="parte2__PinoDoMapa">
             <iframe title="Mapa - localização"
                 src="https://www.google.com/maps/d/u/0/embed?mid=1r0iZyPfV6Cqg9wwN1nbCuUGS0OI02aA&ehbc=2E312F&noprof=1"
                  class="parte2__Mapa"></iframe>
                 </div>
+            </div>
         </section>
 
 
