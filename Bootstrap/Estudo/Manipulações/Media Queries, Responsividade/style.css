@@ -178,7 +178,7 @@ img{
     object-fit: scale-down;
 
 
-    /*Posicionar onde a imagem será cortada = backgroun-position */
+    /*Posicionar onde a imagem será cortada = background-position */
     object-position: center;
     object-position: top;
     object-position: right; 
