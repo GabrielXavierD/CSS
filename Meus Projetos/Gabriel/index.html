@@ -5,47 +5,150 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
+
+ 
+ <!-- Bootstrap CSS -->
+ <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/paginaInicial.css">
+
     <title>Loja</title>
 </head>
 
 <body id="body">
-     <header>
-            <nav>
-                <ul>
-                    <li><a href="index.html" id="navHome">Home</a></li>
-                    <li><a href="loja.html">Loja</a></li>
-                    <li><a href="novidades.html">Novidades</a></li>
-                    <li><a href="contato.html">Contato</a></li>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark">
+            <a href="index.html" class="navbar-brand">Logo</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#hamburguerMostraEsconde">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="hamburguerMostraEsconde">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="index.html" id="navHome" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="loja.html" class="nav-link">Loja</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="novidades.html" class="nav-link">Novidades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contato.html" class="nav-link">Contato</a>
+                    </li>
                 </ul>
-            </nav>
-        </header>
+            </div>
 
-    <main>   
-    <div class="juntatudo">
-
-        <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam blanditiis ea, id distinctio maxime qui recusandae </h1>
-
-    </div>
-</main>
-
-    <footer class="navbar">
-        <nav>
-            <ul>
-                <li><a href="https://www.instagram.com" target="_blank">Instagram </a></li>
-                <li><a href="https://twitter.com" target="_blank">YTB</a></li>
-                <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
-                <li><a href="#" target="_blank">Sobre</a></li>
-            </ul>
         </nav>
-    </footer>
+    </header>
+    
+    <main>
+   
+        <section class="hero-section">
+            <div class="container text-center">
+                <h1>Moda Exclusiva para Todos os Estilos</h1>
+                <p>Descubra as últimas tendências em moda com nossa coleção exclusiva.</p>
+                <a href="#products" class="btn btn-primary btn-lg">Veja Nossos Produtos</a>
+            </div>
+        </section>
+    
+        <section id="about" class="about-section">
+            <div class="container text-center">
+                <h2>Sobre Nós</h2>
+                <p>Nós somos apaixonados por moda e nos dedicamos a oferecer as melhores peças para nossos clientes. Cada peça é selecionada com cuidado, garantindo qualidade e estilo.</p>
+            </div>
+        </section>
+    
+        <section id="features" class="features-section">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <img src="https://img.icons8.com/ios-filled/100/000000/delivery.png" alt="Entrega Rápida">
+                        <h3>Entrega Rápida</h3>
+                        <p>Receba seus produtos rapidamente com nosso serviço de entrega eficiente.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://img.icons8.com/ios-filled/100/000000/return-purchase.png" alt="Troca Fácil">
+                        <h3>Troca Fácil</h3>
+                        <p>Se precisar trocar, oferecemos um processo simples e sem complicações.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://img.icons8.com/ios-filled/100/000000/price-tag.png" alt="Preços Acessíveis">
+                        <h3>Preços Acessíveis</h3>
+                        <p>Oferecemos a melhor moda com preços que cabem no seu bolso.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section id="products" class="products-section">
+            <div class="container text-center">
+                <h2>Nossos Produtos</h2>
+                <p>Explore nossa coleção e escolha suas peças favoritas.</p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://via.placeholder.com/300" alt="Produto 1" class="img-fluid">
+                        <h4>Produto 1</h4>
+                        <p>Descrição breve do produto 1.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://via.placeholder.com/300" alt="Produto 2" class="img-fluid">
+                        <h4>Produto 2</h4>
+                        <p>Descrição breve do produto 2.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://via.placeholder.com/300" alt="Produto 3" class="img-fluid">
+                        <h4>Produto 3</h4>
+                        <p>Descrição breve do produto 3.</p>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-secondary btn-lg">Ver Mais Produtos</a>
+            </div>
+        </section>
+    
+        <section id="contact" class="contact-section">
+            <div class="container text-center">
+                <h2>Entre em Contato</h2>
+                <p>Tem alguma dúvida? Fale conosco.</p>
+                <form>
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <input type="text" class="form-control" placeholder="Nome" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="email" class="form-control" placeholder="E-mail" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="4" placeholder="Mensagem"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+                </form>
+            </div>
+        </section>
+    
+    </main>
 
 
- 
+    <footer>
+        <p class="text-center">&copy; 2024 Sua Loja de Roupas. Todos os direitos reservados.</p>
+</footer>
+    
 
 
-  
-    <script src="script.js"></script>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
-
 </html>
