@@ -5,56 +5,162 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
+
+ 
+ <!-- Bootstrap CSS -->
+ <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/loja.css">
     <title>Loja</title>
 </head>
 
 <body id="body">
-     <header>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="loja.html" id="navLoja">Loja</a></li>
-                    <li><a href="novidades.html">Novidades</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-            </nav>
-        </header>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark">
+            <a href="index.html" class="navbar-brand">Logo</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#hamburguerMostraEsconde">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <main>   
-   
+            <div class="collapse navbar-collapse" id="hamburguerMostraEsconde">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="loja.html" id="navLoja" class="nav-link">Loja</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="novidades.html" class="nav-link">Novidades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contato.html" class="nav-link">Contato</a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+    <main>
         <section class="itensLoja">
 
-            <div class="itens"></div>
-            <div class="itens"></div>
-            <div class="itens"></div>
-            <div class="itens"></div>
-            <div class="itens"></div>
-            <div class="itens"></div>
-            <div class="itens"></div>
-            <div class="itens"></div>
-            <div class="itens"></div>
+            <div class="itens" onclick="redirecionaProduto(1)">
+                <h2>Camiseta futurista</h2>
+                <img src="imagens/camisetas/camiseta1.png" alt="Camiseta com estampa futurista" srcset="">
+                <div class="precos">
+                    <h5><strike>R$ 39,90</strike></h5>
+                    <h4>R$ 27,90</h4>
+                </div>
+                <button class="btn-success">
+                    <p class="comprar">ver</p>
+                </button>
+            </div>
+            <div class="itens" onclick="redirecionaProduto(2)">
+                <h2>Camiseta futurista</h2>
+                <img src="imagens/camisetas/camiseta2.png" alt="Camiseta com estampa futurista" srcset="">
+                <div class="precos">
+                    <h5><strike>R$ 39,90</strike></h5>
+                    <h4>R$ 27,90</h4>
+                </div>
+                <button class="btn-success">
+                    <p class="comprar">ver</p>
+                </button>
+            </div>
+            <div class="itens" onclick="redirecionaProduto(3)">
+                <h2>Camiseta futurista</h2>
+                <img src="imagens/camisetas/camiseta3.png" alt="Camiseta com estampa futurista" srcset="">
+                <div class="precos">
+                    <h5><strike>R$ 39,90</strike></h5>
+                    <h4>R$ 27,90</h4>
+                </div>
+                <button class="btn-success">
+                    <p class="comprar">ver</p>
+                </button>
+            </div>
+            <div class="itens" onclick="redirecionaProduto(4)">
+                <h2>Camiseta futurista</h2>
+                <img src="imagens/camisetas/camiseta1.png" alt="Camiseta com estampa futurista" srcset="">
+                <div class="precos">
+                    <h5><strike>R$ 39,90</strike></h5>
+                    <h4>R$ 27,90</h4>
+                </div>
+                <button class="btn-success">
+                    <p class="comprar">ver</p>
+                </button>
+            </div>
+            <div class="itens" onclick="redirecionaProduto(5)">
+                <h2>Camiseta futurista</h2>
+                <img src="imagens/camisetas/camiseta2.png" alt="Camiseta com estampa futurista" srcset="">
+                <div class="precos">
+                    <h5><strike>R$ 39,90</strike></h5>
+                    <h4>R$ 27,90</h4>
+                </div>
+                <button class="btn-success">
+                    <p class="comprar">ver</p>
+                </button>
+            </div>
+            <div class="itens" onclick="redirecionaProduto(6)">
+                <h2>Camiseta futurista</h2>
+                <img src="imagens/camisetas/camiseta3.png" alt="Camiseta com estampa futurista" srcset="">
+                <div class="precos">
+                    <h5><strike>R$ 39,90</strike></h5>
+                    <h4>R$ 27,90</h4>
+                </div>
+                <button class="btn-success">
+                    <p class="comprar">ver</p>
+                </button>
+            </div>
+            <div class="itens" onclick="redirecionaProduto(7)">
+                <h2>Camiseta futurista</h2>
+                <img src="imagens/camisetas/camiseta1.png" alt="Camiseta com estampa futurista" srcset="">
+                <div class="precos">
+                    <h5><strike>R$ 39,90</strike></h5>
+                    <h4>R$ 27,90</h4>
+                </div>
+                <button class="btn-success">
+                    <p class="comprar">ver</p>
+                </button>
+            </div>
+            <div class="itens" onclick="redirecionaProduto(8)">
+                <h2>Camiseta futurista</h2>
+                <img src="imagens/camisetas/camiseta2.png" alt="Camiseta com estampa futurista" srcset="">
+                <div class="precos">
+                    <h5><strike>R$ 39,90</strike></h5>
+                    <h4>R$ 27,90</h4>
+                </div>
+                <button class="btn-success">
+                    <p class="comprar">ver</p>
+                </button>
+            </div>
+            <div class="itens" onclick="redirecionaProduto(9)">
+                <h2>Camiseta futurista</h2>
+                <img src="imagens/camisetas/camiseta3.png" alt="Camiseta com estampa futurista" srcset="">
+                <div class="precos">
+                    <h5><strike>R$ 39,90</strike></h5>
+                    <h4>R$ 27,90</h4>
+                </div>
+                <button class="btn-success">
+                    <p class="comprar">ver</p>
+                </button>
+            </div>
         </section>
-</main>
-
-<footer class="navbar">
-    <nav>
-        <ul>
-            <li><a href="https://www.instagram.com" target="_blank">Instagram </a></li>
-            <li><a href="https://twitter.com" target="_blank">YTB</a></li>
-            <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
-            <li><a href="#" target="_blank">Sobre</a></li>
-        </ul>
-    </nav>
+    </main>
+    <footer>
+        <p class="text-center">&copy; 2024 Sua Loja de Roupas. Todos os direitos reservados.</p>
 </footer>
- 
-
-
- 
-
-
-  
-    <script src="script.js"></script>
+    
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
-
 </html>
