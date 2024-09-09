@@ -1,0 +1,60 @@
+body {
+    background: url('../imagens/fundo/fundo.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+/* LOJA ITENS */
+.itensLoja{
+    margin: 30px;
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-auto-rows: auto;
+    justify-content: center; 
+    align-items: center; 
+}
+
+
+.itens{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px;
+    height: 500px;
+    width: 400px;
+    background-color: #F7FAFC;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px 0px rgba(0, 0, 0, 1);
+}
+
+.itens h2{
+    font-size: 2em;
+    text-align: center;
+}
+
+.itens img{
+    height: 270px;
+    width: 270px;
+}
+
+.itens button{
+    border: none;
+    height: 40px;
+    width: 200px;
+}
+
+
+.precos{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.comprar{
+    text-transform: uppercase;
+    text-align:center;
+    line-height: 40px;
+    font-weight: bold;
+}
