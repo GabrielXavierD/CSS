@@ -5,47 +5,109 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
+
+ 
+ <!-- Bootstrap CSS -->
+ <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/contato.css">
+
     <title>Loja</title>
 </head>
 
 <body id="body">
-     <header>
-            <nav>
-                <ul>
-                    <li><a href="index.html" >Home</a></li>
-                    <li><a href="loja.html">Loja</a></li>
-                    <li><a href="novidades.html">Novidades</a></li>
-                    <li><a href="contato.html" id="navContato">Contato</a></li>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark">
+            <a href="" class="navbar-brand">Logo</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#hamburguerMostraEsconde">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="hamburguerMostraEsconde">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="index.html" id="home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="loja.html" class="nav-link">Loja</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="novidades.html" class="nav-link">Novidades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contato.html" id="navContato" class="nav-link">Contato</a>
+                    </li>
                 </ul>
-            </nav>
-        </header>
+            </div>
 
-    <main>   
-    <div class="juntatudo">
-
-        <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam blanditiis ea, id distinctio maxime qui recusandae </h1>
-
-    </div>
-</main>
-
-    <footer class="navbar">
-        <nav>
-            <ul>
-                <li><a href="https://www.instagram.com" target="_blank">Instagram </a></li>
-                <li><a href="https://twitter.com" target="_blank">YTB</a></li>
-                <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
-                <li><a href="#" target="_blank">Sobre</a></li>
-            </ul>
         </nav>
+    </header>
+    
+    <main>
+        <section class="contact-section">
+            <div class="container">
+                <h2 class="text-center mt-2">Entre em Contato</h2>
+                <p class="text-center">Fale conosco para dúvidas, sugestões ou suporte.</p>
+    
+                <div class="row">
+                    <div class="col-md-6">
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Nome</label>
+                                <input type="text" class="form-control" id="name" placeholder="Seu nome" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" class="form-control" id="email" placeholder="Seu e-mail" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensagem</label>
+                                <textarea class="form-control" id="message" rows="4" placeholder="Sua mensagem" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block mb-3">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Nossos Contatos</h3>
+                        <ul class="list-unstyled">
+                            <li><strong>Endereço:</strong> Rua X, 123, Pouso Alegre, Minas Gerais</li>
+                            <li><strong>Telefone:</strong> (35) 1234-5678</li>
+                            <li><strong>E-mail:</strong> contato@sualoja.com.br</li>
+                            <li><strong>Horário de Atendimento:</strong> Segunda a Sexta, das 9h às 18h</li>
+                        </ul>
+    
+                        <h3>Siga-nos</h3>
+                        <div class="social-links">
+                            <a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/facebook-new.png" alt="Facebook"></a>
+                            <a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png" alt="Instagram"></a>
+                            <a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/twitter-squared.png" alt="Twitter"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+            <p class="text-center">&copy; 2024 Sua Loja de Roupas. Todos os direitos reservados.</p>
     </footer>
+    
 
 
- 
-
-
-  
-    <script src="script.js"></script>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
-
 </html>
