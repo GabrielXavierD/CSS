@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+div {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div p {
+    text-align: center;
+    border: 1px solid red;
+}
+
+.borda {
+    border: 2px solid black;
+}
+
+.cubo {
+    margin-top: 50%;
+    height: 120px;
+    width: 120px;
+    perspective: 1500px;
+    transition: 4s all;
+    transform-style: preserve-3d;
+    animation: rotacao 4s ease-in-out infinite alternate-reverse;
+}
+
+
+
+
+
+
+/* ************** ANIMAÇÃO ************** */
+/*
+@keyframes rotacao {
+    0% {
+        transform: scale(1) rotateY(0deg) rotateX(0deg);
+    }
+
+    100% {
+        transform: scale(3) rotateY(360deg) rotateX(360deg);
+
+    }
+}
+*/
+.posicao1 {
+    z-index: 1;
+}
+
+.posicao2 {
+    margin-top: 50%;
+    margin-left: 45%;
+}
+
+.posicao3 {
+    margin-top: 50%;
+    margin-left: -45%;
+}
+
+
+
+
+
+
+/* ************** LADOS DO CUBO ************** */
+.frente {
+    background-color: green;
+    transform: translateZ(50px);
+}
+
+.tras {
+    background-color: purple;
+    transform: translateZ(-50px);
+}
+
+.ladoD {
+    background-color: red;
+    transform: rotateY(90deg);
+    left: 59px;
+}
+
+.ladoE {
+    background-color: blue;
+    transform: rotateY(90deg);
+    left: -42px;
+}
+
+.baixo {
+    background-color: rgb(255, 132, 0);
+    transform: rotateX(90deg);
+    top: 60px;
+}
+
+.cima {
+    background-color: rgb(255, 251, 0);
+    transform: rotateX(90deg);
+    top: -42px;
+}
